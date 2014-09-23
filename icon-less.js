@@ -59,10 +59,22 @@ var generateStyle = function( iconPaths, stylePath ) {
 
 var generateJson = function( iconPaths, jsonPath ) {
 
-	console.log('generate the json');
-	//grunt.file.write( options.json, JSON.stringify( iconCategories ) );
+	var fs = require( 'fs' );
+	var json = fs.createWriteStream( jsonPath );
+	var icons = [];
 
-	// TODO: generate the json
+	forEachIcon( iconPaths, function( iconInfo ) {
+
+		icons.push( iconInfo );
+
+	} ).then( function() {
+
+		json.write( JSON.stringify( icons ) );
+		json.end();
+
+	} );
+
+	return json;
 
 };
 

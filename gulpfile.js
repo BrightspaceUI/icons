@@ -29,7 +29,7 @@ gulp.task( 'json', function () {
 } );
 
 gulp.task( 'default', [ 'clean' ], function() {
-	gulp.start( 'css' );
+	gulp.start( 'css', 'json' );
 } );
 
 gulp.task( 'test', function () {
