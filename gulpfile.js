@@ -13,7 +13,7 @@ gulp.task( 'copy-icons', function () {
 } );
 
 gulp.task( 'css', [ 'style', 'less', 'copy-icons' ], function () {
-	return vui.makeCss( [ 'dist/icons.style' ], 'dist/' );
+	return vui.makeCss( [ 'dist/icons.style' ], 'dist/', { lintOpts: '.csslintrc' } );
 } );
 
 gulp.task( 'less', function () {

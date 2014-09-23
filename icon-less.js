@@ -34,6 +34,15 @@ var generateStyle = function( iconPaths, stylePath ) {
 
 	style.write( '@import \'../dist/icons.less\';\n\n' );
 
+	style.write( '[class*=" vui-icon-"],\n' );
+	style.write( '[class^="vui-icon-"] { \n' );
+	style.write( '	display: inline-block;\n' );
+	style.write( '	font-size: 0;\n');
+	style.write( '	line-height: 0;\n' );
+	style.write( '	margin: 0;\n' );
+	style.write( '	vertical-align: text-top;\n' );
+	style.write( '}\n\n' );
+
 	forEachIcon( iconPaths, function( iconInfo ) {
 
 		if ( iconInfo.isRtl ) {
