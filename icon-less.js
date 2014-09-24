@@ -52,7 +52,7 @@ var generateStyle = function( iconPaths, stylePath ) {
 	var fs = require( 'fs' );
 	var style = fs.createWriteStream( stylePath );
 
-	style.write( '@import \'../dist/icons.less\';\n\n' );
+	style.write( '@import \'icons.less\';\n\n' );
 
 	style.write( '[class*=" vui-icon-"],\n' );
 	style.write( '[class^="vui-icon-"] { \n' );
