@@ -93,7 +93,7 @@ var generateJson = function( iconPaths, jsonPath ) {
 
 	} ).then( function() {
 
-		json.write( JSON.stringify( icons ) );
+		json.write( JSON.stringify( icons, null, ' ' ) );
 		json.end();
 
 	} );
