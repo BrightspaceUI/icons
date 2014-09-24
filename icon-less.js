@@ -4,21 +4,41 @@ var generateLess = function( iconPaths, lessPath ) {
 
 	var fs = require( 'fs' );
 	var less = fs.createWriteStream( lessPath );
+	var iconInfos = [];
 
 	forEachIcon( iconPaths, function( iconInfo ) {
 
-		if ( iconInfo.isRtl ) {
-			less.write( '.' + iconInfo.name + '-rtl' + '() {\n' );
-		} else {
-			less.write( '.' + iconInfo.name + '() {\n' );
-		}
-		less.write( '	&:before {\n' );
-		less.write( '		content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
-		less.write( '	}\n' );
-		less.write( '}\n' );
+		iconInfos.push( iconInfo );
 
 	} ).then( function() {
 
+		var tryGetRtlIcon = function( ltrIcon ) {
+			for( var i=0; i<iconInfos.length; i++ ) {
+				if ( iconInfos[i].isRtl && iconInfos[i].name === ltrIcon.name ) {
+					return iconInfos[i];
+				}
+			}
+			return null;
+		};
+
+		for( var i=0; i<iconInfos.length; i++ ) {
+			var iconInfo = iconInfos[i];
+			if ( !iconInfo.isRtl ) {
+
+				less.write( '.' + iconInfo.name + '() {\n' );
+				less.write( '	&:before {\n' );
+				less.write( '		content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
+				var rtlIconInfo = tryGetRtlIcon( iconInfo );
+				if ( rtlIconInfo ) {
+					less.write( '		[dir=\'rtl\'] & {\n' );
+					less.write( '			content: data-uri(\'image/png;base64\',\'' + rtlIconInfo.path + '\');\n' );
+					less.write( '		}\n' );
+				}
+				less.write( '	}\n' );
+				less.write( '}\n' );
+
+			}
+		}
 		less.end();
 
 	} );
@@ -45,16 +65,11 @@ var generateStyle = function( iconPaths, stylePath ) {
 
 	forEachIcon( iconPaths, function( iconInfo ) {
 
-		if ( iconInfo.isRtl ) {
-			style.write( '[dir=\'rtl\'] ' );
-		}
-		style.write( '.' + iconInfo.name + ' {\n' );
-		if ( iconInfo.isRtl ) {
-			style.write( '	.' + iconInfo.name + '-rtl' + ';\n' );
-		} else {
+		if ( !iconInfo.isRtl ) {
+			style.write( '.' + iconInfo.name + ' {\n' );
 			style.write( '	.' + iconInfo.name + ';\n' );
+			style.write( '}\n' );
 		}
-		style.write( '}\n' );
 
 	} ).then( function() {
 
