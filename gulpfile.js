@@ -3,9 +3,9 @@ var gulp = require( 'gulp' ),
 	vui = require( 'vui-helpers' ),
 	icons = require( './icon-less' );
 
-gulp.task( 'clean', function( cb ) {
-	vui.clean( [ 'dist', 'output' ] )
-		.then( function() { cb(); } );
+gulp.task( 'clean', function() {
+	return gulp.src( [ 'dist', 'output' ], { read: false } )
+		.pipe( vui.clean() );
 } );
 
 gulp.task( 'copy-icons', function () {

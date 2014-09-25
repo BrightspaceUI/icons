@@ -1,7 +1,7 @@
 {
   "name": "vui-icons",
   "description": "Valence.UI icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "D2L Incorporated",
   "license": "Apache-2.0",
   "repository": {
@@ -15,6 +15,6 @@
     "q": "^1.0.1",
     "through2": "^0.6.2",
     "vinyl-fs": "^0.3.7",
-    "vui-helpers": "^0.0.4"
+    "vui-helpers": "^0.0.7"
   }
 }
