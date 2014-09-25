@@ -1,30 +1,32 @@
 var gulp = require( 'gulp' ),
+	flatten = require( 'gulp-flatten' ),
 	vui = require( 'vui-helpers' ),
 	icons = require( './icon-less' );
 
 gulp.task( 'clean', function( cb ) {
-	vui.clean( [ 'dist/**/*', 'output' ] )
+	vui.clean( [ 'dist', 'output' ] )
 		.then( function() { cb(); } );
 } );
 
 gulp.task( 'copy-icons', function () {
 	return gulp.src( 'src/**/*.png' )
-		.pipe( gulp.dest( 'dist' ) );
+		.pipe( flatten() )
+		.pipe( gulp.dest( 'dist/images' ) );
 } );
 
 gulp.task( 'css', [ 'style', 'less', 'copy-icons' ], function () {
 	return vui.makeCss( [ 'dist/icons.style' ], 'dist/', { lintOpts: '.csslintrc' } );
 } );
 
-gulp.task( 'less', function () {
-	return icons.generateLess( 'src/**/*.png', 'dist/icons.less' );
+gulp.task( 'less', [ 'copy-icons' ], function () {
+	return icons.generateLess( 'dist/**/*.png', 'dist/icons.less' );
 } );
 
-gulp.task( 'style', function () {
-	return icons.generateStyle( 'src/**/*.png', 'dist/icons.style' );
+gulp.task( 'style', [ 'copy-icons' ], function () {
+	return icons.generateStyle( 'dist/**/*.png', 'dist/icons.style' );
 } );
 
-gulp.task( 'json', function () {
+gulp.task( 'json', [ 'copy-icons' ], function () {
 	return icons.generateJson( 'src/**/*.png', 'dist/icons.json' );
 } );
 

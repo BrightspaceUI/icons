@@ -89,7 +89,12 @@ var generateJson = function( iconPaths, jsonPath ) {
 
 	forEachIcon( iconPaths, function( iconInfo ) {
 
-		icons.push( iconInfo );
+		icons.push( {
+			category: iconInfo.category,
+			name: iconInfo.name,
+			isRtl: iconInfo.isRtl,
+			size: iconInfo.size
+		} );
 
 	} ).then( function() {
 
@@ -126,6 +131,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 			var category = getCategory( relativePath );
 
 			var fileName = file.path.replace( /^.*[\\\/]/, '' );
+
 			fileName = fileName.substr( 0, fileName.lastIndexOf( '.' ) );
 
 			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) == '_rtl' );
