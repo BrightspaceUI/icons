@@ -4,8 +4,6 @@
 .npmignore
 gulpfile.js
 icon-less.js
-dist/icons.style
-output
 node_modules
 src
 test

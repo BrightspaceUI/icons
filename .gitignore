@@ -1,6 +1,9 @@
 deplui.sublime-project
 deplui.sublime-workspace
-dist/
-lib/
 node_modules/
-output/
+test/output
+images
+icons.css
+icons.css.less
+icons.less
+icons.json

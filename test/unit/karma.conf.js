@@ -7,14 +7,14 @@ module.exports = function( config ) {
 		browsers: ['PhantomJS'],
 		coverageReporter: {
 			reporters: [
-				{ type: 'html', dir: 'output/test/coverage/' },
-				{ type: 'cobertura', dir: 'output/test/coverage/' }
+				{ type: 'html', dir: 'test/output/coverage/' },
+				{ type: 'cobertura', dir: 'test/output/coverage/' }
 			]
 		},
 		exclude: [],
 		frameworks: ['jasmine'],
 		junitReporter : {
-			outputFile: 'output/test/unit.xml',
+			outputFile: 'test/output/unit.xml',
 			suite: 'unit'
 		},
 		plugins : [
