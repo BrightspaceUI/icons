@@ -88,43 +88,6 @@ var generateStyle = function( iconPaths, stylePath ) {
 
 };
 
-var generateJson = function( iconPaths, jsonPath ) {
-
-	var fs = require( 'fs' );
-	var json = fs.createWriteStream( jsonPath );
-	var icons = [];
-
-	forEachIcon( iconPaths, function( iconInfo ) {
-
-		icons.push( {
-			category: iconInfo.category,
-			name: iconInfo.name,
-			isRtl: iconInfo.isRtl,
-			size: iconInfo.size
-		} );
-
-	} ).then( function() {
-
-		json.write( JSON.stringify( icons, null, ' ' ) );
-		json.end();
-
-	} );
-
-	return json;
-
-};
-
-var getCategory = function( relativePath ) {
-
-	var pathIndex = relativePath.indexOf( '\\' );
-	if ( pathIndex === -1 ) {
-		return null;
-	}
-
-	return relativePath.substr( 0, pathIndex );
-
-};
-
 var forEachIcon = function( iconPaths, delegate ) {
 
 	var through2 = require( 'through2' ),
@@ -135,7 +98,6 @@ var forEachIcon = function( iconPaths, delegate ) {
 		through2.obj( function( file, enc, done ) {
 
 			var relativePath = file.path.replace( file.base, '' );
-			var category = getCategory( relativePath );
 
 			var fileName = file.path.replace( /^.*[\\\/]/, '' );
 
@@ -148,19 +110,10 @@ var forEachIcon = function( iconPaths, delegate ) {
 				iconName = iconName.substr( 0, iconName.length - 4 );
 			}
 
-			var heightWidth = 16;
-			if ( /-large$/.test( iconName ) ) {
-				heightWidth = 24;
-			} else if ( /-xlarge$/.test( iconName ) ) {
-				heightWidth = 50;
-			}
-
 			delegate( {
-				category: category,
 				name: iconName,
 				isRtl: isRtl,
-				path: relativePath,
-				size: heightWidth
+				path: relativePath
 			} );
 
 			done();
@@ -175,7 +128,6 @@ var forEachIcon = function( iconPaths, delegate ) {
 };
 
 module.exports = {
-	generateJson: generateJson,
 	generateLess: generateLess,
 	generateStyle: generateStyle
 };

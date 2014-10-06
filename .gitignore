@@ -2,8 +2,6 @@ deplui.sublime-project
 deplui.sublime-workspace
 node_modules/
 test/output
-images
 icons.css
 icons.css.less
 icons.less
-icons.json
