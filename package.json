@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.dev.d2l:7999/val/icons.git"
+    "url": "https://github.com/Desire2Learn-Valence/valence-ui-icons.git"
   },
   "scripts": {
     "test": "gulp && gulp test"
