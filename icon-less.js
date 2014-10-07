@@ -1,17 +1,10 @@
 'use strict';
 
-var generateLess = function( iconPaths, basePath, lessPath ) {
+var generateLess = function( iconPaths, lessPath ) {
 
 	var fs = require( 'fs' );
 	var less = fs.createWriteStream( lessPath );
 	var iconInfos = [];
-
-	if ( /\/$/.test( basePath ) ) {
-		basePath = basePath.substr( 0, basePath.length -1 );
-	}
-	if ( !/\\$/.test( basePath ) ) {
-		basePath = basePath + '\\';
-	}
 
 	forEachIcon( iconPaths, function( iconInfo ) {
 
@@ -34,11 +27,11 @@ var generateLess = function( iconPaths, basePath, lessPath ) {
 
 				less.write( '.' + iconInfo.name + '() {\n' );
 				less.write( '	&:before {\n' );
-				less.write( '		content: data-uri(\'image/png;base64\',\'' + basePath + iconInfo.path + '\');\n' );
+				less.write( '		content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
 				var rtlIconInfo = tryGetRtlIcon( iconInfo );
 				if ( rtlIconInfo ) {
 					less.write( '		[dir=\'rtl\'] & {\n' );
-					less.write( '			content: data-uri(\'image/png;base64\',\'' + basePath + rtlIconInfo.path + '\');\n' );
+					less.write( '			content: data-uri(\'image/png;base64\',\'' + rtlIconInfo.path + '\');\n' );
 					less.write( '		}\n' );
 				}
 				less.write( '	}\n' );
@@ -94,10 +87,8 @@ var forEachIcon = function( iconPaths, delegate ) {
 		deferred = require( 'q' ).defer(),
 		vfs = require( 'vinyl-fs' );
 
-	vfs.src( iconPaths ).pipe( 
+	vfs.src( iconPaths, { base: './' } ).pipe( 
 		through2.obj( function( file, enc, done ) {
-
-			var relativePath = file.path.replace( file.base, '' );
 
 			var fileName = file.path.replace( /^.*[\\\/]/, '' );
 
@@ -113,7 +104,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 			delegate( {
 				name: iconName,
 				isRtl: isRtl,
-				path: relativePath
+				path: file.relative
 			} );
 
 			done();
