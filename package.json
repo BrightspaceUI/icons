@@ -18,5 +18,10 @@
     "through2": "^0.6.2",
     "vinyl-fs": "^0.3.7",
     "vui-helpers": "^0.1.1"
-  }
+  },
+  "keywords": [
+    "d2l",
+    "valence-ui",
+    "vui"
+  ]
 }
