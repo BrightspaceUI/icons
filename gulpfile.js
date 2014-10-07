@@ -15,7 +15,7 @@ gulp.task( 'css', [ 'style', 'less' ], function () {
 } );
 
 gulp.task( 'less', function () {
-	return icons.generateLess( 'images/**/*.png', 'images/', 'icons.less' );
+	return icons.generateLess( 'images/**/*.png', 'icons.less' );
 } );
 
 gulp.task( 'style', function () {
