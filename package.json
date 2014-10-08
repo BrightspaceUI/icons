@@ -1,6 +1,6 @@
 {
   "name": "vui-icons",
-  "description": "Valence.UI icons",
+  "description": "LESS mixins, CSS and image assets for consuming icons",
   "version": "0.0.4",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
