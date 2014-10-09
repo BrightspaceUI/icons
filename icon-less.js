@@ -1,5 +1,8 @@
 'use strict';
 
+var mixinNs = '#vui';
+var mixinPrefix = 'icon-';
+
 var generateLess = function( iconPaths, lessPath ) {
 
 	var fs = require( 'fs' );
@@ -21,24 +24,29 @@ var generateLess = function( iconPaths, lessPath ) {
 			return null;
 		};
 
+		less.write( mixinNs + ' {\n' );
+
 		for( var i=0; i<iconInfos.length; i++ ) {
 			var iconInfo = iconInfos[i];
 			if ( !iconInfo.isRtl ) {
 
-				less.write( '.' + iconInfo.name + '() {\n' );
-				less.write( '	&:before {\n' );
-				less.write( '		content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
+				less.write( '	.' + mixinPrefix + iconInfo.name + '() {\n' );
+				less.write( '		&:before {\n' );
+				less.write( '			content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
 				var rtlIconInfo = tryGetRtlIcon( iconInfo );
 				if ( rtlIconInfo ) {
-					less.write( '		[dir=\'rtl\'] & {\n' );
-					less.write( '			content: data-uri(\'image/png;base64\',\'' + rtlIconInfo.path + '\');\n' );
-					less.write( '		}\n' );
+					less.write( '			[dir=\'rtl\'] & {\n' );
+					less.write( '				content: data-uri(\'image/png;base64\',\'' + rtlIconInfo.path + '\');\n' );
+					less.write( '			}\n' );
 				}
+				less.write( '		}\n' );
 				less.write( '	}\n' );
-				less.write( '}\n' );
 
 			}
 		}
+
+		less.write( '}\n' );
+
 		less.end();
 
 	} );
@@ -66,8 +74,8 @@ var generateStyle = function( iconPaths, stylePath ) {
 	forEachIcon( iconPaths, function( iconInfo ) {
 
 		if ( !iconInfo.isRtl ) {
-			style.write( '.' + iconInfo.name + ' {\n' );
-			style.write( '	.' + iconInfo.name + ';\n' );
+			style.write( '.vui-icon-' + iconInfo.name + ' {\n' );
+			style.write( '	' + mixinNs + '.' + mixinPrefix + iconInfo.name + ';\n' );
 			style.write( '}\n' );
 		}
 
@@ -96,7 +104,8 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) == '_rtl' );
 
-			var iconName = 'vui-icon-' + fileName.replace( '_', '-' );
+			//var iconName = 'vui-icon-' + fileName.replace( '_', '-' );
+			var iconName = fileName.replace( '_', '-' );
 			if ( isRtl ) {
 				iconName = iconName.substr( 0, iconName.length - 4 );
 			}
