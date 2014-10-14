@@ -2,6 +2,7 @@
 .gitattributes
 .gitignore
 .npmignore
+.editorconfig
 gulpfile.js
 icon-less.js
 node_modules
