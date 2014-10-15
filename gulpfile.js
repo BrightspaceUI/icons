@@ -1,13 +1,10 @@
 var gulp = require( 'gulp' ),
+	del = require( 'del' ),
 	vui = require( 'vui-helpers' ),
 	icons = require( './icon-less' );
 
-gulp.task( 'clean', function() {
-	return gulp.src( [ 
-			'icons.css.less', 
-			'icons.less'
-		], { read: false } )
-		.pipe( vui.clean() );
+gulp.task( 'clean', function( cb ) {
+	del([ 'icons.css.less', 'icons.less', 'icons.css' ], cb);
 } );
 
 gulp.task( 'css', [ 'style', 'less' ], function () {
@@ -27,9 +24,10 @@ gulp.task( 'default', [ 'clean' ], function() {
 } );
 
 gulp.task( 'test', function () {
-	return vui.test(
-			'test/unit/karma.conf.js',
+	return vui.test( {
+		files: [
 			'test/unit/**/*Spec.js',
 			'icons.css'
-		);
+		]
+	} ) ;
 } );
