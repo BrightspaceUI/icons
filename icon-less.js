@@ -30,13 +30,15 @@ var generateLess = function( iconPaths, lessPath ) {
 			var iconInfo = iconInfos[i];
 			if ( !iconInfo.isRtl ) {
 
+
+
 				less.write( '	.' + mixinPrefix + iconInfo.name + '() {\n' );
 				less.write( '		&:before {\n' );
-				less.write( '			content: data-uri(\'image/png;base64\',\'' + iconInfo.path + '\');\n' );
+				less.write( '			content: url("data:image/png;base64,' + iconInfo.icon.toString( 'base64' ) + '");\n' );
 				var rtlIconInfo = tryGetRtlIcon( iconInfo );
 				if ( rtlIconInfo ) {
 					less.write( '			[dir=\'rtl\'] & {\n' );
-					less.write( '				content: data-uri(\'image/png;base64\',\'' + rtlIconInfo.path + '\');\n' );
+					less.write( '				content: url("data:image/png;base64,' + rtlIconInfo.icon.toString( 'base64' ) + '");\n' );
 					less.write( '			}\n' );
 				}
 				less.write( '		}\n' );
@@ -95,7 +97,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 		deferred = require( 'q' ).defer(),
 		vfs = require( 'vinyl-fs' );
 
-	vfs.src( iconPaths, { base: './' } ).pipe( 
+	vfs.src( iconPaths, { base: './' } ).pipe(
 		through2.obj( function( file, enc, done ) {
 
 			var fileName = file.path.replace( /^.*[\\\/]/, '' );
@@ -104,7 +106,6 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) == '_rtl' );
 
-			//var iconName = 'vui-icon-' + fileName.replace( '_', '-' );
 			var iconName = fileName.replace( '_', '-' );
 			if ( isRtl ) {
 				iconName = iconName.substr( 0, iconName.length - 4 );
@@ -112,6 +113,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 			delegate( {
 				name: iconName,
+				icon: file.contents,
 				isRtl: isRtl,
 				path: file.relative
 			} );
