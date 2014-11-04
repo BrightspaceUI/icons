@@ -4,7 +4,7 @@
 	describe( 'vui-icons', function() {
 
 		beforeEach( function () {
-			jasmine.addMatchers( d2l.jasmine.matchers );
+			jasmine.addMatchers( vui.jasmine.dom.matchers );
 		} );
 
 		describe( 'Selectors', function() {
