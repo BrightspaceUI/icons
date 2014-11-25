@@ -1,0 +1,278 @@
+{
+  "bookmark.png": {
+    "mixin": "actionBookmark",
+    "className": "vui-icon-bookmark"
+  },
+  "browse.png": {
+    "mixin": "actionBrowse",
+    "className": "vui-icon-browse"
+  },
+  "copy.png": {
+    "mixin": "actionCopy",
+    "className": "vui-icon-copy"
+  },
+  "create.png": {
+    "mixin": "actionCreate",
+    "className": "vui-icon-create"
+  },
+  "delete.png": {
+    "mixin": "actionDelete",
+    "className": "vui-icon-delete"
+  },
+  "download.png": {
+    "mixin": "actionDownload",
+    "className": "vui-icon-download"
+  },
+  "edit.png": {
+    "mixin": "actionEdit",
+    "className": "vui-icon-edit"
+  },
+  "edit-bulk.png": {
+    "mixin": "actionEditBulk",
+    "className": "vui-icon-edit-bulk"
+  },
+  "link.png": {
+    "mixin": "actionLink",
+    "className": "vui-icon-link"
+  },
+  "preview.png": {
+    "mixin": "actionPreview",
+    "className": "vui-icon-preview"
+  },
+  "remove.png": {
+    "mixin": "actionRemove",
+    "className": "vui-icon-remove"
+  },
+  "reorder.png": {
+    "mixin": "actionReorder",
+    "className": "vui-icon-reorder"
+  },
+  "share.png": {
+    "mixin": "actionShare",
+    "className": "vui-icon-share"
+  },
+  "subscribe.png": {
+    "mixin": "actionSubscribe",
+    "className": "vui-icon-subscribe"
+  },
+  "tag.png": {
+    "mixin": "actionTag",
+    "className": "vui-icon-tag"
+  },
+  "upload.png": {
+    "mixin": "actionUpload",
+    "className": "vui-icon-upload"
+  },
+  "audio.png": {
+    "mixin": "fileAudio",
+    "className": "vui-icon-file-audio"
+  },
+  "audio-large.png": {
+    "mixin": "fileAudioLarge",
+    "className": "vui-icon-file-audio-large"
+  },
+  "audio-xlarge.png": {
+    "mixin": "fileAudioXLarge",
+    "className": "vui-icon-file-audio-xlarge"
+  },
+  "d2l.png": {
+    "mixin": "fileD2L",
+    "className": "vui-icon-file-d2l"
+  },
+  "d2l-large.png": {
+    "mixin": "fileD2LLarge",
+    "className": "vui-icon-file-d2l-large"
+  },
+  "d2l-xlarge.png": {
+    "mixin": "fileD2LXLarge",
+    "className": "vui-icon-file-d2l-xlarge"
+  },
+  "document.png": {
+    "mixin": "fileDocument",
+    "className": "vui-icon-file-document"
+  },
+  "document-large.png": {
+    "mixin": "fileDocumentLarge",
+    "className": "vui-icon-file-document-large"
+  },
+  "document-xlarge.png": {
+    "mixin": "fileDocumentXLarge",
+    "className": "vui-icon-file-document-xlarge"
+  },
+  "flash.png": {
+    "mixin": "fileFlash",
+    "className": "vui-icon-file-flash"
+  },
+  "flash-large.png": {
+    "mixin": "fileFlashLarge",
+    "className": "vui-icon-file-flash-large"
+  },
+  "flash-xlarge.png": {
+    "mixin": "fileFlashXLarge",
+    "className": "vui-icon-file-flash-xlarge"
+  },
+  "generic.png": {
+    "mixin": "fileGeneric",
+    "className": "vui-icon-file-generic"
+  },
+  "generic-large.png": {
+    "mixin": "fileGenericLarge",
+    "className": "vui-icon-file-generic-large"
+  },
+  "generic-xlarge.png": {
+    "mixin": "fileGenericXLarge",
+    "className": "vui-icon-file-generic-xlarge"
+  },
+  "html.png": {
+    "mixin": "fileHtml",
+    "className": "vui-icon-file-html"
+  },
+  "html-large.png": {
+    "mixin": "fileHtmlLarge",
+    "className": "vui-icon-file-html-large"
+  },
+  "html-xlarge.png": {
+    "mixin": "fileHtmlXLarge",
+    "className": "vui-icon-file-html-xlarge"
+  },
+  "image.png": {
+    "mixin": "fileImage",
+    "className": "vui-icon-file-image"
+  },
+  "image-large.png": {
+    "mixin": "fileImageLarge",
+    "className": "vui-icon-file-image-large"
+  },
+  "image-xlarge.png": {
+    "mixin": "fileImageXLarge",
+    "className": "vui-icon-file-image-xlarge"
+  },
+  "pdf.png": {
+    "mixin": "filePdf",
+    "className": "vui-icon-file-pdf"
+  },
+  "pdf-large.png": {
+    "mixin": "filePdfLarge",
+    "className": "vui-icon-file-pdf-large"
+  },
+  "pdf-xlarge.png": {
+    "mixin": "filePdfXLarge",
+    "className": "vui-icon-file-pdf-xlarge"
+  },
+  "presentation.png": {
+    "mixin": "filePresentation",
+    "className": "vui-icon-file-presentation"
+  },
+  "presentation-large.png": {
+    "mixin": "filePresentationLarge",
+    "className": "vui-icon-file-presentation-large"
+  },
+  "presentation-xlarge.png": {
+    "mixin": "filePresentationXLarge",
+    "className": "vui-icon-file-presentation-xlarge"
+  },
+  "spreadsheet.png": {
+    "mixin": "fileSpreadsheet",
+    "className": "vui-icon-file-spreadsheet"
+  },
+  "spreadsheet-large.png": {
+    "mixin": "fileSpreadsheetLarge",
+    "className": "vui-icon-file-spreadsheet-large"
+  },
+  "spreadsheet-xlarge.png": {
+    "mixin": "fileSpreadsheetXLarge",
+    "className": "vui-icon-file-spreadsheet-xlarge"
+  },
+  "text.png": {
+    "mixin": "fileText",
+    "className": "vui-icon-file-text"
+  },
+  "text-large.png": {
+    "mixin": "fileTextLarge",
+    "className": "vui-icon-file-text-large"
+  },
+  "text-xlarge.png": {
+    "mixin": "fileTextXLarge",
+    "className": "vui-icon-file-text-xlarge"
+  },
+  "video.png": {
+    "mixin": "fileVideo",
+    "className": "vui-icon-file-video"
+  },
+  "video-large.png": {
+    "mixin": "fileVideoLarge",
+    "className": "vui-icon-file-video-large"
+  },
+  "video-xlarge.png": {
+    "mixin": "fileVideoXLarge",
+    "className": "vui-icon-file-video-xlarge"
+  },
+  "xml.png": {
+    "mixin": "fileXml",
+    "className": "vui-icon-file-xml"
+  },
+  "xml-large.png": {
+    "mixin": "fileXmlLarge",
+    "className": "vui-icon-file-xml-large"
+  },
+  "xml-xlarge.png": {
+    "mixin": "fileXmlXLarge",
+    "className": "vui-icon-file-xml-xlarge"
+  },
+  "zip.png": {
+    "mixin": "fileZip",
+    "className": "vui-icon-file-zip"
+  },
+  "zip-large.png": {
+    "mixin": "fileZipLarge",
+    "className": "vui-icon-file-zip-large"
+  },
+  "zip-xlarge.png": {
+    "mixin": "fileZipXLarge",
+    "className": "vui-icon-file-zip-xlarge"
+  },
+  "assessable.png": {
+    "mixin": "propertyAssessable",
+    "className": "vui-icon-property-assessable"
+  },
+  "conditionally-released.png": {
+    "mixin": "propertyConditionallyReleased",
+    "className": "vui-icon-property-conditionally-released"
+  },
+  "date-restricted.png": {
+    "mixin": "propertyDateRestricted",
+    "className": "vui-icon-property-date-restricted"
+  },
+  "group-restricted.png": {
+    "mixin": "propertyGroupRestricted",
+    "className": "vui-icon-property-group-restricted"
+  },
+  "hidden.png": {
+    "mixin": "propertyHidden",
+    "className": "vui-icon-property-hidden"
+  },
+  "locked.png": {
+    "mixin": "propertyLocked",
+    "className": "vui-icon-property-locked"
+  },
+  "collapse.png": {
+    "mixin": "collapse",
+    "className": "vui-icon-collapse"
+  },
+  "collapse-hover.png": {
+    "mixin": "collapseHover",
+    "className": "vui-icon-collapse-h"
+  },
+  "drag-handle.png": {
+    "mixin": "dragHandle",
+    "className": "vui-icon-drag-handle"
+  },
+  "expand.png": {
+    "mixin": "expand",
+    "className": "vui-icon-expand"
+  },
+  "expand-hover.png": {
+    "mixin": "expandHover",
+    "className": "vui-icon-expand-h"
+  }
+}

@@ -1,7 +1,6 @@
 'use strict';
 
 var mixinNs = '#vui';
-var mixinPrefix = 'icon-';
 
 var generateLess = function( iconPaths, lessPath ) {
 
@@ -25,28 +24,28 @@ var generateLess = function( iconPaths, lessPath ) {
 		};
 
 		less.write( mixinNs + ' {\n' );
+		less.write( '	.Icon {\n' );
 
 		for( var i=0; i<iconInfos.length; i++ ) {
 			var iconInfo = iconInfos[i];
 			if ( !iconInfo.isRtl ) {
 
-
-
-				less.write( '	.' + mixinPrefix + iconInfo.name + '() {\n' );
-				less.write( '		&:before {\n' );
-				less.write( '			content: url("data:image/png;base64,' + iconInfo.icon.toString( 'base64' ) + '");\n' );
+				less.write( '		.' + iconInfo.mixin + '() {\n' );
+				less.write( '			&:before {\n' );
+				less.write( '				content: url("data:image/png;base64,' + iconInfo.icon.toString( 'base64' ) + '");\n' );
 				var rtlIconInfo = tryGetRtlIcon( iconInfo );
 				if ( rtlIconInfo ) {
-					less.write( '			[dir=\'rtl\'] & {\n' );
-					less.write( '				content: url("data:image/png;base64,' + rtlIconInfo.icon.toString( 'base64' ) + '");\n' );
-					less.write( '			}\n' );
+					less.write( '				[dir=\'rtl\'] & {\n' );
+					less.write( '					content: url("data:image/png;base64,' + rtlIconInfo.icon.toString( 'base64' ) + '");\n' );
+					less.write( '				}\n' );
 				}
+				less.write( '			}\n' );
 				less.write( '		}\n' );
-				less.write( '	}\n' );
 
 			}
 		}
 
+		less.write( '	}\n' );
 		less.write( '}\n' );
 
 		less.end();
@@ -76,8 +75,8 @@ var generateStyle = function( iconPaths, stylePath ) {
 	forEachIcon( iconPaths, function( iconInfo ) {
 
 		if ( !iconInfo.isRtl ) {
-			style.write( '.vui-icon-' + iconInfo.name + ' {\n' );
-			style.write( '	' + mixinNs + '.' + mixinPrefix + iconInfo.name + ';\n' );
+			style.write( '.' + iconInfo.className + ' {\n' );
+			style.write( '	' + mixinNs + '.Icon' + '.' + iconInfo.mixin + ';\n' );
 			style.write( '}\n' );
 		}
 
@@ -95,16 +94,22 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 	var through2 = require( 'through2' ),
 		deferred = require( 'q' ).defer(),
-		vfs = require( 'vinyl-fs' );
+		vfs = require( 'vinyl-fs' ),
+		iconsData = require( './icons.json' );
 
 	vfs.src( iconPaths, { base: './' } ).pipe(
 		through2.obj( function( file, enc, done ) {
 
 			var fileName = file.path.replace( /^.*[\\\/]/, '' );
+			var iconData = iconsData[ fileName ];
 
 			fileName = fileName.substr( 0, fileName.lastIndexOf( '.' ) );
 
 			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) == '_rtl' );
+
+			if ( iconsData ===  undefined && !isRtl ) {
+				console.log( 'No icon data ( mixin or class ) defined for ' + fileName + '.' );
+			}
 
 			var iconName = fileName.replace( '_', '-' );
 			if ( isRtl ) {
@@ -113,8 +118,10 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 			delegate( {
 				name: iconName,
+				className: iconData ? iconData.className : undefined,
 				icon: file.contents,
 				isRtl: isRtl,
+				mixin: iconData ? iconData.mixin : undefined,
 				path: file.relative
 			} );
 
