@@ -5,6 +5,7 @@
 .editorconfig
 gulpfile.js
 icon-less.js
+icons.json
 node_modules
 test
 icons.css.less
