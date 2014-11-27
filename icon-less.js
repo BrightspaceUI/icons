@@ -24,6 +24,15 @@ var generateLess = function( iconPaths, lessPath ) {
 		};
 
 		less.write( mixinNs + ' {\n' );
+
+		less.write( '	.Icon() {\n' );
+		less.write( '		display: inline-block;\n' );
+		less.write( '		font-size: 0;\n');
+		less.write( '		line-height: 0;\n' );
+		less.write( '		margin: 0;\n' );
+		less.write( '		vertical-align: text-top;\n' );
+		less.write( '	}\n' );
+
 		less.write( '	.Icon {\n' );
 
 		for( var i=0; i<iconInfos.length; i++ ) {
@@ -65,11 +74,7 @@ var generateStyle = function( iconPaths, stylePath ) {
 
 	style.write( '[class*=" vui-icon-"],\n' );
 	style.write( '[class^="vui-icon-"] { \n' );
-	style.write( '	display: inline-block;\n' );
-	style.write( '	font-size: 0;\n');
-	style.write( '	line-height: 0;\n' );
-	style.write( '	margin: 0;\n' );
-	style.write( '	vertical-align: text-top;\n' );
+	style.write( '	#vui.Icon();\n' );
 	style.write( '}\n\n' );
 
 	forEachIcon( iconPaths, function( iconInfo ) {
