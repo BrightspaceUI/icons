@@ -2,17 +2,59 @@
 
 var mixinNs = '#vui';
 
-var generateLess = function( iconPaths, lessPath ) {
+var minify = function( iconInfo ) {
 
-	var fs = require( 'fs' );
-	var less = fs.createWriteStream( lessPath );
+	var chalk = require( 'chalk' ),
+		deferred = require( 'q' ).defer(),
+		Imagemin = require( 'imagemin' );
+
+	var imagemin = new Imagemin()
+		.src( iconInfo.icon ).use( Imagemin.optipng( { optimizationLevel: 3 } ) );
+
+	imagemin.run( function ( err, files ) {
+
+		if ( err ) {
+			deferred.reject( err );
+			return deferred.promise;
+		}
+
+		if ( files === undefined || files.length === 0 ) {
+			deferred.reject( 'Imagemin did not return a minified image.' );
+			return deferred.promise;
+		}
+
+		var bytesSaved = iconInfo.icon.length - files[0].contents.length;
+		var percentSaved = 0;
+		if ( iconInfo.icon.length > 0 ) {
+			percentSaved = ( bytesSaved * 100 / iconInfo.icon.length ).toFixed( 1 );
+		}
+
+		console.log(
+			'Optimize: ' + iconInfo.path + ' '
+				+ chalk.green( files[0].contents.length + 'B ' )
+				+ chalk.gray( 'compression ' + percentSaved + '%' )
+			);
+
+		deferred.resolve( files[0] );
+
+	} );
+
+	return deferred.promise;
+
+};
+
+var generateLess = function( iconPaths, lessPath, cb ) {
+
 	var iconInfos = [];
 
-	forEachIcon( iconPaths, function( iconInfo ) {
+	return forEachIcon( iconPaths, function( iconInfo ) {
 
 		iconInfos.push( iconInfo );
 
 	} ).then( function() {
+
+		var q = require( 'q' );
+		var iconPromises = [];
 
 		var tryGetRtlIcon = function( ltrIcon ) {
 			for( var i=0; i<iconInfos.length; i++ ) {
@@ -22,6 +64,56 @@ var generateLess = function( iconPaths, lessPath ) {
 			}
 			return null;
 		};
+
+		var getIconInfo = function( ltrIconInfo ) {
+
+			if ( ltrIconInfo.isRtl ) {
+				return;
+			}
+
+			var minifyPromises = [];
+			minifyPromises.push( minify( ltrIconInfo ) );
+
+			var rtlIconInfo = tryGetRtlIcon( ltrIconInfo );
+			if ( rtlIconInfo ) {
+				minifyPromises.push( minify( rtlIconInfo ) );
+			}
+
+			return q.all( minifyPromises ).then( function( minifiedIcons ) {
+
+				var iconInfo = ltrIconInfo;
+
+				iconInfo.ltrIcon = minifiedIcons[0].contents;
+
+				if ( minifiedIcons.length === 2 ) {
+					iconInfo.rtlIcon = minifiedIcons[1].contents;
+				}
+
+				return iconInfo;
+			} );
+
+		};
+
+		for( var i=0; i<iconInfos.length; i++ ) {
+
+			var iconPromise = getIconInfo( iconInfos[i] );
+			if ( iconPromise ) {
+				iconPromises.push( iconPromise );
+			}
+
+		}
+
+		return q.all( iconPromises );
+
+	} ).then( function( iconInfos ) {
+
+		var deferred = require( 'q' ).defer(),
+			fs = require( 'fs' ),
+			less = fs.createWriteStream( lessPath );
+
+		less.on( 'finish', function() {
+			deferred.resolve();
+		} );
 
 		less.write( mixinNs + ' {\n' );
 
@@ -36,22 +128,20 @@ var generateLess = function( iconPaths, lessPath ) {
 		less.write( '	.Icon {\n' );
 
 		for( var i=0; i<iconInfos.length; i++ ) {
+
 			var iconInfo = iconInfos[i];
-			if ( !iconInfo.isRtl ) {
 
-				less.write( '		.' + iconInfo.mixin + '() {\n' );
-				less.write( '			&:before {\n' );
-				less.write( '				content: url("data:image/png;base64,' + iconInfo.icon.toString( 'base64' ) + '");\n' );
-				var rtlIconInfo = tryGetRtlIcon( iconInfo );
-				if ( rtlIconInfo ) {
-					less.write( '				[dir=\'rtl\'] & {\n' );
-					less.write( '					content: url("data:image/png;base64,' + rtlIconInfo.icon.toString( 'base64' ) + '");\n' );
-					less.write( '				}\n' );
-				}
-				less.write( '			}\n' );
-				less.write( '		}\n' );
-
+			less.write( '		.' + iconInfo.mixin + '() {\n' );
+			less.write( '			&:before {\n' );
+			less.write( '				content: url("data:image/png;base64,' + iconInfo.ltrIcon.toString( 'base64' ) + '");\n' );
+			if ( iconInfo.rtlIcon ) {
+				less.write( '				[dir=\'rtl\'] & {\n' );
+				less.write( '					content: url("data:image/png;base64,' + iconInfo.rtlIcon.toString( 'base64' ) + '");\n' );
+				less.write( '				}\n' );
 			}
+			less.write( '			}\n' );
+			less.write( '		}\n' );
+
 		}
 
 		less.write( '	}\n' );
@@ -59,9 +149,9 @@ var generateLess = function( iconPaths, lessPath ) {
 
 		less.end();
 
-	} );
+		return deferred.promise;
 
-	return less;
+	} );
 
 };
 
