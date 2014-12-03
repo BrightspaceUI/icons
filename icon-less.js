@@ -43,7 +43,7 @@ var minify = function( iconInfo ) {
 
 };
 
-var generateLess = function( iconPaths, lessPath, cb ) {
+var generateLess = function( iconPaths, lessPath ) {
 
 	var iconInfos = [];
 
