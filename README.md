@@ -11,6 +11,6 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 [npm-url]: https://www.npmjs.org/package/vui-icons
 [npm-image]: https://img.shields.io/npm/v/vui-icons.svg
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-icons
-[ci-image]: https://img.shields.io/travis-ci/Brightspace/valence-ui-icons.svg?branch=master
+[ci-image]: https://travis-ci.org/Brightspace/valence-ui-icons.svg?branch=master
 [dependencies-url]: https://david-dm.org/brightspace/valence-ui-icons
 [dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-icons.svg
