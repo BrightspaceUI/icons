@@ -45,7 +45,7 @@
 			} );
 
 			it( 'has icon content', function() {
-				expect( node ).toHaveBeforeElementContent( 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAARVBMVEX///+0ODi0ODi0ODi0ODi1OzvERkbESEjESUneYWHfZGTgaGjhbGzhb2/ic3PjdnbkenrkfX3lgYHmhIXokZHomZnroKDN9k3IAAAABHRSTlMAEICf9IbTdAAAAEdJREFUGFfFz7kRgDAMAMH1UwD9N0kDSCLgGVwB2c1mN6F3kImJNraG2h+gEo0bqhLqhad/gNQXyMPsH4gIxgLENTOhAmLACWvtICC//BPwAAAAAElFTkSuQmCC)' );
+				expect( node ).toHaveBeforeElementContent( 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAARVBMVEX///+0ODi0ODi0ODi0ODi1OzvERkbESEjESUneYWHfZGTgaGjhbGzhb2/ic3PjdnbkenrkfX3lgYHmhIXokZHomZnroKDN9k3IAAAABHRSTlMAEICf9IbTdAAAAEpJREFUGNPFz7kNgEAQA8C5gwLov0kaYHcJ7pGogMjWyIkb9A4ycaIdV0PdC6hEY0JVQm1Y/QdI/QP5OIcc0EXUPDAWEcQ8s2czXpV3HyAKn9Y1AAAAAElFTkSuQmCC)' );
 			} );
 
 			it( 'has display of inline-block', function() {
