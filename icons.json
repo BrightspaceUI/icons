@@ -47,6 +47,10 @@
     "mixin": "actionReorder",
     "className": "vui-icon-reorder"
   },
+  "search.png": {
+    "mixin": "actionSearch",
+    "className": "vui-icon-search"
+  },
   "share.png": {
     "mixin": "actionShare",
     "className": "vui-icon-share"
