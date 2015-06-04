@@ -3,4 +3,6 @@ test/output
 icons.css
 icons-less.css
 icons.css.less
+icons.css.scss
 icons.less
+icons.scss

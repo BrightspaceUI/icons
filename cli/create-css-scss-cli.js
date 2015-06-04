@@ -10,14 +10,14 @@ if (argv._.length === 0) {
 	process.exit(1);
 }
 
-var create = require('../create');
+var createCssScss = require('../create-css-scss');
 
-create(argv._, argv.output, require('../create-less'))
+createCssScss(argv._, argv.output)
 	.catch(function(err) {
 		console.error(err);
 		process.exit(1);
 	})
 	.then(function() {
-		console.log(chalk.green('Icons Less created successfully.'));
+		console.log(chalk.green('Icons Css-Scss created successfully.'));
 		process.exit(0);
 	});

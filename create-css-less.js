@@ -3,40 +3,40 @@
 var mixinNs = '#vui';
 var forEachIcon = require('./for-each-icon');
 
-var generateCssLess = function( iconPaths, stylePath ) {
+var writeCssLess = function(iconPaths, lessPath) {
 
-	var fs = require( 'fs' );
-	var style = fs.createWriteStream( stylePath );
+	var fs = require('fs');
+	var less = fs.createWriteStream(lessPath);
 
-	style.write( '@import \'icons.less\';\n\n' );
+	less.write('@import \'icons.less\';\n\n');
 
-	style.write( '[class*=" vui-icon-"],\n' );
-	style.write( '[class^="vui-icon-"] { \n' );
-	style.write( '	#vui.Icon();\n' );
-	style.write( '}\n\n' );
+	less.write('[class*=" vui-icon-"],\n');
+	less.write('[class^="vui-icon-"] { \n');
+	less.write('	#vui.Icon();\n');
+	less.write('}\n\n');
 
-	return forEachIcon( iconPaths, function( iconInfo ) {
+	return forEachIcon(iconPaths, function(iconInfo) {
 
-		if ( !iconInfo.isRtl ) {
-			style.write( '.' + iconInfo.className + ' {\n' );
-			style.write( '	' + mixinNs + '.Icon' + '.' + iconInfo.mixin + ';\n' );
-			style.write( '}\n' );
+		if (!iconInfo.isRtl) {
+			less.write('.' + iconInfo.className + ' {\n');
+			less.write('	' + mixinNs + '.Icon' + '.' + iconInfo.mixin + ';\n');
+			less.write('}\n');
 		}
 
-	} ).then( function() {
+	}).then(function() {
 
-		var deferred = require( 'q' ).defer();
+		var deferred = require('q').defer();
 
-		style.on( 'finish', function() {
+		less.on('finish', function() {
 			deferred.resolve();
-		} );
+		});
 
-		style.end();
+		less.end();
 
 		return deferred.promise;
 
-	} );
+	});
 
 };
 
-module.exports = generateCssLess;
+module.exports = writeCssLess;
