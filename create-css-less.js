@@ -5,6 +5,8 @@ var forEachIcon = require('./for-each-icon');
 
 var writeCssLess = function(iconPaths, lessPath) {
 
+	var iconInfos = [];
+
 	var fs = require('fs');
 	var less = fs.createWriteStream(lessPath);
 
@@ -18,9 +20,28 @@ var writeCssLess = function(iconPaths, lessPath) {
 	return forEachIcon(iconPaths, function(iconInfo) {
 
 		if (!iconInfo.isRtl) {
-			less.write('.' + iconInfo.className + ' {\n');
-			less.write('	' + mixinNs + '.Icon' + '.' + iconInfo.mixin + ';\n');
-			less.write('}\n');
+			iconInfos.push(iconInfo);
+		}
+
+	}).then(function() {
+
+		iconInfos.sort(function(a,b) {
+			if (a.className > b.className) {
+				return 1;
+			}
+			if (a.className < b.className) {
+				return -1;
+			}
+			return 0;
+		});
+
+		for(var i=0; i<iconInfos.length; i++) {
+			var iconInfo = iconInfos[i];
+			if (!iconInfo.isRtl) {
+				less.write('.' + iconInfo.className + ' {\n');
+				less.write('	' + mixinNs + '.Icon' + '.' + iconInfo.mixin + ';\n');
+				less.write('}\n');
+			}
 		}
 
 	}).then(function() {
