@@ -67,6 +67,16 @@ var generate = function(iconPaths, outputPath, formatter) {
 
 	}).then(function(iconInfos) {
 
+		iconInfos.sort(function(a,b) {
+			if (a.mixin > b.mixin) {
+				return 1;
+			}
+			if (a.mixin < b.mixin) {
+				return -1;
+			}
+			return 0;
+		});
+
 		return formatter(iconInfos, outputPath);
 
 	});

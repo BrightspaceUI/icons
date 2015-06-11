@@ -1,6 +1,6 @@
 {
   "name": "vui-icons",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Mixins, CSS and image assets for consuming icons",
   "scripts": {
     "clean": "rimraf *.css && rimraf *.less",
@@ -17,7 +17,10 @@
     "build:sass:css": "node-sass --output-style expanded icons.css.scss icons.css",
     "postbuild:sass:css": "csslint icons.css",
     "pretest": "npm run build",
-    "test": "karma start karma.conf.js"
+    "test": "npm run diff:assert && karma start karma.conf.js",
+    "prediff:assert": "npm run diff:create",
+    "diff:assert": "assertnodiff --file1 ./test/diff/less-scss-diff --file2 ./test/diff/less-scss-diff-new",
+    "diff:create": "createpatch --file1 icons-less.css --file2 icons.css -o ./test/diff/less-scss-diff-new"
   },
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
   "devDependencies": {
     "chalk": "^0.5.1",
     "csslint": "^0.10.0",
+    "diff-cli": "git://github.com/Brightspace/diff-cli.git#v0.0.1",
     "fs": "0.0.2",
     "jasmine-dom-matchers": "^0.1.0",
     "imagemin": "^3.1.0",

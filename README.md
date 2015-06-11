@@ -3,7 +3,7 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
 
-The **vui-icons** library provides a series of mixins and CSS classes that you can use to incorporate icons into your application. LESS mixins are still include for backward compatibility, however these will likely be removed in a future version.
+This component provides Sass mixins and CSS that can be used to incorporate icons into your application. LESS mixins are still include for backward compatibility, however these will likely be removed in a future version.
 
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 

@@ -4,6 +4,8 @@ var forEachIcon = require('./for-each-icon');
 
 var writeCssScss = function(iconPaths, scssPath) {
 
+	var iconInfos = [];
+
 	var fs = require('fs');
 	var scss = fs.createWriteStream(scssPath);
 
@@ -16,10 +18,27 @@ var writeCssScss = function(iconPaths, scssPath) {
 
 	return forEachIcon(iconPaths, function(iconInfo) {
 
-		if (!iconInfo.isRtl) {
-			scss.write('.' + iconInfo.className + ' {\n');
-			scss.write('	@include vui-' + iconInfo.mixin + ';\n');
-			scss.write('}\n');
+		iconInfos.push(iconInfo);
+
+	}).then( function() {
+
+		iconInfos.sort(function(a,b) {
+			if (a.className > b.className) {
+				return 1;
+			}
+			if (a.className < b.className) {
+				return -1;
+			}
+			return 0;
+		});
+
+		for(var i=0; i<iconInfos.length; i++) {
+			var iconInfo = iconInfos[i];
+			if (!iconInfo.isRtl) {
+				scss.write('.' + iconInfo.className + ' {\n');
+				scss.write('	@include vui-' + iconInfo.mixin + ';\n');
+				scss.write('}\n');
+			}
 		}
 
 	}).then( function() {
