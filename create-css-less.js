@@ -19,7 +19,9 @@ var writeCssLess = function(iconPaths, lessPath) {
 
 	return forEachIcon(iconPaths, function(iconInfo) {
 
-		iconInfos.push(iconInfo);
+		if (!iconInfo.isRtl) {
+			iconInfos.push(iconInfo);
+		}
 
 	}).then(function() {
 

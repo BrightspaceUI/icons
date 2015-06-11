@@ -18,7 +18,9 @@ var writeCssScss = function(iconPaths, scssPath) {
 
 	return forEachIcon(iconPaths, function(iconInfo) {
 
-		iconInfos.push(iconInfo);
+		if (!iconInfo.isRtl) {
+			iconInfos.push(iconInfo);
+		}
 
 	}).then( function() {
 
