@@ -1,9 +1,5 @@
 node_modules/
 test/output
-test/diff/less-scss-diff-new
 icons.css
-icons-less.css
-icons.css.less
 icons.css.scss
-icons.less
 icons.scss
