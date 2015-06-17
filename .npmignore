@@ -8,13 +8,9 @@ node_modules
 karma.conf.js
 test
 cli
-create-css-less.js
 create-css-scss.js
-create-less.js
 create-scss.js
 create.js
 for-each-icon.js
-icons-less.css
-icons.css.less
 icons.css.scss
 icons.json

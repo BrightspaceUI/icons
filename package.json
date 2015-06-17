@@ -1,26 +1,17 @@
 {
   "name": "vui-icons",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Mixins, CSS and image assets for consuming icons",
   "scripts": {
     "clean": "rimraf *.css && rimraf *.less",
     "prebuild": "npm run clean",
-    "build": "npm run build:less:css && npm run build:sass:css",
-    "build:less": "node ./cli/create-less-cli -o icons.less images/**/*.png",
-    "build:less:vui": "node ./cli/create-css-less-cli -o icons.css.less images/**/*.png",
-    "prebuild:less:css": "npm run build:less && npm run build:less:vui",
-    "build:less:css": "lessc icons.css.less > icons-less.css",
-    "postbuild:less:css": "csslint icons-less.css",
+    "build": "npm run build:css",
     "build:sass": "node ./cli/create-scss-cli -o icons.scss images/**/*.png",
-    "build:sass:vui": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.png",
-    "prebuild:sass:css": "npm run build:sass && npm run build:sass:vui",
-    "build:sass:css": "node-sass --output-style expanded icons.css.scss icons.css",
-    "postbuild:sass:css": "csslint icons.css",
+    "build:vui": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.png",
+    "prebuild:css": "npm run build:sass && npm run build:vui",
+    "build:css": "node-sass --output-style expanded icons.css.scss icons.css",
     "pretest": "npm run build",
-    "test": "npm run diff:assert && karma start karma.conf.js",
-    "prediff:assert": "npm run diff:create",
-    "diff:assert": "assertnodiff --file1 ./test/diff/less-scss-diff --file2 ./test/diff/less-scss-diff-new",
-    "diff:create": "createpatch --file1 icons-less.css --file2 icons.css -o ./test/diff/less-scss-diff-new"
+    "test": "csslint icons.css && karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -40,7 +31,6 @@
   "devDependencies": {
     "chalk": "^0.5.1",
     "csslint": "^0.10.0",
-    "diff-cli": "git://github.com/Brightspace/diff-cli.git#v0.0.1",
     "fs": "0.0.2",
     "jasmine-dom-matchers": "^0.1.0",
     "imagemin": "^3.1.0",
@@ -49,7 +39,6 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-jasmine": "^0.3.5",
     "karma-cli": "0.0.4",
-    "less": "^2.5.1",
     "node-sass": "^3.1.1",
     "q": "^1.0.1",
     "rimraf": "^2.3.4",
