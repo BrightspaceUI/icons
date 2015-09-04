@@ -1,0 +1,217 @@
+@import 'icons';
+
+[class*=" vui-icon-"],
+[class^="vui-icon-"] { 
+	@include vui-icon();
+}
+
+.vui-icon-bookmark {
+	@include vui-actionBookmark;
+}
+.vui-icon-browse {
+	@include vui-actionBrowse;
+}
+.vui-icon-collapse {
+	@include vui-collapse;
+}
+.vui-icon-collapse-h {
+	@include vui-collapseHover;
+}
+.vui-icon-copy {
+	@include vui-actionCopy;
+}
+.vui-icon-create {
+	@include vui-actionCreate;
+}
+.vui-icon-delete {
+	@include vui-actionDelete;
+}
+.vui-icon-download {
+	@include vui-actionDownload;
+}
+.vui-icon-drag-handle {
+	@include vui-dragHandle;
+}
+.vui-icon-edit {
+	@include vui-actionEdit;
+}
+.vui-icon-edit-bulk {
+	@include vui-actionEditBulk;
+}
+.vui-icon-expand {
+	@include vui-expand;
+}
+.vui-icon-expand-h {
+	@include vui-expandHover;
+}
+.vui-icon-file-audio {
+	@include vui-fileAudio;
+}
+.vui-icon-file-audio-large {
+	@include vui-fileAudioLarge;
+}
+.vui-icon-file-audio-xlarge {
+	@include vui-fileAudioXLarge;
+}
+.vui-icon-file-d2l {
+	@include vui-fileD2L;
+}
+.vui-icon-file-d2l-large {
+	@include vui-fileD2LLarge;
+}
+.vui-icon-file-d2l-xlarge {
+	@include vui-fileD2LXLarge;
+}
+.vui-icon-file-document {
+	@include vui-fileDocument;
+}
+.vui-icon-file-document-large {
+	@include vui-fileDocumentLarge;
+}
+.vui-icon-file-document-xlarge {
+	@include vui-fileDocumentXLarge;
+}
+.vui-icon-file-flash {
+	@include vui-fileFlash;
+}
+.vui-icon-file-flash-large {
+	@include vui-fileFlashLarge;
+}
+.vui-icon-file-flash-xlarge {
+	@include vui-fileFlashXLarge;
+}
+.vui-icon-file-generic {
+	@include vui-fileGeneric;
+}
+.vui-icon-file-generic-large {
+	@include vui-fileGenericLarge;
+}
+.vui-icon-file-generic-xlarge {
+	@include vui-fileGenericXLarge;
+}
+.vui-icon-file-html {
+	@include vui-fileHtml;
+}
+.vui-icon-file-html-large {
+	@include vui-fileHtmlLarge;
+}
+.vui-icon-file-html-xlarge {
+	@include vui-fileHtmlXLarge;
+}
+.vui-icon-file-image {
+	@include vui-fileImage;
+}
+.vui-icon-file-image-large {
+	@include vui-fileImageLarge;
+}
+.vui-icon-file-image-xlarge {
+	@include vui-fileImageXLarge;
+}
+.vui-icon-file-pdf {
+	@include vui-filePdf;
+}
+.vui-icon-file-pdf-large {
+	@include vui-filePdfLarge;
+}
+.vui-icon-file-pdf-xlarge {
+	@include vui-filePdfXLarge;
+}
+.vui-icon-file-presentation {
+	@include vui-filePresentation;
+}
+.vui-icon-file-presentation-large {
+	@include vui-filePresentationLarge;
+}
+.vui-icon-file-presentation-xlarge {
+	@include vui-filePresentationXLarge;
+}
+.vui-icon-file-spreadsheet {
+	@include vui-fileSpreadsheet;
+}
+.vui-icon-file-spreadsheet-large {
+	@include vui-fileSpreadsheetLarge;
+}
+.vui-icon-file-spreadsheet-xlarge {
+	@include vui-fileSpreadsheetXLarge;
+}
+.vui-icon-file-text {
+	@include vui-fileText;
+}
+.vui-icon-file-text-large {
+	@include vui-fileTextLarge;
+}
+.vui-icon-file-text-xlarge {
+	@include vui-fileTextXLarge;
+}
+.vui-icon-file-video {
+	@include vui-fileVideo;
+}
+.vui-icon-file-video-large {
+	@include vui-fileVideoLarge;
+}
+.vui-icon-file-video-xlarge {
+	@include vui-fileVideoXLarge;
+}
+.vui-icon-file-xml {
+	@include vui-fileXml;
+}
+.vui-icon-file-xml-large {
+	@include vui-fileXmlLarge;
+}
+.vui-icon-file-xml-xlarge {
+	@include vui-fileXmlXLarge;
+}
+.vui-icon-file-zip {
+	@include vui-fileZip;
+}
+.vui-icon-file-zip-large {
+	@include vui-fileZipLarge;
+}
+.vui-icon-file-zip-xlarge {
+	@include vui-fileZipXLarge;
+}
+.vui-icon-link {
+	@include vui-actionLink;
+}
+.vui-icon-preview {
+	@include vui-actionPreview;
+}
+.vui-icon-property-assessable {
+	@include vui-propertyAssessable;
+}
+.vui-icon-property-conditionally-released {
+	@include vui-propertyConditionallyReleased;
+}
+.vui-icon-property-date-restricted {
+	@include vui-propertyDateRestricted;
+}
+.vui-icon-property-group-restricted {
+	@include vui-propertyGroupRestricted;
+}
+.vui-icon-property-hidden {
+	@include vui-propertyHidden;
+}
+.vui-icon-property-locked {
+	@include vui-propertyLocked;
+}
+.vui-icon-remove {
+	@include vui-actionRemove;
+}
+.vui-icon-reorder {
+	@include vui-actionReorder;
+}
+.vui-icon-search {
+	@include vui-actionSearch;
+}
+.vui-icon-share {
+	@include vui-actionShare;
+}
+.vui-icon-subscribe {
+	@include vui-actionSubscribe;
+}
+.vui-icon-tag {
+	@include vui-actionTag;
+}
+.vui-icon-upload {
+	@include vui-actionUpload;
+}

@@ -1,10 +1,9 @@
 {
   "name": "vui-icons",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Mixins, CSS and image assets for consuming icons",
   "scripts": {
-    "clean": "rimraf *.css && rimraf *.scss",
-    "prebuild": "npm run clean",
+    "prebuild": "rimraf *.css",
     "build": "npm run build:css",
     "build:sass": "node ./cli/create-scss-cli -o icons.scss images/**/*.png",
     "build:vui": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.png",
