@@ -1,0 +1,21 @@
+{
+  "name": "vui-icons",
+  "main": "icons.scss",
+  "license": "Apache-2.0",
+  "ignore": [
+    "cli",
+    "test",
+    ".csslintrc",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "create-css-scss.js",
+    "create-scss.js",
+    "create.js",
+    "for-each-icon.js",
+    "karma.conf.js",
+    "package.json"
+  ]
+}

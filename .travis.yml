@@ -1,6 +1,7 @@
 language: node_js
 node_js:
-- '0.10'
+- '0.12'
+sudo: false
 deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
