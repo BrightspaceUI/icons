@@ -22,7 +22,7 @@ var writeScss = function(iconInfos, scssPath) {
 
 		var iconInfo = iconInfos[i];
 
-		scss.write('@mixin vui-' + iconInfo.mixin + '() {\n');
+		scss.write('@mixin vui-icon-' + iconInfo.mixin + '() {\n');
 		scss.write('	&:before {\n');
 		scss.write('		content: url("data:image/png;base64,' + iconInfo.ltrIcon.toString('base64') + '");\n');
 		if ( iconInfo.rtlIcon ) {

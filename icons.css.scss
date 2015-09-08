@@ -6,212 +6,212 @@
 }
 
 .vui-icon-bookmark {
-	@include vui-actionBookmark;
+	@include vui-icon-action-bookmark;
 }
 .vui-icon-browse {
-	@include vui-actionBrowse;
+	@include vui-icon-action-browse;
 }
 .vui-icon-collapse {
-	@include vui-collapse;
+	@include vui-icon-collapse;
 }
 .vui-icon-collapse-h {
-	@include vui-collapseHover;
+	@include vui-icon-collapse-hover;
 }
 .vui-icon-copy {
-	@include vui-actionCopy;
+	@include vui-icon-action-copy;
 }
 .vui-icon-create {
-	@include vui-actionCreate;
+	@include vui-icon-action-create;
 }
 .vui-icon-delete {
-	@include vui-actionDelete;
+	@include vui-icon-action-delete;
 }
 .vui-icon-download {
-	@include vui-actionDownload;
+	@include vui-icon-action-download;
 }
 .vui-icon-drag-handle {
-	@include vui-dragHandle;
+	@include vui-icon-drag-handle;
 }
 .vui-icon-edit {
-	@include vui-actionEdit;
+	@include vui-icon-action-edit;
 }
 .vui-icon-edit-bulk {
-	@include vui-actionEditBulk;
+	@include vui-icon-action-edit-bulk;
 }
 .vui-icon-expand {
-	@include vui-expand;
+	@include vui-icon-expand;
 }
 .vui-icon-expand-h {
-	@include vui-expandHover;
+	@include vui-icon-expand-hover;
 }
 .vui-icon-file-audio {
-	@include vui-fileAudio;
+	@include vui-icon-file-audio;
 }
 .vui-icon-file-audio-large {
-	@include vui-fileAudioLarge;
+	@include vui-icon-file-audio-large;
 }
 .vui-icon-file-audio-xlarge {
-	@include vui-fileAudioXLarge;
+	@include vui-icon-file-audio-xlarge;
 }
 .vui-icon-file-d2l {
-	@include vui-fileD2L;
+	@include vui-icon-file-D2L;
 }
 .vui-icon-file-d2l-large {
-	@include vui-fileD2LLarge;
+	@include vui-icon-file-D2L-large;
 }
 .vui-icon-file-d2l-xlarge {
-	@include vui-fileD2LXLarge;
+	@include vui-icon-file-D2L-xlarge;
 }
 .vui-icon-file-document {
-	@include vui-fileDocument;
+	@include vui-icon-file-document;
 }
 .vui-icon-file-document-large {
-	@include vui-fileDocumentLarge;
+	@include vui-icon-file-document-large;
 }
 .vui-icon-file-document-xlarge {
-	@include vui-fileDocumentXLarge;
+	@include vui-icon-file-document-xlarge;
 }
 .vui-icon-file-flash {
-	@include vui-fileFlash;
+	@include vui-icon-file-flash;
 }
 .vui-icon-file-flash-large {
-	@include vui-fileFlashLarge;
+	@include vui-icon-file-flash-large;
 }
 .vui-icon-file-flash-xlarge {
-	@include vui-fileFlashXLarge;
+	@include vui-icon-file-flash-xlarge;
 }
 .vui-icon-file-generic {
-	@include vui-fileGeneric;
+	@include vui-icon-file-generic;
 }
 .vui-icon-file-generic-large {
-	@include vui-fileGenericLarge;
+	@include vui-icon-file-generic-large;
 }
 .vui-icon-file-generic-xlarge {
-	@include vui-fileGenericXLarge;
+	@include vui-icon-file-generic-xlarge;
 }
 .vui-icon-file-html {
-	@include vui-fileHtml;
+	@include vui-icon-file-html;
 }
 .vui-icon-file-html-large {
-	@include vui-fileHtmlLarge;
+	@include vui-icon-file-html-large;
 }
 .vui-icon-file-html-xlarge {
-	@include vui-fileHtmlXLarge;
+	@include vui-icon-file-html-xlarge;
 }
 .vui-icon-file-image {
-	@include vui-fileImage;
+	@include vui-icon-file-image;
 }
 .vui-icon-file-image-large {
-	@include vui-fileImageLarge;
+	@include vui-icon-file-image-large;
 }
 .vui-icon-file-image-xlarge {
-	@include vui-fileImageXLarge;
+	@include vui-icon-fileimage-xlarge;
 }
 .vui-icon-file-pdf {
-	@include vui-filePdf;
+	@include vui-icon-file-pdf;
 }
 .vui-icon-file-pdf-large {
-	@include vui-filePdfLarge;
+	@include vui-icon-file-pdf-large;
 }
 .vui-icon-file-pdf-xlarge {
-	@include vui-filePdfXLarge;
+	@include vui-icon-file-pdf-xlarge;
 }
 .vui-icon-file-presentation {
-	@include vui-filePresentation;
+	@include vui-icon-file-presentation;
 }
 .vui-icon-file-presentation-large {
-	@include vui-filePresentationLarge;
+	@include vui-icon-file-presentation-large;
 }
 .vui-icon-file-presentation-xlarge {
-	@include vui-filePresentationXLarge;
+	@include vui-icon-file-presentation-xlarge;
 }
 .vui-icon-file-spreadsheet {
-	@include vui-fileSpreadsheet;
+	@include vui-icon-file-spreadsheet;
 }
 .vui-icon-file-spreadsheet-large {
-	@include vui-fileSpreadsheetLarge;
+	@include vui-icon-file-spreadsheet-large;
 }
 .vui-icon-file-spreadsheet-xlarge {
-	@include vui-fileSpreadsheetXLarge;
+	@include vui-icon-file-spreadsheet-xlarge;
 }
 .vui-icon-file-text {
-	@include vui-fileText;
+	@include vui-icon-file-text;
 }
 .vui-icon-file-text-large {
-	@include vui-fileTextLarge;
+	@include vui-icon-file-text-large;
 }
 .vui-icon-file-text-xlarge {
-	@include vui-fileTextXLarge;
+	@include vui-icon-file-text-xlarge;
 }
 .vui-icon-file-video {
-	@include vui-fileVideo;
+	@include vui-icon-file-video;
 }
 .vui-icon-file-video-large {
-	@include vui-fileVideoLarge;
+	@include vui-icon-file-video-large;
 }
 .vui-icon-file-video-xlarge {
-	@include vui-fileVideoXLarge;
+	@include vui-icon-file-video-xlarge;
 }
 .vui-icon-file-xml {
-	@include vui-fileXml;
+	@include vui-icon-file-xml;
 }
 .vui-icon-file-xml-large {
-	@include vui-fileXmlLarge;
+	@include vui-icon-file-xml-large;
 }
 .vui-icon-file-xml-xlarge {
-	@include vui-fileXmlXLarge;
+	@include vui-icon-file-xml-xlarge;
 }
 .vui-icon-file-zip {
-	@include vui-fileZip;
+	@include vui-icon-file-zip;
 }
 .vui-icon-file-zip-large {
-	@include vui-fileZipLarge;
+	@include vui-icon-file-zip-large;
 }
 .vui-icon-file-zip-xlarge {
-	@include vui-fileZipXLarge;
+	@include vui-icon-file-zip-xlarge;
 }
 .vui-icon-link {
-	@include vui-actionLink;
+	@include vui-icon-action-link;
 }
 .vui-icon-preview {
-	@include vui-actionPreview;
+	@include vui-icon-action-preview;
 }
 .vui-icon-property-assessable {
-	@include vui-propertyAssessable;
+	@include vui-icon-property-assessable;
 }
 .vui-icon-property-conditionally-released {
-	@include vui-propertyConditionallyReleased;
+	@include vui-icon-property-conditionally-released;
 }
 .vui-icon-property-date-restricted {
-	@include vui-propertyDateRestricted;
+	@include vui-icon-property-date-restricted;
 }
 .vui-icon-property-group-restricted {
-	@include vui-propertyGroupRestricted;
+	@include vui-icon-property-group-restricted;
 }
 .vui-icon-property-hidden {
-	@include vui-propertyHidden;
+	@include vui-icon-property-hidden;
 }
 .vui-icon-property-locked {
-	@include vui-propertyLocked;
+	@include vui-icon-property-locked;
 }
 .vui-icon-remove {
-	@include vui-actionRemove;
+	@include vui-icon-action-remove;
 }
 .vui-icon-reorder {
-	@include vui-actionReorder;
+	@include vui-icon-action-reorder;
 }
 .vui-icon-search {
-	@include vui-actionSearch;
+	@include vui-icon-action-search;
 }
 .vui-icon-share {
-	@include vui-actionShare;
+	@include vui-icon-action-share;
 }
 .vui-icon-subscribe {
-	@include vui-actionSubscribe;
+	@include vui-icon-action-subscribe;
 }
 .vui-icon-tag {
-	@include vui-actionTag;
+	@include vui-icon-action-tag;
 }
 .vui-icon-upload {
-	@include vui-actionUpload;
+	@include vui-icon-action-upload;
 }

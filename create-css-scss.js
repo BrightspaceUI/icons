@@ -38,7 +38,7 @@ var writeCssScss = function(iconPaths, scssPath) {
 			var iconInfo = iconInfos[i];
 			if (!iconInfo.isRtl) {
 				scss.write('.' + iconInfo.className + ' {\n');
-				scss.write('	@include vui-' + iconInfo.mixin + ';\n');
+				scss.write('	@include vui-icon-' + iconInfo.mixin + ';\n');
 				scss.write('}\n');
 			}
 		}
