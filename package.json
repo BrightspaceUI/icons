@@ -1,6 +1,6 @@
 {
   "name": "vui-icons",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Mixins, CSS and image assets for consuming icons",
   "scripts": {
     "prebuild": "rimraf *.css",
