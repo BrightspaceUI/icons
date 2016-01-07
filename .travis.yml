@@ -6,7 +6,7 @@ deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
   api_key:
-    secure: jcUQgFoZuGa17oqeQgQ+WxIjb31HhxEF+jUj7DffAy8oYZvoOfFBL35V5bdB+UG6Ccmj1bqD+yA1HCQymuNVvCvcYtkULdQg05g/i1OQZZlD8pEGmXMiDhg8Q2vu1yr8UOCv27czbRr3QJkRa9PA/MM4cIl3BqlRroWza5y5QCQ=
+    secure: kSTyR+rWJImMj+I9IajN2exML7Ia/QQMtoft5TQLCQbLqC6y/fk03I11K5oDLrZ2MNhUzREj9vChSCvxTwR4qrkq/HxjB4deKIqUJAOaGsk7z/WmL5H8CI+MpOYBT5D39bVZxT7fPJrc6UUrcZDN0pbIuSUq7A5yvjsrCe/zoiE=
   on:
     tags: true
     all_branches: true
