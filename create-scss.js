@@ -24,10 +24,10 @@ var writeScss = function(iconInfos, scssPath) {
 
 		scss.write('@mixin vui-icon-' + iconInfo.mixin + '() {\n');
 		scss.write('	&:before {\n');
-		scss.write('		content: url("data:image/png;base64,' + iconInfo.ltrIcon.toString('base64') + '");\n');
+		scss.write('		content: url("data:' + iconInfo.mimeType + ';base64,' + iconInfo.ltrIcon.toString('base64') + '");\n');
 		if ( iconInfo.rtlIcon ) {
 			scss.write('		[dir=\'rtl\'] & {\n');
-			scss.write('			content: url("data:image/png;base64,' + iconInfo.rtlIcon.toString('base64') + '");\n');
+			scss.write('			content: url("data:' + iconInfo.mimeType + ';base64,' + iconInfo.rtlIcon.toString('base64') + '");\n');
 			scss.write('		}\n');
 		}
 		scss.write('	}\n');
