@@ -39,7 +39,7 @@
     "mixin": "action-preview",
     "className": "vui-icon-preview"
   },
-  "print.png": {
+  "print.svg": {
     "mixin": "action-print",
     "className": "vui-icon-print"
   },
@@ -59,7 +59,7 @@
     "mixin": "action-share",
     "className": "vui-icon-share"
   },
-  "sliders.png": {
+  "sliders.svg": {
     "mixin": "action-sliders",
     "className": "vui-icon-sliders"
   },
