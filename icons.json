@@ -39,6 +39,10 @@
     "mixin": "action-preview",
     "className": "vui-icon-preview"
   },
+  "print.png": {
+    "mixin": "action-print",
+    "className": "vui-icon-print"
+  },
   "remove.png": {
     "mixin": "action-remove",
     "className": "vui-icon-remove"
@@ -54,6 +58,10 @@
   "share.png": {
     "mixin": "action-share",
     "className": "vui-icon-share"
+  },
+  "sliders.png": {
+    "mixin": "action-sliders",
+    "className": "vui-icon-sliders"
   },
   "subscribe.png": {
     "mixin": "action-subscribe",

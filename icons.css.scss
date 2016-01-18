@@ -176,6 +176,9 @@
 .vui-icon-preview {
 	@include vui-icon-action-preview;
 }
+.vui-icon-print {
+	@include vui-icon-action-print;
+}
 .vui-icon-property-assessable {
 	@include vui-icon-property-assessable;
 }
@@ -205,6 +208,9 @@
 }
 .vui-icon-share {
 	@include vui-icon-action-share;
+}
+.vui-icon-sliders {
+	@include vui-icon-action-sliders;
 }
 .vui-icon-subscribe {
 	@include vui-icon-action-subscribe;
