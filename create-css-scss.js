@@ -9,7 +9,7 @@ var writeCssScss = function(iconPaths, scssPath) {
 	var fs = require('fs');
 	var scss = fs.createWriteStream(scssPath);
 
-	scss.write('@import \'icons\';\n\n');
+	scss.write('@import \'icons.scss\';\n\n');
 
 	scss.write('[class*=" vui-icon-"],\n');
 	scss.write('[class^="vui-icon-"] { \n');
