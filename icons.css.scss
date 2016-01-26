@@ -170,6 +170,9 @@
 .vui-icon-file-zip-xlarge {
 	@include vui-icon-file-zip-xlarge;
 }
+.vui-icon-help {
+	@include vui-icon-action-help;
+}
 .vui-icon-link {
 	@include vui-icon-action-link;
 }
@@ -211,6 +214,9 @@
 }
 .vui-icon-sliders {
 	@include vui-icon-action-sliders;
+}
+.vui-icon-star {
+	@include vui-icon-action-star;
 }
 .vui-icon-subscribe {
 	@include vui-icon-action-subscribe;
