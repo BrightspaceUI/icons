@@ -31,6 +31,10 @@
     "mixin": "action-edit-bulk",
     "className": "vui-icon-edit-bulk"
   },
+  "help.png": {
+	"mixin": "action-help",
+	"className": "vui-icon-help"
+  },
   "link.png": {
     "mixin": "action-link",
     "className": "vui-icon-link"
@@ -63,13 +67,17 @@
     "mixin": "action-sliders",
     "className": "vui-icon-sliders"
   },
-  "subscribe.png": {
-    "mixin": "action-subscribe",
-    "className": "vui-icon-subscribe"
+  "subscribed.png": {
+	"mixin": "action-unsubscribe",
+	"className": "vui-icon-unsubscribe"
   },
   "tag.png": {
     "mixin": "action-tag",
     "className": "vui-icon-tag"
+  },
+  "unsubscribed.png": {
+	"mixin": "action-subscribe",
+	"className": "vui-icon-subscribe"
   },
   "upload.png": {
     "mixin": "action-upload",
