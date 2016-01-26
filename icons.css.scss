@@ -215,14 +215,14 @@
 .vui-icon-sliders {
 	@include vui-icon-action-sliders;
 }
-.vui-icon-star {
-	@include vui-icon-action-star;
-}
 .vui-icon-subscribe {
 	@include vui-icon-action-subscribe;
 }
 .vui-icon-tag {
 	@include vui-icon-action-tag;
+}
+.vui-icon-unsubscribe {
+	@include vui-icon-action-unsubscribe;
 }
 .vui-icon-upload {
 	@include vui-icon-action-upload;
