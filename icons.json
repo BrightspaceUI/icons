@@ -31,6 +31,10 @@
     "mixin": "action-edit-bulk",
     "className": "vui-icon-edit-bulk"
   },
+  "help.svg": {
+	  "mixin": "action-help",
+	  "className": "vui-icon-help"
+  },
   "link.png": {
     "mixin": "action-link",
     "className": "vui-icon-link"
@@ -63,7 +67,7 @@
     "mixin": "action-sliders",
     "className": "vui-icon-sliders"
   },
-  "subscribe.png": {
+  "subscribe.svg": {
     "mixin": "action-subscribe",
     "className": "vui-icon-subscribe"
   },
