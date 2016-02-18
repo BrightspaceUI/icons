@@ -1,12 +1,9 @@
+.csslintrc
 .editorconfig
 .gitattributes
 .gitignore
-.npmignore
 .travis.yml
-.csslintrc
 node_modules
-karma.conf.js
-test
 cli
 create-css-scss.js
 create-scss.js
