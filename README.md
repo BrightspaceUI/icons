@@ -96,13 +96,13 @@ Don't forget to provide alternate text if the icon isn't accompanied by any othe
 | Help | ![](/images/actions/help.svg) | `vui-icon-help` | `/images/actions/help.svg` |
 | Link | ![](/images/actions/link.png) | `vui-icon-link` | `/images/actions/link.png` |
 | Preview | ![](/images/actions/preview.png) | `vui-icon-preview` | `/images/actions/preview.png` |
-| Print | ![](/images/actions/print.svg) | `vui-icon-print` | `/images/actions/print.svg` |
+| Print | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/print.svg) | `vui-icon-print` | `/images/actions/print.svg` |
 | Remove | ![](/images/actions/remove.png) | `vui-icon-remove` | `/images/actions/remove.png` |
 | Reorder | ![](/images/actions/reorder.png) | `vui-icon-reorder` | `/images/actions/reorder.png` |
 | Search | ![](/images/actions/search.png) | `vui-icon-search` | `/images/actions/search.png` |
 | Share | ![](/images/actions/share.png) | `vui-icon-share` | `/images/actions/share.png` |
-| Sliders | ![](/images/actions/sliders.svg) | `vui-icon-sliders` | `/images/actions/sliders.svg` |
-| Subscribe | ![](/images/actions/subscribe.svg) | `vui-icon-subscribe` | `/images/actions/subscribe.svg` |
+| Sliders | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/sliders.svg) | `vui-icon-sliders` | `/images/actions/sliders.svg` |
+| Subscribe | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/subscribe.svg) | `vui-icon-subscribe` | `/images/actions/subscribe.svg` |
 | Tag | ![](/images/actions/tag.png) | `vui-icon-tag` | `/images/actions/tag.png` |
 | Upload | ![](/images/actions/upload.png) | `vui-icon-upload` | `/images/actions/upload.png` |
 
