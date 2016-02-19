@@ -36,7 +36,7 @@ There are several ways to consume the icon images. The one you choose depends on
 
 In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text, applying the icon using a background image is a good approach. It hides the icon from assistive technology (like a screen reader), allowing the text to stand alone.
 
-Examples of this might include: a button or link which contain text and the icon is redundant:
+Examples of this might include a button or link which contain text and the icon is redundant:
 ```html
 <button>
 	<span class="vui-icon-bookmark" />
@@ -56,9 +56,7 @@ If you would prefer the text accompanying the icon to be invisible, the backgrou
 
 To position something off-screen, you can either use the [vui-offscreen](https://github.com/Brightspace/valence-ui-offscreen) component, or follow [WebAIM's text-indent technique](http://webaim.org/techniques/css/invisiblecontent/).
 
-Examples: a button or link which contain only an icon
-
-HTML:
+For example, a button or link which contains only an icon:
 ```html
 <button title="Bookmark">
 	<span class="vui-icon-bookmark" />
