@@ -30,7 +30,7 @@ Depending on which installation method you choose, use that path when doing the 
 
 ## Usage
 
-There are several ways to consume the icon images, each depending on your icon use case.
+There are several ways to consume the icon images. The one you choose depends on your use case.
 
 ### As a background image with text
 
@@ -48,7 +48,7 @@ Examples of this might include: a button or link which contain text and the icon
 </a>
 ```
 
-To make these CSS classes available, make sure you bundle the `icons.css` file (from the Bower/NPM package) with your application's CSS. The full list of available `vui-icon-*` class names is [listed below][#available-icons].
+To make these CSS classes available, make sure you bundle the `icons.css` file (from the Bower/NPM package) with your application's CSS. The full list of available `vui-icon-*` class names is [listed below](#available-icons).
 
 ### As a background image with off-screen text
 
