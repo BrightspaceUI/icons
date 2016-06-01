@@ -1,12 +1,3 @@
 language: node_js
-node_js:
-- 5.6
+node_js: stable
 sudo: false
-deploy:
-  provider: npm
-  email: d2ltravisdeploy@d2l.com
-  api_key:
-    secure: kSTyR+rWJImMj+I9IajN2exML7Ia/QQMtoft5TQLCQbLqC6y/fk03I11K5oDLrZ2MNhUzREj9vChSCvxTwR4qrkq/HxjB4deKIqUJAOaGsk7z/WmL5H8CI+MpOYBT5D39bVZxT7fPJrc6UUrcZDN0pbIuSUq7A5yvjsrCe/zoiE=
-  on:
-    tags: true
-    all_branches: true

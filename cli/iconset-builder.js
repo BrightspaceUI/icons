@@ -69,7 +69,7 @@ function buildFileXml(iconsetObj, iconsetPath, file) {
 
 module.exports = function(iconsetPath) {
 
-	iconsetPath = path.join(__dirname, iconsetPath);
+	iconsetPath = path.join(__dirname, '../', iconsetPath);
 
 	var name = path.basename(iconsetPath);
 
@@ -88,7 +88,7 @@ module.exports = function(iconsetPath) {
 			return builder.buildObject(iconsetObj);
 		}).then(function(xml) {
 			xml = xml.substring(7, xml.length - 7);
-			return fs.writeFile(path.join(__dirname, name + '.html'), xml);
+			return fs.writeFile(path.join(__dirname, '../', name + '-icons.html'), xml);
 		});
 
 };

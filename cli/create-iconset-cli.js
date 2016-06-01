@@ -1,5 +1,5 @@
 var chalk = require('chalk'),
-	iconsetBuilder = require('../iconset-builder'),
+	iconsetBuilder = require('./iconset-builder'),
 	Q = require('q');
 
 console.log(chalk.green('Creating icon sets...'));

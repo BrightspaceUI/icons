@@ -10,7 +10,7 @@ if (argv._.length === 0) {
 	process.exit(1);
 }
 
-var createCssScss = require('../create-css-scss');
+var createCssScss = require('./create-css-scss');
 
 createCssScss(argv._, argv.output)
 	.catch(function(err) {
