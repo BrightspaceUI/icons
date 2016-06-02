@@ -1,7 +1,9 @@
 @import 'icons.scss';
 
 [class*=" d2l-icon-"],
-[class^="d2l-icon-"] { 
+[class^="d2l-icon-"], { 
+[class*=" vui-icon-"],
+[class^="vui-icon-"] { 
 	@include d2l-icon();
 }
 
