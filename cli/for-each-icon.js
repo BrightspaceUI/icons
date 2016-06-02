@@ -32,10 +32,10 @@ var forEachIcon = function( iconPaths, delegate ) {
 
 			delegate( {
 				name: iconName,
-				className: 'vui-icon-' + dirs[1] + '-' + iconName,
+				className: 'd2l-icon-' + dirs[1] + '-' + iconName,
 				file: file,
 				isRtl: isRtl,
-				mixin: 'vui-icon-' + dirs[1] + '-' + iconName,
+				mixin: 'd2l-icon-' + dirs[1] + '-' + iconName,
 				path: file.relative,
 				mimeType: mimeType
 			} );

@@ -1,5 +1,5 @@
 {
-  "name": "vui-icons",
+  "name": "d2l-icons",
   "version": "2.0.0",
   "description": "Web components, mixins and image assets for consuming icons",
   "private": true,
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-icons.git"
+    "url": "https://github.com/Brightspace/d2l-icons-ui.git"
   },
   "keywords": [
     "d2l",
@@ -23,9 +23,9 @@
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/valence-ui-icons/issues"
+    "url": "https://github.com/Brightspace/d2l-icons-ui/issues"
   },
-  "homepage": "https://github.com/Brightspace/valence-ui-icons",
+  "homepage": "https://github.com/Brightspace/d2l-icons-ui",
   "devDependencies": {
     "chalk": "^1.1.1",
     "fs": "0.0.2",

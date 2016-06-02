@@ -1,6 +1,6 @@
 {
-  "name": "vui-icons",
-  "main": "vui-icons.html",
+  "name": "d2l-icons-ui",
+  "main": "d2l-icons.html",
   "license": "Apache-2.0",
   "ignore": [
     "cli",

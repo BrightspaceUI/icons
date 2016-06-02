@@ -74,7 +74,7 @@ module.exports = function(iconsetPath) {
 	var name = path.basename(iconsetPath);
 
 	var iconsetObj = JSON.parse(JSON.stringify(iconsetObjTemplate));
-	iconsetObj['iron-iconset-svg'].$.name = 'vui-' + name;
+	iconsetObj['iron-iconset-svg'].$.name = 'd2l-' + name;
 
 	var files = fs.readdirSync(iconsetPath);
 	var promises = [];

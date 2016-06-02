@@ -10,7 +10,7 @@ var writeScss = function(iconInfos, scssPath) {
 		deferred.resolve();
 	});
 
-	scss.write('@mixin vui-icon() {\n');
+	scss.write('@mixin d2l-icon() {\n');
 	scss.write('	display: inline-block;\n');
 	scss.write('	font-size: 0;\n');
 	scss.write('	line-height: 0;\n');

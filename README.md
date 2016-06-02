@@ -1,4 +1,4 @@
-# vui-icons
+# d2l-icons
 [![Bower version][bower-image]][bower-url]
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
