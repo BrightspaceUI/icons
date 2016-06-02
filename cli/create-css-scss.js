@@ -12,7 +12,9 @@ var writeCssScss = function(iconPaths, scssPath) {
 	scss.write('@import \'icons.scss\';\n\n');
 
 	scss.write('[class*=" d2l-icon-"],\n');
-	scss.write('[class^="d2l-icon-"] { \n');
+	scss.write('[class^="d2l-icon-"], { \n');
+	scss.write('[class*=" vui-icon-"],\n');
+	scss.write('[class^="vui-icon-"] { \n');
 	scss.write('	@include d2l-icon();\n');
 	scss.write('}\n\n');
 
