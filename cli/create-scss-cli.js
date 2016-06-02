@@ -10,9 +10,9 @@ if (argv._.length === 0) {
 	process.exit(1);
 }
 
-var create = require('../create');
+var create = require('./create');
 
-create(argv._, argv.output, require('../create-scss'))
+create(argv._, argv.output, require('./create-scss'))
 	.catch(function(err) {
 		console.error(err);
 		process.exit(1);

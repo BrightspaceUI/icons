@@ -1,20 +1,19 @@
 {
-  "name": "vui-icons",
-  "version": "1.1.3",
-  "description": "Mixins, CSS and image assets for consuming icons",
+  "name": "d2l-icons",
+  "version": "2.0.0",
+  "description": "Web components, mixins and image assets for consuming icons",
+  "private": true,
   "scripts": {
     "prebuild": "rimraf *.css",
-    "build": "npm run build:css",
-    "build:sass": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
-    "build:vui": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.*",
-    "prebuild:css": "npm run build:sass && npm run build:vui",
-    "build:css": "node-sass --output-style expanded icons.css.scss icons.css",
-    "pretest": "npm run build",
-    "test": "csslint icons.css"
+    "build": "npm run build:scss && npm run build:css-scss",
+    "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
+    "build:css-scss": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.*",
+    "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/valence-ui-icons.git"
+    "url": "https://github.com/Brightspace/d2l-icons-ui.git"
   },
   "keywords": [
     "d2l",
@@ -24,16 +23,14 @@
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/valence-ui-icons/issues"
+    "url": "https://github.com/Brightspace/d2l-icons-ui/issues"
   },
-  "homepage": "https://github.com/Brightspace/valence-ui-icons",
+  "homepage": "https://github.com/Brightspace/d2l-icons-ui",
   "devDependencies": {
     "chalk": "^1.1.1",
-    "csslint": "^0.10.0",
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
-    "node-sass": "^3.4.2",
     "q": "^1.4.1",
     "rimraf": "^2.5.2",
     "through2": "^2.0.1",

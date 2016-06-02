@@ -1,6 +1,6 @@
 {
-  "name": "vui-icons",
-  "main": "icons.scss",
+  "name": "d2l-icons-ui",
+  "main": "d2l-icons.html",
   "license": "Apache-2.0",
   "ignore": [
     "cli",
@@ -8,12 +8,11 @@
     ".editorconfig",
     ".gitattributes",
     ".gitignore",
-    ".npmignore",
     ".travis.yml",
-    "create-css-scss.js",
-    "create-scss.js",
-    "create.js",
-    "for-each-icon.js",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0"
+  }
 }
