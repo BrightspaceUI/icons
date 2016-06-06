@@ -1,11 +1,11 @@
 {
   "name": "d2l-icons",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Web components, mixins and image assets for consuming icons",
   "private": true,
   "scripts": {
     "prebuild": "rimraf *.css",
-    "build": "npm run build:scss && npm run build:css-scss",
+    "build": "npm run build:scss && npm run build:css-scss && npm run build:iconsets",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:css-scss": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor",
