@@ -1,120 +1,193 @@
+**Looking for pre-Daylight icons?** They're [over here](https://github.com/Brightspace/d2l-icons-ui/tree/pre-daylight).
+
 # d2l-icons
 [![Bower version][bower-image]][bower-url]
-[![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
-[![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains [Sass mixins](http://sass-lang.com) and CSS that can be used to incorporate icons into your application.
+`d2l-icons` contains SVGs and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application. It also exposes icons as [Polymer iron-iconset-svg](https://github.com/PolymerElements/iron-iconset-svg) collections.
 
-For further information on this and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 ## Installation
 
-`vui-icons` can be installed from [Bower][bower-url]:
+`d2l-icons` can be installed from [Bower][bower-url]:
 ```shell
-bower install vui-icons
+bower install d2l-icons
 ```
 
-Or alternatively from [NPM][npm-url]:
-```shell
-npm install vui-icons
-```
+## Icon Categories
 
-Depending on which installation method you choose, use that path when doing the SASS import:
+Each icon is grouped into a category, and every icon in a particular category has the same native size. You can browse the categories and icons by visiting the [/images/](https://github.com/Brightspace/d2l-icons-ui/tree/master/images) directory.
 
-```scss
-@import "bower_components/vui-icons/icons.scss";
-// or...
-@import "node_modules/vui-icons/icons.scss";
-```
+Currently, there are 4 icon categories:
+- **tier1**: general D2L icons, 18px x 18px native
+- **tier2**: general D2L icons, 24px x 24px native
+- **tier3**: general D2L icons, 30px x 30px native
+- **html-editor**: icons for use in the HTML editor, 18px x 18px native
+
+Always choose the icon whose native size best matches your desired icon size -- ideally exactly.
 
 ## Usage
 
-There are several ways to consume the icon images. The one you choose depends on your use case.
+There are many ways to consume icons -- the best technique depends on your application and use case.
 
-### As a background image with text
+### Directly with an `<img>` element
 
-In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text, applying the icon using a background image is a good approach. It hides the icon from assistive technology (like a screen reader), allowing the text to stand alone.
-
-Examples of this might include a button or link which contain text and the icon is redundant:
-```html
-<button>
-	<span class="vui-icon-bookmark" />
-	Bookmark
-</button>
-<a>
-	<span class="vui-icon-print" />
-	Print
-</a>
-```
-
-To make these CSS classes available, make sure you bundle the `icons.css` file (from the Bower/NPM package) with your application's CSS. The full list of available `vui-icon-*` class names is [listed below](#available-icons).
-
-### As a background image with off-screen text
-
-If you would prefer the text accompanying the icon to be invisible, the background image approach can be combined with off-screen text. The text will be positioned outside of the visible screen area using CSS, essentially hiding it for everyone except those using assistive devices.
-
-To position something off-screen, you can either use the [vui-offscreen](https://github.com/Brightspace/valence-ui-offscreen) component, or follow [WebAIM's text-indent technique](http://webaim.org/techniques/css/invisiblecontent/).
-
-For example, a button or link which contains only an icon:
-```html
-<button title="Bookmark">
-	<span class="vui-icon-bookmark" />
-	<span class="vui-offscreen">Bookmark</span>
-</button>
-<a title="Print">
-	<span class="vui-icon-print" />
-	<span class="vui-offscreen">Print</span>
-</a>
-```
-
-We've used the `title` attribute in this example so that tooltips will appear on-hover.
-
-### Directly as an image element
-
-Another way to consume the icons is by simply pointing a HTML `<img>` element's `src` attribute directly at the icon file. In both the Bower and NPM packages, all the icon files can be found in the `images` directory.
+Simply point an HTML `<img>` element's `src` attribute at the icon's SVG file. You can reference the files directly from `bower_components`, or copy the icons you need as part of your application's build process.
 
 HTML:
 ```html
-<img src="/images/actions/subscribe.svg" alt="subscribed" />
+<img src="bower_components/d2l-icons/images/tier1/bookmark-filled.svg" alt="bookmarked" />
 ```
 
 Don't forget to provide alternate text if the icon isn't accompanied by any other text.
 
-## Available Icons
+### Background Images
 
-| Name | Icon | CSS Class | Filename |
-| ---- | ---- | --------- | --- |
-| Bookmark | ![](/images/actions/bookmark.png) | `vui-icon-bookmark` | `/images/actions/bookmark.png` |
-| Browse | ![](/images/actions/browse.png) | `vui-icon-browse` | `/images/actions/browse.png` |
-| Copy | ![](/images/actions/copy.png) | `vui-icon-copy` | `/images/actions/copy.png` |
-| Create | ![](/images/actions/create.png) | `vui-icon-create` | `/images/actions/create.png` |
-| Delete | ![](/images/actions/delete.png) | `vui-icon-delete` | `/images/actions/delete.png` |
-| Download | ![](/images/actions/download.png) | `vui-icon-download` | `/images/actions/download.png` |
-| Edit (Bulk) | ![](/images/actions/edit-bulk.png) | `vui-icon-edit-bulk.` | `/images/actions/edit-bulk..png` |
-| Edit | ![](/images/actions/edit.png) | `vui-icon-edit` | `/images/actions/edit.png` |
-| Help | ![](/images/actions/help.svg) | `vui-icon-help` | `/images/actions/help.svg` |
-| Link | ![](/images/actions/link.png) | `vui-icon-link` | `/images/actions/link.png` |
-| Preview | ![](/images/actions/preview.png) | `vui-icon-preview` | `/images/actions/preview.png` |
-| Print | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/print.svg) | `vui-icon-print` | `/images/actions/print.svg` |
-| Remove | ![](/images/actions/remove.png) | `vui-icon-remove` | `/images/actions/remove.png` |
-| Reorder | ![](/images/actions/reorder.png) | `vui-icon-reorder` | `/images/actions/reorder.png` |
-| Search | ![](/images/actions/search.png) | `vui-icon-search` | `/images/actions/search.png` |
-| Share | ![](/images/actions/share.png) | `vui-icon-share` | `/images/actions/share.png` |
-| Sliders | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/sliders.svg) | `vui-icon-sliders` | `/images/actions/sliders.svg` |
-| Subscribe | ![](https://cdn.rawgit.com/Brightspace/valence-ui-icons/master/images/actions/subscribe.svg) | `vui-icon-subscribe` | `/images/actions/subscribe.svg` |
-| Tag | ![](/images/actions/tag.png) | `vui-icon-tag` | `/images/actions/tag.png` |
-| Upload | ![](/images/actions/upload.png) | `vui-icon-upload` | `/images/actions/upload.png` |
+In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text and/or a tooltip, applying the icon using a background image is a good approach. It hides the icon from assistive technology (like a screen reader), allowing the accompanying text to stand alone.
+
+First, create some CSS that points at the image you'd like and sets the correct size:
+
+```
+.my-app-bookmark-icon {
+	background: url('bower_components/d2l-icons/tier1/bookmark-filled.svg');
+	background-size: 18px 18px; /* needed for IE */
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
+```
+
+Then apply the CSS class to an element:
+```html
+<button>
+	<span class="my-app-bookmark-icon"></span>
+	Bookmark
+</button>
+```
+
+#### Background images with invisible text
+
+If you would prefer the text accompanying the icon to be invisible, the background image approach can be combined with off-screen text. The text will be positioned outside of the visible screen area using CSS, essentially hiding it for everyone except those using assistive devices.
+
+To position something off-screen, you can either use the [vui-offscreen](https://github.com/Brightspace/d2l-offscreen-ui) component, or follow [WebAIM's text-indent technique](http://webaim.org/techniques/css/invisiblecontent/).
+
+For example, a button which contains only an icon:
+```html
+<link rel="import" href="../d2l-offscreen/d2l-offscreen.html">
+<button title="Bookmark">
+	<span class="my-app-bookmark-icon"></span>
+	<d2l-offscreen>Bookmark</d2l-offscreen>
+</button>
+```
+
+We've used the `title` attribute in this example to display tooltips on-hover.
+
+#### Sass Mixins
+
+If you'd like to use the [Sass](http://sass-lang.com) extension language in your application, `d2l-icons` provides an `icons.scss` file you can import which contains mixins to generate the background image CSS.
+
+Import the mixin file and [include it](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#including_a_mixin) in a CSS class for each of the icons you'd like to use:
+
+```scss
+@import "bower_components/d2l-icons/icons.scss";
+
+.my-app-bookmark-icon {
+	@include d2l-icon-tier1-bookmark-hollow();
+}
+
+.my-app-print-icon {
+	@include d2l-icon-tier1-print();
+}
+```
+
+The name of the mixin will correspond to its location within the `images` directory, plus the subdirectory/category (e.g. `tier1`, `tier2`), plus the icon's filename -- all separated by hyphens.
+
+Finally, consume the CSS class in your markup as before.
+
+```html
+<button>
+	<span class="my-app-bookmark-icon"></span>
+	Bookmark
+</button>
+```
+
+### Polymer Icon Sets
+
+If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
+
+An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
+
+Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
+<button>
+	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
+	Bookmark
+</button>
+```
+
+You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+
+```html
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<style include="d2l-colors">
+iron-icon {
+	color: var(--d2l-color-tungsten);
+	height: 18px;
+	width: 18px;
+}
+</style>
+```
+
+If you'd like a different color when the user hovers:
+```css
+button:hover iron-icon, button:focus iron-icon {
+	color: var(--d2l-color-celestuba);
+}
+```
 
 ## Coding styles
 
+### Updating or contributing new icons
+
+#### SVG format
+
+When contributing changes to icons, the SVG files should be properly formatted. Follow these rules:
+- native icon sizes need to be one of: 18, 24 or 30
+- the `<svg>` element must:
+  - have a `width` and `height` attribute which match the native size
+  - not have an `id` or `data-name` attribute
+- the `<svg>`'s `viewBox` attribute must:
+  - have an origin beginning at `0 0`
+  - be exactly square (e.g. `0 0 18 18`)
+  - match the icon's native size
+  - not contain negative values
+- there should be no `<title>` element
+- there should be no inline `<style>` -- all style for line fills should be applied directly to the SVG elements
+- color of SVG elements should be "tungsten" (#72777a)
+
+The best way to have most of these rules applied for you automatically is to put the icon through [SVGOMG](https://jakearchibald.github.io/svgomg/) with the "remove title" and "prettify code" options selected.
+
+Here's a sample of a properly formatted SVG:
+
+```svg
+<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+  <path fill="#72777a" d="..."/>
+</svg>
+```
+
+#### Auto-generated files
+
+The Polymer iconset files and Sass `icons.scss` file are automatically generated, so when making icon modifications, re-generate these files by running `npm run build`.
+
+### General
+
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
-[bower-url]: http://bower.io/search/?q=vui-icons
-[bower-image]: https://img.shields.io/bower/v/vui-icons.svg
-[npm-url]: https://www.npmjs.org/package/vui-icons
-[npm-image]: https://img.shields.io/npm/v/vui-icons.svg
-[ci-url]: https://travis-ci.org/Brightspace/valence-ui-icons
-[ci-image]: https://travis-ci.org/Brightspace/valence-ui-icons.svg?branch=master
-[dependencies-url]: https://david-dm.org/brightspace/valence-ui-icons
-[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-icons.svg
+[bower-url]: http://bower.io/search/?q=d2l-icons
+[bower-image]: https://img.shields.io/bower/v/d2l-icons.svg
+[ci-url]: https://travis-ci.org/Brightspace/d2l-icons-ui
+[ci-image]: https://travis-ci.org/Brightspace/d2l-icons-ui.svg?branch=master

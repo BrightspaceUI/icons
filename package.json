@@ -1,7 +1,7 @@
 {
   "name": "d2l-icons",
-  "version": "2.0.1",
-  "description": "Web components, mixins and image assets for consuming icons",
+  "version": "2.0.2",
+  "description": "SVG images, Polymer iron-iconset collections and SASS mixins for D2L icons",
   "private": true,
   "scripts": {
     "prebuild": "rimraf *.css",
@@ -17,8 +17,13 @@
   },
   "keywords": [
     "d2l",
-    "valence-ui",
-    "vui"
+    "ui",
+    "icons",
+    "scss",
+    "sass",
+    "mixins",
+    "polymer",
+    "web component"
   ],
   "author": "D2L Corporation",
   "license": "Apache-2.0",
