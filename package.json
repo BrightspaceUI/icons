@@ -1,13 +1,11 @@
 {
   "name": "d2l-icons",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "SVG images, Polymer iron-iconset collections and SASS mixins for D2L icons",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf *.css",
-    "build": "npm run build:scss && npm run build:css-scss && npm run build:iconsets",
+    "build": "npm run build:scss && npm run build:iconsets",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
-    "build:css-scss": "node ./cli/create-css-scss-cli -o icons.css.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor",
     "test": "npm run build"
   },
@@ -37,7 +35,6 @@
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
     "q": "^1.4.1",
-    "rimraf": "^2.5.2",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
     "xml2js": "^0.4.16",

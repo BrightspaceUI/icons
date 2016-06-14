@@ -34,6 +34,7 @@ var writeScss = function(iconInfos, scssPath) {
 		var iconInfo = iconInfos[i];
 
 		scss.write('@mixin ' + iconInfo.mixin + '() {\n');
+		scss.write('	@include d2l-icon();\n');
 		scss.write('	&:before {\n');
 		scss.write('		content: ' + getContentValue(iconInfo.mimeType, iconInfo.ltrIcon) + ';\n');
 		if ( iconInfo.rtlIcon ) {
