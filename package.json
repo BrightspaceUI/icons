@@ -1,6 +1,5 @@
 {
   "name": "d2l-icons",
-  "version": "3.0.0",
   "description": "SVG images, Polymer iron-iconset collections and SASS mixins for D2L icons",
   "private": true,
   "scripts": {
