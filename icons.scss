@@ -1127,6 +1127,12 @@
 		content: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20fill%3D%22%2372777a%22%20cx%3D%2212.5%22%20cy%3D%221.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20fill%3D%22%2372777a%22%20cx%3D%2212.5%22%20cy%3D%226.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20fill%3D%22%2372777a%22%20cx%3D%2212.5%22%20cy%3D%2211.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20fill%3D%22%2372777a%22%20cx%3D%2212.5%22%20cy%3D%2216.5%22%20r%3D%221.5%22%2F%3E%3Ccircle%20fill%3D%22%2372777a%22%20cx%3D%2212.5%22%20cy%3D%2221.5%22%20r%3D%221.5%22%2F%3E%3C%2Fsvg%3E");
 	}
 }
+@mixin d2l-icon-tier2-dot() {
+	@include d2l-icon();
+	&:before {
+		content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%224%22%20fill%3D%22%2372777a%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+	}
+}
 @mixin d2l-icon-tier2-download() {
 	@include d2l-icon();
 	&:before {
