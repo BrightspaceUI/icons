@@ -26,7 +26,7 @@
     "package.json"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0",
+    "polymer": "^1.5.0",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0"
   }
 }
