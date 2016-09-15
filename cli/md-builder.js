@@ -44,6 +44,8 @@ function writeCategory(iconsetPath, writer) {
 		writer.write('| :---: | :--- |');
 		if (d === numCols - 1) {
 			writer.write('\n');
+		} else {
+			writer.write(' --- ')
 		}
 	}
 

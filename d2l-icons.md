@@ -3,7 +3,7 @@
 ## tier1 (18px x 18px)
 
 | Icon | Name || Icon | Name || Icon | Name |
-| :---: | :--- || :---: | :--- || :---: | :--- |
+| :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/add-file.svg?raw=true) | add-file || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/edit.svg?raw=true) | edit || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/pic.svg?raw=true) | pic |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/add-message.svg?raw=true) | add-message || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/email-read.svg?raw=true) | email-read || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/pin-filled.svg?raw=true) | pin-filled |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/add.svg?raw=true) | add || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/email.svg?raw=true) | email || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/pin-hollow.svg?raw=true) | pin-hollow |
@@ -47,7 +47,7 @@
 ## tier2 (24px x 24px)
 
 | Icon | Name || Icon | Name || Icon | Name |
-| :---: | :--- || :---: | :--- || :---: | :--- |
+| :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/add-file.svg?raw=true) | add-file || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/eportfolio.svg?raw=true) | eportfolio || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/pin-hollow.svg?raw=true) | pin-hollow |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/add.svg?raw=true) | add || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/feedback.svg?raw=true) | feedback || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/preview.svg?raw=true) | preview |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/alert.svg?raw=true) | alert || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/file-archive.svg?raw=true) | file-archive || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/print.svg?raw=true) | print |
@@ -86,7 +86,7 @@
 ## tier3 (30px x 30px)
 
 | Icon | Name || Icon | Name || Icon | Name |
-| :---: | :--- || :---: | :--- || :---: | :--- |
+| :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/alert.svg?raw=true) | alert || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/close.svg?raw=true) | close || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/lock.svg?raw=true) | lock |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/bookmark.svg?raw=true) | bookmark || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/discussions.svg?raw=true) | discussions || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/menu-hamburger.svg?raw=true) | menu-hamburger |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/calendar.svg?raw=true) | calendar || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/email-open.svg?raw=true) | email-open || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/news.svg?raw=true) | news |
@@ -101,7 +101,7 @@
 ## html-editor (18px x 18px)
 
 | Icon | Name || Icon | Name || Icon | Name |
-| :---: | :--- || :---: | :--- || :---: | :--- |
+| :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/align-center.svg?raw=true) | align-center || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/italic.svg?raw=true) | italic || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/table-column-insert-after.svg?raw=true) | table-column-insert-after |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/align-full.svg?raw=true) | align-full || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/link.svg?raw=true) | link || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/table-column-insert-before.svg?raw=true) | table-column-insert-before |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/align-left.svg?raw=true) | align-left || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/list-bullet.svg?raw=true) | list-bullet || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/table-column-remove.svg?raw=true) | table-column-remove |
