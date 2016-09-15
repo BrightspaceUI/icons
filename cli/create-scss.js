@@ -2,6 +2,12 @@
 
 var writeScss = function(iconInfos, scssPath) {
 
+	iconInfos = iconInfos.sort(function(a, b) {
+		if (a.mixin < b.mixin) return -1;
+		if (a.mixin > b.mixin) return 1;
+		return 0;
+	});
+
 	var deferred = require('q').defer(),
 		fs = require('fs'),
 		scss = fs.createWriteStream(scssPath);

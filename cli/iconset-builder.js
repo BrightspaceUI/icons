@@ -27,7 +27,7 @@ function processFill(elem) {
 	}
 }
 
-function buildFileXml(iconsetObj, iconsetPath, file) {
+function buildFileXml(iconsetObj, objs, iconsetPath, file) {
 
 	var deferred = q.defer();
 
@@ -40,6 +40,7 @@ function buildFileXml(iconsetObj, iconsetPath, file) {
 		if (err) {
 			return deferred.reject(err);
 		}
+		var id = path.basename(file, extension);
 		var parser = new xml2js.Parser();
 		parser.parseString(xml, function(err, result) {
 			if (err) {
@@ -51,14 +52,14 @@ function buildFileXml(iconsetObj, iconsetPath, file) {
 			}
 			processFill(result);
 			var g = {
-				$: {'id': path.basename(file, extension)}
+				$: {'id': id}
 			};
 			for(var child in result.svg) {
 				if (child !== '$') {
 					g[child] = result.svg[child];
 				}
 			}
-			iconsetObj['iron-iconset-svg'].svg.defs.g.push(g);
+			objs[file] = g;
 			deferred.resolve(true);
 		});
 	});
@@ -76,14 +77,27 @@ module.exports = function(iconsetPath) {
 	var iconsetObj = JSON.parse(JSON.stringify(iconsetObjTemplate));
 	iconsetObj['iron-iconset-svg'].$.name = 'd2l-' + name;
 
-	var files = fs.readdirSync(iconsetPath);
+	var objs = {};
+
+	var files = fs
+		.readdirSync(iconsetPath)
+		.sort(function(a,b) {
+			if (a < b) return -1;
+			if (a > b) return 1;
+			return 0;
+		});
 	var promises = [];
 	files.forEach(function(file) {
-		promises.push(buildFileXml(iconsetObj, iconsetPath, file));
+		promises.push(buildFileXml(iconsetObj, objs, iconsetPath, file));
 	});
 
 	return q.allSettled(promises)
 		.then(function(results) {
+			files.forEach(function(file) {
+				if (objs[file]) {
+					iconsetObj['iron-iconset-svg'].svg.defs.g.push(objs[file]);
+				}
+			});
 			var builder = new xml2js.Builder({headless: true});
 			return builder.buildObject(iconsetObj);
 		}).then(function(xml) {
