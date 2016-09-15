@@ -17,13 +17,16 @@ bower install d2l-icons
 
 ## Icon Categories
 
-Each icon is grouped into a category, and every icon in a particular category has the same native size. You can browse the categories and icons by visiting the [/images/](https://github.com/Brightspace/d2l-icons-ui/tree/master/images) directory.
+Each icon is grouped into a category, and every icon in a particular category has the same native size.
+
+**[Browse the categories and icons](d2l-icons.md)**
 
 Currently, there are 4 icon categories:
-- **tier1**: general D2L icons, 18px x 18px native
-- **tier2**: general D2L icons, 24px x 24px native
-- **tier3**: general D2L icons, 30px x 30px native
-- **html-editor**: icons for use in the HTML editor, 18px x 18px native
+
+- **tier1**: general D2L icons, `18px` x `18px` native
+- **tier2**: general D2L icons, `24px` x `24px` native
+- **tier3**: general D2L icons, `30px` x `30px` native
+- **html-editor**: icons for use in the HTML editor, `18px` x `18px` native
 
 Always choose the icon whose native size best matches your desired icon size -- ideally exactly.
 
