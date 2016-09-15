@@ -18,25 +18,55 @@ function writeCategory(iconsetPath, writer) {
 		size = 30;
 	}
 
-	writer.write('## ' + categoryName + ' (`' + size + 'px` x `' + size + 'px`)\n\n');
-	writer.write('| Icon | Name |\n');
-	writer.write('| :---: | --- |\n');
+	writer.write('## ' + categoryName + ' (' + size + 'px x ' + size + 'px)\n\n');
 
 	var files = fs
 		.readdirSync(iconsetPath)
-		.sort(function(a,b) {
+		.filter(function(file) {
+			return path.extname(file) === '.svg';
+		}).sort(function(a,b) {
 			if (a < b) return -1;
 			if (a > b) return 1;
 			return 0;
 		});
-	files.forEach(function(file) {
-		var extension = path.extname(file);
-		if (extension !== '.svg') {
-			return;
+
+	var numCols = 3;
+	var numPerCol = Math.ceil(files.length / numCols);
+	var counter = 0;
+
+	for (var c = 0; c < numCols; c++) {
+		writer.write('| Icon | Name |');
+		if (c === numCols - 1) {
+			writer.write('\n');
 		}
-		var iconName = path.basename(file, extension);
-		writer.write('| ![](' + basePath + categoryName + '/' + file + '?raw=true) | ' + iconName + ' |\n');
-	});
+	}
+	for (var d = 0; d < numCols; d++) {
+		writer.write('| :---: | :--- |');
+		if (d === numCols - 1) {
+			writer.write('\n');
+		}
+	}
+
+	for (var i = 0; i < numPerCol; i++ ) {
+
+		for (var j = 0; j < numCols; j++ ) {
+
+			var index = i + j * numPerCol;
+			if (index > files.length - 1) {
+				writer.write('| &nbsp; | &nbsp; |');
+			} else {
+				var file = files[index];
+				var iconName = path.basename(file, path.extname(file));
+				writer.write('| ![](' + basePath + categoryName + '/' + file + '?raw=true) | ' + iconName + ' |');
+			}
+
+			if (j === numCols - 1) {
+				writer.write('\n');
+			}
+
+		}
+
+	}
 
 	writer.write('\n');
 
