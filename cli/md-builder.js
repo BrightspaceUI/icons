@@ -4,6 +4,8 @@ var fs = require('fs'),
 	path = require('path'),
 	q = require('q');
 
+var basePath = 'https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/';
+
 function writeCategory(iconsetPath, writer) {
 
 	iconsetPath = path.join(__dirname, '../', iconsetPath);
@@ -33,7 +35,7 @@ function writeCategory(iconsetPath, writer) {
 			return;
 		}
 		var iconName = path.basename(file, extension);
-		writer.write('| ![](/images/' + categoryName + '/' + file + '?raw=true) | ' + iconName + ' |\n');
+		writer.write('| ![](' + basePath + categoryName + '/' + file + '?raw=true) | ' + iconName + ' |\n');
 	});
 
 	writer.write('\n');
