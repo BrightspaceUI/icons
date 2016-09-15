@@ -18,7 +18,8 @@ function writeCategory(iconsetPath, writer) {
 		size = 30;
 	}
 
-	writer.write('## ' + categoryName + ' (' + size + 'px x ' + size + 'px)\n\n');
+	writer.write('## ' + categoryName + '\n\n');
+	writer.write('Size: `' + size + 'px` x `' + size + '`px\n\n');
 
 	var files = fs
 		.readdirSync(iconsetPath)

@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<dom-module id="d2l-icon">
+	<template>
+		<style include="d2l-colors">
+			:host {
+				color: var(--d2l-color-tungsten);
+				--iron-icon-height: 18px;
+				--iron-icon-width: 18px;
+			}
+			:host([icon^="d2l-tier2:"]) {
+				--iron-icon-height: 24px;
+				--iron-icon-width: 24px;
+			}
+			:host([icon^="d2l-tier3:"]) {
+				--iron-icon-height: 30px;
+				--iron-icon-width: 30px;
+			}
+			:host-context([dir="rtl"]) > iron-icon {
+				transform: scaleX(-1);
+			}
+			:host([no-rtl]) > iron-icon {
+				transform: scaleX(1);
+			}
+		</style>
+		<iron-icon icon="[[icon]]"></iron-icon>
+	</template>
+	<script>
+		Polymer({
+			is: 'd2l-icon',
+			properties: {
+				icon: String,
+				noRtl: {
+					type: Boolean,
+					reflectToAttribute: true,
+					value: false
+				}
+			}
+		});
+	</script>
+</dom-module>

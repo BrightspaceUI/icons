@@ -4,7 +4,7 @@
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-`d2l-icons` contains SVGs and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application. It also exposes icons as [Polymer iron-iconset-svg](https://github.com/PolymerElements/iron-iconset-svg) collections.
+`d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/1.0/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
 
 For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
@@ -19,20 +19,93 @@ bower install d2l-icons
 
 Each icon is grouped into a category, and every icon in a particular category has the same native size.
 
-**[Browse the categories and icons](d2l-icons.md)**
-
 Currently, there are 4 icon categories:
 
-- **tier1**: general D2L icons, `18px` x `18px` native
-- **tier2**: general D2L icons, `24px` x `24px` native
-- **tier3**: general D2L icons, `30px` x `30px` native
-- **html-editor**: icons for use in the HTML editor, `18px` x `18px` native
+| Name | Description | Samples | Size | List |
+| :----: | --- | :---: | :---: | :---: |
+| tier1 | general icons | ![print](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
+| tier2 | general icons | ![audio](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
+| tier3 | general icons | ![notifications](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
+| html-editor | for use in the HTML editor | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
 
-Always choose the icon whose native size best matches your desired icon size -- ideally exactly.
+**[&gt; Browse ALL categories and icons](d2l-icons.md)**
+
+**Note:** Always choose the icon whose native size best matches your desired icon size, ideally exactly.
 
 ## Usage
 
 There are many ways to consume icons -- the best technique depends on your application and use case.
+
+### Polymer Icon Sets
+
+If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
+
+An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
+
+Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
+<button>
+	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
+	Bookmark
+</button>
+```
+
+You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+
+```html
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<style include="d2l-colors">
+iron-icon {
+	color: var(--d2l-color-tungsten);
+	--iron-icon-height: 18px;
+	--iron-icon-width: 18px;
+}
+</style>
+```
+
+If you'd like a different color when the user hovers:
+```css
+button:hover iron-icon, button:focus iron-icon {
+	color: var(--d2l-color-celestuba);
+}
+```
+
+### &lt;d2l-icon&gt; Web Component
+
+Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size and color.
+
+Use it identically to `<iron-icon>`:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-icons/d2l-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
+<button>
+	<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
+	Bookmark
+</button>
+```
+
+The color will default to tungsten, and the size will be set automatically based on the category name.
+
+To swap the color on-hover:
+```css
+button:hover d2l-icon, button:focus d2l-icon  {
+	color: var(--d2l-color-celestuba);
+}
+```
+
+#### Right-to-Left
+
+If your application is being rendered in a right-to-left direction, `<d2l-icon>` will automatically flip the image horizontally.
+
+This is typically desired, however in some cases flipping the icon will cause it to lose important meaning (e.g. the "B" bold icon). In those cases, set the `no-rtl` attribute:
+
+```html
+<d2l-icon icon="d2l-html-editor:bold" no-rtl></d2l-icon>
+```
 
 ### Directly with an `<img>` element
 
@@ -113,43 +186,6 @@ Finally, consume the CSS class in your markup as before.
 	<span class="my-app-bookmark-icon"></span>
 	Bookmark
 </button>
-```
-
-### Polymer Icon Sets
-
-If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
-
-An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
-
-Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
-```html
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
-	Bookmark
-</button>
-```
-
-You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
-
-```html
-<link rel="import" href="../d2l-colors/d2l-colors.html">
-<style include="d2l-colors">
-iron-icon {
-	color: var(--d2l-color-tungsten);
-	height: 18px;
-	width: 18px;
-}
-</style>
-```
-
-If you'd like a different color when the user hovers:
-```css
-button:hover iron-icon, button:focus iron-icon {
-	color: var(--d2l-color-celestuba);
-}
 ```
 
 ## Coding styles
