@@ -6,7 +6,9 @@
     "build": "npm run build:scss && npm run build:iconsets",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor",
-    "test": "npm run build"
+    "test": "npm run test:lint:js && npm run test:lint:wc && npm run build",
+    "test:lint:js": "eslint *.html demo/*.html cli/*.js",
+    "test:lint:wc": "polylint --input *.html"
   },
   "repository": {
     "type": "git",
@@ -30,9 +32,13 @@
   "homepage": "https://github.com/Brightspace/d2l-icons-ui",
   "devDependencies": {
     "chalk": "^1.1.1",
+    "eslint": "^3.5.0",
+    "eslint-config-brightspace": "^0.2.1",
+    "eslint-plugin-html": "^1.5.2",
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
+    "polylint": "^2.10.1",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",

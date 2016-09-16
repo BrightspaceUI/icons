@@ -14,7 +14,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 			var dirs = file.relative.split(path.sep);
 
 			var mimeType;
-			switch(path.extname(fileName).toLowerCase()) {
+			switch (path.extname(fileName).toLowerCase()) {
 				case '.svg':
 					mimeType = 'image/svg';
 					break;
@@ -25,7 +25,7 @@ var forEachIcon = function( iconPaths, delegate ) {
 			fileName = fileName.substr( 0, fileName.lastIndexOf( '.' ) );
 			var iconName = fileName.replace( '_', '-' );
 
-			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) == '_rtl' );
+			var isRtl = ( fileName.length > 4 && fileName.substr( fileName.length - 4, 4 ) === '_rtl' );
 			if ( isRtl ) {
 				iconName = iconName.substr( 0, iconName.length - 4 );
 			}
