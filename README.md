@@ -263,12 +263,10 @@ The Polymer iconset files and Sass `icons.scss` file are automatically generated
 
 #### Bidirectionality
 
-When rendered in a right-to-left direction, any icons which show directionality in terms of time (back/forward, next/previous, etc.) need to be flipped horizontally. The `<d2l-icon>` component will do this automatically.
-
-Mirroring is typically desired, however in some cases it will cause the icon to lose important meaning (e.g. the "B" bold icon). In those cases, mirroring can be bypassed by setting the `no-rtl-mirror` attribute on the `<svg>` element:
+When rendered in a right-to-left direction, any icons which show directionality in terms of time (back/forward, next/previous, etc.) need to be mirrored horizontally. If the underlying `<svg>` element has a `mirror-rtl` attribute set, the `<d2l-icon>` component will do this automatically.
 
 ```svg
-<svg no-rtl-mirror="true" ...>
+<svg mirror-rtl="true" ...>
   ...
 </svg>
 ```

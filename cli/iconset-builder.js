@@ -51,8 +51,8 @@ function buildFileXml(iconsetObj, objs, iconsetPath, file) {
 				iconsetObj['iron-iconset-svg'].$.size = values[values.length - 1].toString();
 			}
 			var attrs = {'id': id};
-			if (result.svg.$['no-rtl-mirror'] !== undefined) {
-				attrs['no-rtl-mirror'] = true;
+			if (result.svg.$['mirror-rtl'] !== undefined) {
+				attrs['mirror-rtl'] = true;
 			}
 			processFill(result);
 			var g = {

@@ -18,30 +18,24 @@
 				--iron-icon-height: 30px;
 				--iron-icon-width: 30px;
 			}
-			:host-context([dir="rtl"]) iron-icon {
+			:host-context([dir="rtl"]) iron-icon[data-mirror-rtl] {
 				transform: scaleX(-1);
 			}
-			:host([no-rtl-mirror]) iron-icon {
-				transform: none;
-			}
 		</style>
-		<iron-icon icon="[[icon]]"></iron-icon>
+		<!-- the <span> is needed when shadow DOM is enabled for some reason -->
+		<span><iron-icon icon="[[icon]]"></iron-icon></span>
 	</template>
 	<script>
 		Polymer({
 			is: 'd2l-icon',
 			properties: {
-				icon: String,
-				noRtlMirror: {
-					type: Boolean,
-					readOnly: true,
-					reflectToAttribute: true,
-					value: false
-				}
+				icon: String
 			},
 			ready: function() {
-				var hasNoRtlMirror = this.__hasNoRtlMirror();
-				this._setNoRtlMirror(hasNoRtlMirror);
+				var mirrorRtl = this.__computeMirrorRtl();
+				if (mirrorRtl) {
+					this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
+				}
 			},
 			__findSvg: function(node) {
 				var composedChildren = D2L.Dom.getComposedChildren(node);
@@ -57,14 +51,14 @@
 				}
 				return null;
 			},
-			__hasNoRtlMirror: function() {
+			__computeMirrorRtl: function() {
 				var svg = this.__findSvg(this);
 				if (svg === null) {
 					return false;
 				}
 				var gs = svg.getElementsByTagName('g');
 				for (var i = 0; i < gs.length; i++) {
-					if (gs[i].hasAttribute('no-rtl-mirror')) {
+					if (gs[i].hasAttribute('mirror-rtl')) {
 						return true;
 					}
 				}
