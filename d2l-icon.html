@@ -1,6 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
+<link rel="import" href="../d2l-polymer-behaviors/d2l-dom.html">
 <dom-module id="d2l-icon">
 	<template>
 		<style include="d2l-colors">
@@ -33,9 +34,41 @@
 				icon: String,
 				noRtl: {
 					type: Boolean,
+					readOnly: true,
 					reflectToAttribute: true,
 					value: false
 				}
+			},
+			ready: function() {
+				var isNoRtl = this.__isNoRtl();
+				this._setNoRtl(isNoRtl);
+			},
+			__findSvg: function(node) {
+				var composedChildren = D2L.Dom.getComposedChildren(node);
+				for (var i = 0; i < composedChildren.length; i++) {
+					var c = composedChildren[i];
+					if (c.tagName.toLowerCase() === 'svg') {
+						return c;
+					}
+					var svg = this.__findSvg(c);
+					if (svg) {
+						return svg;
+					}
+				}
+				return null;
+			},
+			__isNoRtl: function() {
+				var svg = this.__findSvg(this);
+				if (svg === null) {
+					return false;
+				}
+				var gs = svg.getElementsByTagName('g');
+				for (var i = 0; i < gs.length; i++) {
+					if (gs[i].hasAttribute('no-rtl')) {
+						return true;
+					}
+				}
+				return false;
 			}
 		});
 	</script>

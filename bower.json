@@ -29,6 +29,7 @@
     "polymer": "^1.5.0",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0",
     "iron-icon": "^1.0.10",
-    "d2l-colors": "^2.1.0"
+    "d2l-colors": "^2.1.0",
+    "d2l-polymer-behaviors": "^0.0.3"
   }
 }
