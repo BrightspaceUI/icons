@@ -21,7 +21,7 @@
 			:host-context([dir="rtl"]) iron-icon {
 				transform: scaleX(-1);
 			}
-			:host([no-rtl]) iron-icon {
+			:host([no-rtl-mirror]) iron-icon {
 				transform: none;
 			}
 		</style>
@@ -32,7 +32,7 @@
 			is: 'd2l-icon',
 			properties: {
 				icon: String,
-				noRtl: {
+				noRtlMirror: {
 					type: Boolean,
 					readOnly: true,
 					reflectToAttribute: true,
@@ -40,8 +40,8 @@
 				}
 			},
 			ready: function() {
-				var isNoRtl = this.__isNoRtl();
-				this._setNoRtl(isNoRtl);
+				var hasNoRtlMirror = this.__hasNoRtlMirror();
+				this._setNoRtlMirror(hasNoRtlMirror);
 			},
 			__findSvg: function(node) {
 				var composedChildren = D2L.Dom.getComposedChildren(node);
@@ -57,14 +57,14 @@
 				}
 				return null;
 			},
-			__isNoRtl: function() {
+			__hasNoRtlMirror: function() {
 				var svg = this.__findSvg(this);
 				if (svg === null) {
 					return false;
 				}
 				var gs = svg.getElementsByTagName('g');
 				for (var i = 0; i < gs.length; i++) {
-					if (gs[i].hasAttribute('no-rtl')) {
+					if (gs[i].hasAttribute('no-rtl-mirror')) {
 						return true;
 					}
 				}
