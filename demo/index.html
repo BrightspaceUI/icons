@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>d2l-icons</title>
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents.min.js"></script>
+	<script>
+		window.Polymer = window.Polymer || {};
+		window.Polymer.dom = 'shadow';
+	</script>
+	<link rel="import" href="../../d2l-colors/d2l-colors.html">
+	<link rel="import" href="../d2l-icons.html">
+	<style is="custom-style" include="d2l-colors">
+		button:hover d2l-icon,
+		button:focus d2l-icon  {
+			color: var(--d2l-color-celestuba);
+		}
+	</style>
+</head>
+<body>
+	<h1>&lt;d2l-icon&gt; Demo</h1>
+	<p>
+		<d2l-icon icon="d2l-tier1:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<d2l-icon icon="d2l-tier2:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<d2l-icon icon="d2l-tier3:calendar"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<button><d2l-icon icon="d2l-tier1:gear"></d2l-icon>Settings</button>
+	</p>
+	<h2>LTR</h2>
+	<p>
+		<d2l-icon icon="d2l-tier1:check-circle"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<d2l-icon icon="d2l-tier1:volume"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<d2l-icon icon="d2l-tier1:flag-filled"></d2l-icon>&nbsp;&nbsp;&nbsp;
+		<d2l-icon icon="d2l-html-editor:bold"></d2l-icon>
+	</p>
+	<section dir="rtl">
+		<h2>RTL</h2>
+		<p>
+			<d2l-icon icon="d2l-tier1:check-circle"></d2l-icon>&nbsp;&nbsp;&nbsp;
+			<d2l-icon icon="d2l-tier1:volume"></d2l-icon>&nbsp;&nbsp;&nbsp;
+			<d2l-icon icon="d2l-tier1:flag-filled"></d2l-icon>&nbsp;&nbsp;&nbsp;
+			<d2l-icon icon="d2l-html-editor:bold"></d2l-icon>
+		</p>
+	</section>
+</body>
+</html>

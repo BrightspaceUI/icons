@@ -18,13 +18,14 @@ function writeCategory(iconsetPath, writer) {
 		size = 30;
 	}
 
-	writer.write('## ' + categoryName + ' (' + size + 'px x ' + size + 'px)\n\n');
+	writer.write('## ' + categoryName + '\n\n');
+	writer.write('Size: `' + size + 'px` x `' + size + '`px\n\n');
 
 	var files = fs
 		.readdirSync(iconsetPath)
 		.filter(function(file) {
 			return path.extname(file) === '.svg';
-		}).sort(function(a,b) {
+		}).sort(function(a, b) {
 			if (a < b) return -1;
 			if (a > b) return 1;
 			return 0;
@@ -32,7 +33,6 @@ function writeCategory(iconsetPath, writer) {
 
 	var numCols = 3;
 	var numPerCol = Math.ceil(files.length / numCols);
-	var counter = 0;
 
 	for (var c = 0; c < numCols; c++) {
 		writer.write('| Icon | Name |');
@@ -45,7 +45,7 @@ function writeCategory(iconsetPath, writer) {
 		if (d === numCols - 1) {
 			writer.write('\n');
 		} else {
-			writer.write(' --- ')
+			writer.write(' --- ');
 		}
 	}
 

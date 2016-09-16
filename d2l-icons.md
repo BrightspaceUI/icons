@@ -1,6 +1,8 @@
 # Icons
 
-## tier1 (18px x 18px)
+## tier1
+
+Size: `18px` x `18`px
 
 | Icon | Name || Icon | Name || Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
@@ -44,7 +46,9 @@
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/draft.svg?raw=true) | draft || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/online.svg?raw=true) | online || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/visibility-show.svg?raw=true) | visibility-show |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/edit-bulk.svg?raw=true) | edit-bulk || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/outcomes.svg?raw=true) | outcomes || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/volume.svg?raw=true) | volume |
 
-## tier2 (24px x 24px)
+## tier2
+
+Size: `24px` x `24`px
 
 | Icon | Name || Icon | Name || Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
@@ -83,7 +87,9 @@
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/email-open.svg?raw=true) | email-open || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/pic.svg?raw=true) | pic || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/volume.svg?raw=true) | volume |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/email.svg?raw=true) | email || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/pin-filled.svg?raw=true) | pin-filled || &nbsp; | &nbsp; |
 
-## tier3 (30px x 30px)
+## tier3
+
+Size: `30px` x `30`px
 
 | Icon | Name || Icon | Name || Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
@@ -98,7 +104,9 @@
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/classes.svg?raw=true) | classes || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/image.svg?raw=true) | image || &nbsp; | &nbsp; |
 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/close-thick.svg?raw=true) | close-thick || ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/lock-unlocked.svg?raw=true) | lock-unlocked || &nbsp; | &nbsp; |
 
-## html-editor (18px x 18px)
+## html-editor
+
+Size: `18px` x `18`px
 
 | Icon | Name || Icon | Name || Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |

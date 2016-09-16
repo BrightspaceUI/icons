@@ -35,7 +35,7 @@ var writeScss = function(iconInfos, scssPath) {
 		}
 	};
 
-	for(var i=0; i<iconInfos.length; i++) {
+	for (var i = 0; i < iconInfos.length; i++) {
 
 		var iconInfo = iconInfos[i];
 

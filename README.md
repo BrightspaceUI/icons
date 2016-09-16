@@ -4,7 +4,7 @@
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-`d2l-icons` contains SVGs and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application. It also exposes icons as [Polymer iron-iconset-svg](https://github.com/PolymerElements/iron-iconset-svg) collections.
+`d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/1.0/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
 
 For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
@@ -19,20 +19,103 @@ bower install d2l-icons
 
 Each icon is grouped into a category, and every icon in a particular category has the same native size.
 
-**[Browse the categories and icons](d2l-icons.md)**
-
 Currently, there are 4 icon categories:
 
-- **tier1**: general D2L icons, `18px` x `18px` native
-- **tier2**: general D2L icons, `24px` x `24px` native
-- **tier3**: general D2L icons, `30px` x `30px` native
-- **html-editor**: icons for use in the HTML editor, `18px` x `18px` native
+| Category Name | Description | Samples | Size | List |
+| :----: | --- | :---: | :---: | :---: |
+| tier1 | minimal level of detail, solid style | ![print](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
+| tier2 | medium level of detail, linear style | ![audio](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
+| tier3 | medium level of detail, linear style | ![notifications](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
+| html-editor | for use in the HTML editor | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
 
-Always choose the icon whose native size best matches your desired icon size -- ideally exactly.
+**[&gt; Browse ALL categories and icons](d2l-icons.md)**
+
+**Note:** Always choose the icon whose native size best matches your desired icon size, ideally exactly.
 
 ## Usage
 
-There are many ways to consume icons -- the best technique depends on your application and use case.
+There are many ways to consume icons -- the best technique depends on your application, technology stack and use case.
+
+### Polymer Icon Sets
+
+If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
+
+An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
+
+Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
+<button>
+	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
+	Bookmark
+</button>
+```
+
+You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+
+```html
+<link rel="import" href="../d2l-colors/d2l-colors.html">
+<style include="d2l-colors">
+iron-icon {
+	color: var(--d2l-color-tungsten);
+	--iron-icon-height: 18px;
+	--iron-icon-width: 18px;
+}
+</style>
+```
+
+If you'd like a different color when the user hovers:
+```css
+button:hover iron-icon, button:focus iron-icon {
+	color: var(--d2l-color-celestuba);
+}
+```
+
+Advantages:
+- color can be manipulated using CSS
+- size can be manipulated using CSS
+
+Disadvantages:
+- requires Google Polymer
+- default color (tungsten) must be set
+- size must be set
+- no automatic support for right-to-left icons
+
+### &lt;d2l-icon&gt; Web Component
+
+Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size, color, and mirror the icon horizontally for right-to-left languages.
+
+Use it identically to `<iron-icon>`:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-icons/d2l-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
+<button>
+	<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
+	Bookmark
+</button>
+```
+
+The color will default to tungsten, and the size will be set automatically based on the category name.
+
+To swap the color on-hover:
+```css
+button:hover d2l-icon, button:focus d2l-icon  {
+	color: var(--d2l-color-celestuba);
+}
+```
+
+Advantages:
+- color (tungsten) is automatically set
+- size is automatically set based on the icon category
+- color can be manipulated using CSS
+- size can be manipulated using CSS
+- automatic support for right-to-left icons
+
+Disadvantages:
+- requires Google Polymer
 
 ### Directly with an `<img>` element
 
@@ -45,9 +128,19 @@ HTML:
 
 Don't forget to provide alternate text if the icon isn't accompanied by any other text.
 
+Advantages:
+- easy -- no other tech needed
+- color (tungsten) is automatically set
+- size is automatically set
+- size can be manipulated using CSS
+
+Disadvantages:
+- no ability to change the color
+- no automatic support for right-to-left icons
+
 ### Background Images
 
-In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text and/or a tooltip, applying the icon using a background image is a good approach. It hides the icon from assistive technology (like a screen reader), allowing the accompanying text to stand alone.
+In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text and/or a tooltip, applying the icon using a background image can be a good approach. It hides the icon from assistive technology (like a screen reader), allowing the accompanying text to stand alone.
 
 First, create some CSS that points at the image you'd like and sets the correct size:
 
@@ -68,6 +161,16 @@ Then apply the CSS class to an element:
 	Bookmark
 </button>
 ```
+
+Advantages:
+- easy -- no other tech needed
+- color (tungsten) is automatically set
+- size can be manipulated using CSS
+
+Disadvantages:
+- no ability to change the color
+- size must be set
+- no automatic support for right-to-left icons
 
 #### Background images with invisible text
 
@@ -115,42 +218,14 @@ Finally, consume the CSS class in your markup as before.
 </button>
 ```
 
-### Polymer Icon Sets
+Advantages:
+- color (tungsten) is automatically set
+- size is automatically set
 
-If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
-
-An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
-
-Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
-```html
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
-	Bookmark
-</button>
-```
-
-You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
-
-```html
-<link rel="import" href="../d2l-colors/d2l-colors.html">
-<style include="d2l-colors">
-iron-icon {
-	color: var(--d2l-color-tungsten);
-	height: 18px;
-	width: 18px;
-}
-</style>
-```
-
-If you'd like a different color when the user hovers:
-```css
-button:hover iron-icon, button:focus iron-icon {
-	color: var(--d2l-color-celestuba);
-}
-```
+Disadvantages:
+- requires Sass
+- no ability to change the color
+- no automatic support for right-to-left icons
 
 ## Coding styles
 
@@ -185,6 +260,18 @@ Here's a sample of a properly formatted SVG:
 #### Auto-generated files
 
 The Polymer iconset files and Sass `icons.scss` file are automatically generated, so when making icon modifications, re-generate these files by running `npm run build`.
+
+#### Bidirectionality
+
+When rendered in a right-to-left direction, any icons which show directionality in terms of time (back/forward, next/previous, etc.) need to be mirrored horizontally. If the underlying `<svg>` element has a `mirror-rtl` attribute set, the `<d2l-icon>` component will do this automatically.
+
+```svg
+<svg mirror-rtl="true" ...>
+  ...
+</svg>
+```
+
+To learn more about how best to determine if an icon should be mirrored, refer to [Google's Material Design Bidirectionality](https://material.google.com/usability/bidirectionality.html) documentation.
 
 ### General
 

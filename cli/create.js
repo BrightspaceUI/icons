@@ -17,7 +17,7 @@ var generate = function(iconPaths, outputPath, formatter) {
 		var iconPromises = [];
 
 		var tryGetRtlIcon = function(ltrIcon) {
-			for(var i=0; i<iconInfos.length; i++) {
+			for (var i = 0; i < iconInfos.length; i++) {
 				if (iconInfos[i].isRtl && iconInfos[i].name === ltrIcon.name) {
 					return iconInfos[i];
 				}
@@ -54,7 +54,7 @@ var generate = function(iconPaths, outputPath, formatter) {
 
 		};
 
-		for(var i=0; i<iconInfos.length; i++) {
+		for (var i = 0; i < iconInfos.length; i++) {
 
 			var iconPromise = getIconInfo(iconInfos[i]);
 			if (iconPromise) {
@@ -67,7 +67,7 @@ var generate = function(iconPaths, outputPath, formatter) {
 
 	}).then(function(iconInfos) {
 
-		iconInfos.sort(function(a,b) {
+		iconInfos.sort(function(a, b) {
 			if (a.mixin > b.mixin) {
 				return 1;
 			}

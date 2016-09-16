@@ -1,6 +1,6 @@
 {
   "name": "d2l-icons",
-  "description": "SVG images, Polymer iron-iconset collections and SASS mixins for D2L icons",
+  "description": "SVGs, Polymer web components, iron-iconset collections and SASS mixins for D2L icons",
   "main": [
     "d2l-icons.html",
     "icons.scss"
@@ -27,6 +27,9 @@
   ],
   "dependencies": {
     "polymer": "^1.5.0",
-    "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0"
+    "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0",
+    "iron-icon": "^1.0.10",
+    "d2l-colors": "^2.1.0",
+    "d2l-polymer-behaviors": "^0.0.3"
   }
 }

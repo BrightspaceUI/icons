@@ -8,7 +8,7 @@ var path = require('path'),
 var iconsetObjTemplate = {
 	'link': [
 		{'$': {'rel': 'import', 'href': '../polymer/polymer.html'}},
-		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}},
+		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}}
 	],
 	'iron-iconset-svg': {
 		'$': {'name': '', 'size': ''},
@@ -20,7 +20,7 @@ function processFill(elem) {
 	if (elem.$ && elem.$.fill && elem.$.fill !== 'none') {
 		delete elem.$.fill;
 	}
-	for(var child in elem) {
+	for (var child in elem) {
 		if (child !== '$') {
 			processFill(elem[child]);
 		}
@@ -48,13 +48,17 @@ function buildFileXml(iconsetObj, objs, iconsetPath, file) {
 			}
 			if (iconsetObj['iron-iconset-svg'].$.size === '' && result.svg.$.viewBox) {
 				var values = result.svg.$.viewBox.split(' ');
-				iconsetObj['iron-iconset-svg'].$.size = values[values.length-1].toString();
+				iconsetObj['iron-iconset-svg'].$.size = values[values.length - 1].toString();
+			}
+			var attrs = {'id': id};
+			if (result.svg.$['mirror-rtl'] !== undefined) {
+				attrs['mirror-rtl'] = true;
 			}
 			processFill(result);
 			var g = {
-				$: {'id': id}
+				$: attrs
 			};
-			for(var child in result.svg) {
+			for (var child in result.svg) {
 				if (child !== '$') {
 					g[child] = result.svg[child];
 				}
@@ -81,7 +85,7 @@ module.exports = function(iconsetPath) {
 
 	var files = fs
 		.readdirSync(iconsetPath)
-		.sort(function(a,b) {
+		.sort(function(a, b) {
 			if (a < b) return -1;
 			if (a > b) return 1;
 			return 0;
@@ -92,7 +96,7 @@ module.exports = function(iconsetPath) {
 	});
 
 	return q.allSettled(promises)
-		.then(function(results) {
+		.then(function() {
 			files.forEach(function(file) {
 				if (objs[file]) {
 					iconsetObj['iron-iconset-svg'].svg.defs.g.push(objs[file]);
