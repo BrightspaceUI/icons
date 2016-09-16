@@ -34,7 +34,7 @@ Currently, there are 4 icon categories:
 
 ## Usage
 
-There are many ways to consume icons -- the best technique depends on your application and use case.
+There are many ways to consume icons -- the best technique depends on your application, technology stack and use case.
 
 ### Polymer Icon Sets
 
@@ -73,9 +73,19 @@ button:hover iron-icon, button:focus iron-icon {
 }
 ```
 
+Advantages:
+- color can be manipulated using CSS
+- size can be manipulated using CSS
+
+Disadvantages:
+- requires Google Polymer
+- default color (tungsten) must be set
+- size must be set
+- no automatic support for right-to-left icons
+
 ### &lt;d2l-icon&gt; Web Component
 
-Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size and color.
+Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size, color, and mirror the icon horizontally for right-to-left languages.
 
 Use it identically to `<iron-icon>`:
 ```html
@@ -97,15 +107,15 @@ button:hover d2l-icon, button:focus d2l-icon  {
 }
 ```
 
-#### Right-to-Left
+Advantages:
+- color (tungsten) is automatically set
+- size is automatically set based on the icon category
+- color can be manipulated using CSS
+- size can be manipulated using CSS
+- automatic support for right-to-left icons
 
-If your application is being rendered in a right-to-left direction, `<d2l-icon>` will automatically flip the image horizontally.
-
-This is typically desired, however in some cases flipping the icon will cause it to lose important meaning (e.g. the "B" bold icon). In those cases, set the `no-rtl` attribute:
-
-```html
-<d2l-icon icon="d2l-html-editor:bold" no-rtl></d2l-icon>
-```
+Disadvantages:
+- requires Google Polymer
 
 ### Directly with an `<img>` element
 
@@ -118,9 +128,19 @@ HTML:
 
 Don't forget to provide alternate text if the icon isn't accompanied by any other text.
 
+Advantages:
+- easy -- no other tech needed
+- color (tungsten) is automatically set
+- size is automatically set
+- size can be manipulated using CSS
+
+Disadvantages:
+- no ability to change the color
+- no automatic support for right-to-left icons
+
 ### Background Images
 
-In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text and/or a tooltip, applying the icon using a background image is a good approach. It hides the icon from assistive technology (like a screen reader), allowing the accompanying text to stand alone.
+In cases where the icon is purely decorative (it doesn't provide any additional information) and is accompanied by text and/or a tooltip, applying the icon using a background image can be a good approach. It hides the icon from assistive technology (like a screen reader), allowing the accompanying text to stand alone.
 
 First, create some CSS that points at the image you'd like and sets the correct size:
 
@@ -141,6 +161,16 @@ Then apply the CSS class to an element:
 	Bookmark
 </button>
 ```
+
+Advantages:
+- easy -- no other tech needed
+- color (tungsten) is automatically set
+- size can be manipulated using CSS
+
+Disadvantages:
+- no ability to change the color
+- size must be set
+- no automatic support for right-to-left icons
 
 #### Background images with invisible text
 
@@ -187,6 +217,15 @@ Finally, consume the CSS class in your markup as before.
 	Bookmark
 </button>
 ```
+
+Advantages:
+- color (tungsten) is automatically set
+- size is automatically set
+
+Disadvantages:
+- requires Sass
+- no ability to change the color
+- no automatic support for right-to-left icons
 
 ## Coding styles
 
