@@ -261,6 +261,20 @@ Here's a sample of a properly formatted SVG:
 
 The Polymer iconset files and Sass `icons.scss` file are automatically generated, so when making icon modifications, re-generate these files by running `npm run build`.
 
+#### Bidirectionality
+
+When rendered in a right-to-left direction, any icons which show directionality in terms of time (back/forward, next/previous, etc.) need to be flipped horizontally. The `<d2l-icon>` component will do this automatically.
+
+Mirroring is typically desired, however in some cases it will cause the icon to lose important meaning (e.g. the "B" bold icon). In those cases, mirroring can be bypassed by setting the `no-rtl-mirror` attribute on the `<svg>` element:
+
+```svg
+<svg no-rtl-mirror="true" ...>
+  ...
+</svg>
+```
+
+To learn more about how best to determine if an icon should be mirrored, refer to [Google's Material Design Bidirectionality](https://material.google.com/usability/bidirectionality.html) documentation.
+
 ### General
 
 See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
