@@ -17,11 +17,11 @@
 				--iron-icon-height: 30px;
 				--iron-icon-width: 30px;
 			}
-			:host-context([dir="rtl"]) > iron-icon {
+			:host-context([dir="rtl"]) iron-icon {
 				transform: scaleX(-1);
 			}
-			:host([no-rtl]) > iron-icon {
-				transform: scaleX(1);
+			:host([no-rtl]) iron-icon {
+				transform: none;
 			}
 		</style>
 		<iron-icon icon="[[icon]]"></iron-icon>
