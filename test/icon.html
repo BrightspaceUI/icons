@@ -14,10 +14,7 @@
 		<test-fixture id="icon">
 			<template>
 				<div>
-					<a id="focusable_before" href="http://www.d2l.com"></a>
-										<a id="focusable_before2" href="http://www.d2l.com"></a>
 					<d2l-icon icon="d2l-tier1:print"></d2l-icon>
-					<a id="focusable_after" href="http://www.d2l.com"></a>
 				</div>
 			</template>
 		</test-fixture>
@@ -47,7 +44,6 @@
 
 				it('initializes svg as not focusable', function() {
 					expect(icon.__findSvg(icon).getAttribute('focusable')).to.equal('false');
-										//expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.be.null;
 				});
 
 				it('updates svg when icon attribute changes', function() {
