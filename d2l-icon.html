@@ -29,17 +29,14 @@
 	<script>
 		Polymer({
 			is: 'd2l-icon',
+
 			properties: {
-				icon: String
+				icon: {
+					type: String,
+					observer: '__onChange'
+				}
 			},
-			ready: function() {
-				this.async(function() {
-					var mirrorRtl = this.__computeMirrorRtl();
-					if (mirrorRtl) {
-						this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
-					}
-				});
-			},
+
 			__findSvg: function(node) {
 				var composedChildren = D2L.Dom.getComposedChildren(node);
 				for (var i = 0; i < composedChildren.length; i++) {
@@ -54,9 +51,9 @@
 				}
 				return null;
 			},
-			__computeMirrorRtl: function() {
-				var svg = this.__findSvg(this);
-				if (svg === null) {
+
+			__computeMirrorRtl: function(svg) {
+				if (!svg) {
 					return false;
 				}
 				var gs = svg.getElementsByTagName('g');
@@ -66,7 +63,26 @@
 					}
 				}
 				return false;
+			},
+
+			__initialize: function() {
+				var svg = this.__findSvg(this);
+				if (!svg) {
+					return false;
+				}
+				/* IE prevent svg from being focusable */
+				svg.setAttribute('focusable', 'false');
+				var mirrorRtl = this.__computeMirrorRtl(svg);
+				if (mirrorRtl) {
+					this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
+				}
+
+			},
+
+			__onChange: function() {
+				this.__initialize();
 			}
+
 		});
 	</script>
 </dom-module>
