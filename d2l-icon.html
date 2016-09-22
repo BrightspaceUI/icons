@@ -30,7 +30,10 @@
 		Polymer({
 			is: 'd2l-icon',
 			properties: {
-				icon: String
+				icon: {
+					type: String,
+					reflectToAttribute: true
+				}
 			},
 			ready: function() {
 				var mirrorRtl = this.__computeMirrorRtl();
