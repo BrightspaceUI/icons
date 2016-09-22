@@ -9,7 +9,8 @@
     "postinstall": "bower install",
     "test": "npm run test:lint:js && npm run test:lint:wc && npm run build",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
-    "test:lint:wc": "polylint --input *.html"
+    "test:lint:wc": "polylint --input *.html",
+    "test:unit:local": "wct --skip-plugin sauce"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
+    "web-component-tester": "^4.2.2",
     "xml2js": "^0.4.16",
     "yargs": "^4.1.0"
   },

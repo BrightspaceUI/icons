@@ -65,6 +65,10 @@
 				return false;
 			},
 
+			__getIronIcon: function() {
+				return this.$$('iron-icon');
+			},
+
 			__initialize: function() {
 				var svg = this.__findSvg(this);
 				if (!svg) {
