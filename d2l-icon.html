@@ -75,6 +75,8 @@
 				var mirrorRtl = this.__computeMirrorRtl(svg);
 				if (mirrorRtl) {
 					this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
+				} else {
+					this.$$('iron-icon').removeAttribute('data-mirror-rtl');
 				}
 
 			},
