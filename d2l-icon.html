@@ -33,10 +33,12 @@
 				icon: String
 			},
 			ready: function() {
-				var mirrorRtl = this.__computeMirrorRtl();
-				if (mirrorRtl) {
-					this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
-				}
+				this.async(function() {
+					var mirrorRtl = this.__computeMirrorRtl();
+					if (mirrorRtl) {
+						this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
+					}
+				});
 			},
 			__findSvg: function(node) {
 				var composedChildren = D2L.Dom.getComposedChildren(node);
