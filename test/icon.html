@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>d2l-icon tests</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../web-component-tester/browser.js"></script>
+		<link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
+		<link rel="import" href="../d2l-icons.html">
+	</head>
+	<body>
+
+		<test-fixture id="icon">
+			<template>
+				<div>
+					<d2l-icon icon="d2l-tier1:print"></d2l-icon>
+				</div>
+			</template>
+		</test-fixture>
+
+		<test-fixture id="icon_with_mirror">
+			<template>
+				<d2l-icon icon="d2l-tier1:volume"></d2l-icon>
+			</template>
+		</test-fixture>
+
+		<script>
+
+		describe('<d2l-icon>', function() {
+
+			var iconFixture, icon;
+
+			describe('standard', function() {
+
+				beforeEach(function() {
+					iconFixture = fixture('icon');
+					icon = iconFixture.querySelector('d2l-icon');
+				});
+
+				it('finds svg', function() {
+					expect(icon.__findSvg(icon)).to.not.be.null;
+				});
+
+				it('initializes svg as not focusable', function() {
+					expect(icon.__findSvg(icon).getAttribute('focusable')).to.equal('false');
+				});
+
+				it('updates svg when icon attribute changes', function() {
+						var originalSvg = icon.__findSvg(icon);
+						originalSvg.setAttribute('original', 'true');
+
+						icon.setAttribute('icon', 'd2l-tier1:add');
+						var updatedSvg = icon.__findSvg(icon);
+
+						expect(updatedSvg).to.not.equal(originalSvg);
+						expect(updatedSvg.getAttribute('original')).to.be.null;
+				});
+
+			});
+
+			describe('mirrored', function() {
+
+				beforeEach(function() {
+					icon = fixture('icon_with_mirror');
+				});
+
+				it('initializes iron-icon with data-mirror-rtl attribute', function() {
+					expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.not.be.null;
+					expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.equal('');
+				});
+
+				it('updates iron-icon data-mirror-rtl attribute when icon changes', function() {
+					icon.setAttribute('icon', 'd2l-tier1:print');
+					expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.be.null;
+					expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.be.null;
+				});
+
+			});
+
+		});
+		</script>
+	</body>
+</html>
