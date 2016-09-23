@@ -7,8 +7,7 @@
 	<link rel="import" href="../../d2l-demo-template/d2l-demo-template.html">
 	<link rel="import" href="../d2l-icons.html">
 	<style is="custom-style" include="d2l-colors">
-		button:hover d2l-icon,
-		button:focus d2l-icon  {
+		.color-override d2l-icon {
 			color: var(--d2l-color-celestuba);
 		}
 	</style>
@@ -20,6 +19,13 @@
 
 			<h2 class="d2l-heading-4">tiers (1,2,3)</h2>
 			<p>
+				<d2l-icon icon="d2l-tier1:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
+				<d2l-icon icon="d2l-tier2:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
+				<d2l-icon icon="d2l-tier3:calendar"></d2l-icon>&nbsp;&nbsp;&nbsp;
+			</p>
+
+			<h2 class="d2l-heading-4">color override</h2>
+			<p class="color-override">
 				<d2l-icon icon="d2l-tier1:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
 				<d2l-icon icon="d2l-tier2:print"></d2l-icon>&nbsp;&nbsp;&nbsp;
 				<d2l-icon icon="d2l-tier3:calendar"></d2l-icon>&nbsp;&nbsp;&nbsp;
