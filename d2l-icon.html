@@ -7,20 +7,24 @@
 		<style include="d2l-colors">
 			:host {
 				color: var(--d2l-color-tungsten);
-				--iron-icon-height: 18px;
-				--iron-icon-width: 18px;
+				display: inline-block;
+				--iron-icon-height: var(--d2l-icon-height, 18px);
+				--iron-icon-width: var(--d2l-icon-width, 18px);
 			}
 			:host([icon*="d2l-tier2:"]) {
-				--iron-icon-height: 24px;
-				--iron-icon-width: 24px;
+				--iron-icon-height: var(--d2l-icon-height, 24px);
+				--iron-icon-width: var(--d2l-icon-width, 24px);
 			}
 			:host([icon*="d2l-tier3:"]) {
-				--iron-icon-height: 30px;
-				--iron-icon-width: 30px;
+				--iron-icon-height: var(--d2l-icon-height, 30px);
+				--iron-icon-width: var(--d2l-icon-width, 30px);
 			}
 			:host-context([dir="rtl"]) iron-icon[data-mirror-rtl] {
 				-webkit-transform: scaleX(-1);
 				transform: scaleX(-1);
+			}
+			:host > span {
+				display: inline-block;
 			}
 		</style>
 		<!-- the <span> is needed when shadow DOM is enabled for some reason -->
