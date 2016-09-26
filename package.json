@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run build:scss && npm run build:iconsets",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
-    "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor",
+    "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
     "postinstall": "bower install",
     "test": "npm run test:lint:js && npm run test:lint:wc && npm run build",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
