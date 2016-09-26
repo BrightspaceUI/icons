@@ -3,19 +3,34 @@
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 <link rel="import" href="../d2l-polymer-behaviors/d2l-dom.html">
 <dom-module id="d2l-icon">
-	<template>
+	<template strip-whitespace>
 		<style include="d2l-colors">
 			:host {
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
 				color: var(--d2l-color-tungsten);
-				display: inline-block;
+				display: -ms-inline-flexbox;
+				display: -webkit-inline-flex;
+				display: inline-flex;
+				height: var(--d2l-icon-height, 18px);
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				vertical-align: middle;
+				width: var(--d2l-icon-width, 18px);
 				--iron-icon-height: var(--d2l-icon-height, 18px);
 				--iron-icon-width: var(--d2l-icon-width, 18px);
 			}
 			:host([icon*="d2l-tier2:"]) {
+				height: var(--d2l-icon-height, 24px);
+				width: var(--d2l-icon-width, 24px);
 				--iron-icon-height: var(--d2l-icon-height, 24px);
 				--iron-icon-width: var(--d2l-icon-width, 24px);
 			}
 			:host([icon*="d2l-tier3:"]) {
+				height: var(--d2l-icon-height, 30px);
+				width: var(--d2l-icon-width, 30px);
 				--iron-icon-height: var(--d2l-icon-height, 30px);
 				--iron-icon-width: var(--d2l-icon-width, 30px);
 			}
@@ -23,12 +38,8 @@
 				-webkit-transform: scaleX(-1);
 				transform: scaleX(-1);
 			}
-			:host > span {
-				display: inline-block;
-			}
 		</style>
-		<!-- the <span> is needed when shadow DOM is enabled for some reason -->
-		<span><iron-icon icon="[[icon]]"></iron-icon></span>
+		<iron-icon icon="[[icon]]"></iron-icon>
 	</template>
 	<script>
 		Polymer({
@@ -92,6 +103,7 @@
 
 			__onChange: function() {
 				this.__initialize();
+				this.updateStyles(); // need to re-calc iron-icon variables
 			}
 
 		});
