@@ -1,0 +1,17 @@
+<script>
+	window.D2LBehaviors = window.D2LBehaviors || {};
+	window.D2LBehaviors.LabelBehavior = {
+		properties: {
+			title: {
+				type: String,
+				reflectToAttribute: true
+			}
+		},
+
+		ready: function() {
+			this._observer = Polymer.dom(this).observeNodes(function() {
+				this.title = Polymer.dom(this).textContent;
+			});
+		}
+	};
+</script>
