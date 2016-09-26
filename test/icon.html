@@ -17,7 +17,7 @@
 			</template>
 		</test-fixture>
 
-		<test-fixture id="icon_with_mirror">
+		<test-fixture id="mirror-rtl">
 			<template>
 				<d2l-icon icon="d2l-tier1:volume"></d2l-icon>
 			</template>
@@ -60,7 +60,7 @@
 			describe('mirrored', function() {
 
 				beforeEach(function() {
-					icon = fixture('icon_with_mirror');
+					icon = fixture('mirror-rtl');
 				});
 
 				it('initializes iron-icon with data-mirror-rtl attribute', function() {
