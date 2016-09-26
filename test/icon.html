@@ -11,11 +11,9 @@
 	</head>
 	<body>
 
-		<test-fixture id="icon">
+		<test-fixture id="tier1">
 			<template>
-				<div>
-					<d2l-icon icon="d2l-tier1:print"></d2l-icon>
-				</div>
+				<d2l-icon icon="d2l-tier1:print"></d2l-icon>
 			</template>
 		</test-fixture>
 
@@ -29,13 +27,12 @@
 
 		describe('<d2l-icon>', function() {
 
-			var iconFixture, icon;
+			var icon;
 
-			describe('standard', function() {
+			describe('tier1', function() {
 
 				beforeEach(function() {
-					iconFixture = fixture('icon');
-					icon = iconFixture.querySelector('d2l-icon');
+					icon = fixture('tier1');
 				});
 
 				it('finds svg', function() {
@@ -43,7 +40,8 @@
 				});
 
 				it('initializes svg as not focusable', function() {
-					expect(icon.__findSvg(icon).getAttribute('focusable')).to.equal('false');
+					expect(icon.__findSvg(icon).getAttribute('focusable'))
+						.to.equal('false');
 				});
 
 				it('updates svg when icon attribute changes', function() {
