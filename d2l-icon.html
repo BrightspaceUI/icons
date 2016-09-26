@@ -6,6 +6,12 @@
 	<template>
 		<style include="d2l-colors">
 			:host {
+				/*
+				 * Without this, some browsers (IE) will think the minimum
+				 * height of an iron-icon is 20px instead of 18px, which
+				 * messes up centering
+				 */
+				vertical-align: top;
 				color: var(--d2l-color-tungsten);
 				display: inline-block;
 				--iron-icon-height: var(--d2l-icon-height, 18px);
