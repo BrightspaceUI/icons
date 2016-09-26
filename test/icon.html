@@ -50,6 +50,12 @@
 			</template>
 		</test-fixture>
 
+		<test-fixture id="override-size">
+			<template>
+				<d2l-icon icon="d2l-tier1:print" class="override-size"></d2l-icon>
+			</template>
+		</test-fixture>
+
 		<test-fixture id="override-color">
 			<template>
 				<d2l-icon icon="d2l-tier1:print" class="override-color"></d2l-icon>
@@ -144,6 +150,16 @@
 				});
 
 			});
+
+			describe('override size', function() {
+
+				beforeEach(function() {
+					icon = fixture('override-size');
+				});
+
+				it('should set size of icon and svg to overriden value', function() {
+					assertSize(icon, 50);
+				});
 
 			});
 

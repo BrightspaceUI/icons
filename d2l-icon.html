@@ -8,16 +8,22 @@
 			:host {
 				color: var(--d2l-color-tungsten);
 				display: inline-block;
-				--iron-icon-height: var(--d2l-icon-height, 18px);
-				--iron-icon-width: var(--d2l-icon-width, 18px);
+				height: var(--d2l-icon-size, 18px);
+				width: var(--d2l-icon-size, 18px);
+				--iron-icon-height: var(--d2l-icon-size, 18px);
+				--iron-icon-width: var(--d2l-icon-size, 18px);
 			}
 			:host([icon*="d2l-tier2:"]) {
-				--iron-icon-height: var(--d2l-icon-height, 24px);
-				--iron-icon-width: var(--d2l-icon-width, 24px);
+				height: var(--d2l-icon-size, 24px);
+				width: var(--d2l-icon-size, 24px);
+				--iron-icon-height: var(--d2l-icon-size, 24px);
+				--iron-icon-width: var(--d2l-icon-size, 24px);
 			}
 			:host([icon*="d2l-tier3:"]) {
-				--iron-icon-height: var(--d2l-icon-height, 30px);
-				--iron-icon-width: var(--d2l-icon-width, 30px);
+				height: var(--d2l-icon-size, 30px);
+				width: var(--d2l-icon-size, 30px);
+				--iron-icon-height: var(--d2l-icon-size, 30px);
+				--iron-icon-width: var(--d2l-icon-size, 30px);
 			}
 			:host-context([dir="rtl"]) iron-icon[data-mirror-rtl] {
 				-webkit-transform: scaleX(-1);
@@ -92,6 +98,7 @@
 
 			__onChange: function() {
 				this.__initialize();
+				this.updateStyles(); // need to re-calc iron-icon variables
 			}
 
 		});

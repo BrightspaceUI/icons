@@ -108,6 +108,16 @@ button:hover d2l-icon, button:focus d2l-icon  {
 }
 ```
 
+If you'd like to use a non-standard size, set the `d2l-icon-size` variable in a [custom style block](https://www.polymer-project.org/1.0/docs/devguide/styling#custom-style):
+```html
+<style is="custom-style">
+d2l-icon.big-icon {
+	--d2l-icon-size: 50px;
+}
+</style>
+<d2l-icon class="big-icon" icon="..."></d2l-icon>
+```
+
 Advantages:
 - color (tungsten) is automatically set
 - size is automatically set based on the icon category
