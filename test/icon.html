@@ -8,6 +8,14 @@
 		<script src="../../web-component-tester/browser.js"></script>
 		<link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
 		<link rel="import" href="../d2l-icons.html">
+		<style is="custom-style">
+		.override-color {
+			color: red;
+		}
+		.override-size {
+			--d2l-icon-size: 50px;
+		}
+		</style>
 	</head>
 	<body>
 
@@ -20,6 +28,12 @@
 		<test-fixture id="mirror-rtl">
 			<template>
 				<d2l-icon icon="d2l-tier1:volume"></d2l-icon>
+			</template>
+		</test-fixture>
+
+		<test-fixture id="override-color">
+			<template>
+				<d2l-icon icon="d2l-tier1:print" class="override-color"></d2l-icon>
 			</template>
 		</test-fixture>
 
@@ -53,6 +67,19 @@
 
 						expect(updatedSvg).to.not.equal(originalSvg);
 						expect(updatedSvg.getAttribute('original')).to.be.null;
+				});
+
+			});
+
+			describe('override color', function() {
+
+				beforeEach(function() {
+					icon = fixture('override-color');
+				});
+
+				it('should set color of icon and svg to overriden value', function() {
+					var svg = icon.__findSvg(icon);
+					expect(getComputedStyle(svg).color).to.eql('rgb(255, 0, 0)');
 				});
 
 			});
