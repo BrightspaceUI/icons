@@ -25,6 +25,24 @@
 			</template>
 		</test-fixture>
 
+		<test-fixture id="tier2">
+			<template>
+				<d2l-icon icon="d2l-tier2:print"></d2l-icon>
+			</template>
+		</test-fixture>
+
+		<test-fixture id="tier3">
+			<template>
+				<d2l-icon icon="d2l-tier3:calendar"></d2l-icon>
+			</template>
+		</test-fixture>
+
+		<test-fixture id="custom">
+			<template>
+				<d2l-icon icon="d2l-test:github"></d2l-icon>
+			</template>
+		</test-fixture>
+
 		<test-fixture id="mirror-rtl">
 			<template>
 				<d2l-icon icon="d2l-tier1:volume"></d2l-icon>
@@ -69,6 +87,51 @@
 						expect(updatedSvg.getAttribute('original')).to.be.null;
 				});
 
+				it('should default size to 18px', function() {
+					assertSize(icon, 18);
+				});
+
+				it('should update size when icon changes', function() {
+					icon.setAttribute('icon', 'd2l-tier2:print');
+					assertSize(icon, 24);
+				});
+
+			});
+
+			describe('tier2', function() {
+
+				beforeEach(function() {
+					icon = fixture('tier2');
+				});
+
+				it('should default size to 24px', function() {
+					assertSize(icon, 24);
+				});
+
+				it('should update size when icon changes', function() {
+					icon.setAttribute('icon', 'd2l-tier1:print');
+					assertSize(icon, 18);
+				});
+
+			});
+
+			describe('tier3', function() {
+
+				beforeEach(function() {
+					icon = fixture('tier3');
+				});
+
+				it('should default size to 30px', function() {
+					assertSize(icon, 30);
+				});
+
+				it('should update size when icon changes', function() {
+					icon.setAttribute('icon', 'd2l-tier2:print');
+					assertSize(icon, 24);
+				});
+
+			});
+
 			});
 
 			describe('override color', function() {
@@ -104,6 +167,19 @@
 			});
 
 		});
+
+		function assertSize(icon, size) {
+			expect(icon.clientWidth, 1).to.eql(size);
+			expect(icon.clientHeight, 2).to.eql(size);
+			var svg = icon.__findSvg(icon);
+			var style = getComputedStyle(svg);
+			var correctWidth = svg.clientWidth === size ||
+				style.width == (size + 'px');
+			var correctHeight = svg.clientHeight === size ||
+				style.height == (size + 'px');
+			expect(correctWidth).to.be.true;
+			expect(correctHeight).to.be.true;
+		}
 		</script>
 	</body>
 </html>
