@@ -32,6 +32,23 @@
 			:host(::-moz-focus-inner) {
 				border: 0;
 			}
+			:host {
+				@apply(--d2l-icon-button);
+			}
+			:host(:hover),
+			:host(:focus) {
+				@apply(--d2l-icon-button-hover);
+			}
+			.d2l-icon-button-icon {
+				@apply(--d2l-icon-button-icon);
+			}
+			:host-context([dir="rtl"]) d2l-icon {
+				@apply(--d2l-icon-button-icon-rtl);
+			}
+			:host(:hover) d2l-icon,
+			:host(:focus) d2l-icon {
+				@apply(--d2l-icon-button-icon-hover);
+			}
 		</style>
 	</template>
 </dom-module>
