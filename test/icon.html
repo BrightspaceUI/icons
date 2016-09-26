@@ -8,6 +8,7 @@
 		<script src="../../web-component-tester/browser.js"></script>
 		<link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
 		<link rel="import" href="../d2l-icons.html">
+		<link rel="import" href="custom-set.html">
 		<style is="custom-style">
 		.override-color {
 			color: red;
@@ -128,6 +129,18 @@
 				it('should update size when icon changes', function() {
 					icon.setAttribute('icon', 'd2l-tier2:print');
 					assertSize(icon, 24);
+				});
+
+			});
+
+			describe('custom', function() {
+
+				beforeEach(function() {
+					icon = fixture('custom');
+				});
+
+				it('should default size to 18px', function() {
+					assertSize(icon, 18);
 				});
 
 			});
