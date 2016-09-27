@@ -9,7 +9,7 @@
     "postinstall": "bower install",
     "test": "npm run test:lint:js && npm run test:lint:wc && npm run build",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
-    "test:lint:wc": "polylint --input *.html",
+    "test:lint:wc": "polylint --input *.html --no-recursion",
     "test:unit:local": "wct --skip-plugin sauce"
   },
   "repository": {
