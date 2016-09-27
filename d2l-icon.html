@@ -102,8 +102,10 @@
 			},
 
 			__onChange: function() {
-				this.__initialize();
-				this.updateStyles(); // need to re-calc iron-icon variables
+				this.async(function() {
+					this.__initialize();
+					this.updateStyles(); // need to re-calc iron-icon variables
+				}, 1);
 			}
 
 		});

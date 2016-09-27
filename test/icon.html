@@ -64,15 +64,15 @@
 		</test-fixture>
 
 		<script>
-
 		describe('<d2l-icon>', function() {
 
 			var icon;
 
 			describe('tier1', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('tier1');
+					flush(done);
 				});
 
 				it('finds svg', function() {
@@ -85,40 +85,47 @@
 				});
 
 				it('updates svg when icon attribute changes', function() {
-						var originalSvg = icon.__findSvg(icon);
-						originalSvg.setAttribute('original', 'true');
+					var originalSvg = icon.__findSvg(icon);
+					originalSvg.setAttribute('original', 'true');
 
-						icon.setAttribute('icon', 'd2l-tier1:add');
-						var updatedSvg = icon.__findSvg(icon);
+					icon.setAttribute('icon', 'd2l-tier1:add');
+					var updatedSvg = icon.__findSvg(icon);
 
-						expect(updatedSvg).to.not.equal(originalSvg);
-						expect(updatedSvg.getAttribute('original')).to.be.null;
+					expect(updatedSvg).to.not.equal(originalSvg);
+					expect(updatedSvg.getAttribute('original')).to.be.null;
 				});
 
 				it('should default size to 18px', function() {
 					assertSize(icon, 18);
 				});
 
-				it('should update size when icon changes', function() {
+				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier2:print');
-					assertSize(icon, 24);
+					flush(function() {
+						assertSize(icon, 24);
+						done();
+					});
 				});
 
 			});
 
 			describe('tier2', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('tier2');
+					flush(done);
 				});
 
 				it('should default size to 24px', function() {
 					assertSize(icon, 24);
 				});
 
-				it('should update size when icon changes', function() {
+				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier1:print');
-					assertSize(icon, 18);
+					flush(function() {
+						assertSize(icon, 18);
+						done();
+					});
 				});
 
 			});
@@ -133,17 +140,21 @@
 					assertSize(icon, 30);
 				});
 
-				it('should update size when icon changes', function() {
+				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier2:print');
-					assertSize(icon, 24);
+					flush(function() {
+						assertSize(icon, 24);
+						done();
+					});
 				});
 
 			});
 
 			describe('custom', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('custom');
+					flush(done);
 				});
 
 				it('should default size to 18px', function() {
@@ -154,8 +165,9 @@
 
 			describe('override size', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('override-size');
+					flush(done);
 				});
 
 				it('should set size of icon and svg to overriden value', function() {
@@ -166,8 +178,9 @@
 
 			describe('override color', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('override-color');
+					flush(done);
 				});
 
 				it('should set color of icon and svg to overriden value', function() {
@@ -179,8 +192,9 @@
 
 			describe('mirrored', function() {
 
-				beforeEach(function() {
+				beforeEach(function(done) {
 					icon = fixture('mirror-rtl');
+					flush(done);
 				});
 
 				it('initializes iron-icon with data-mirror-rtl attribute', function() {
@@ -188,10 +202,13 @@
 					expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.equal('');
 				});
 
-				it('updates iron-icon data-mirror-rtl attribute when icon changes', function() {
+				it('updates iron-icon data-mirror-rtl attribute when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier1:print');
-					expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.be.null;
-					expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.be.null;
+					flush(function() {
+						expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.be.null;
+						expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.be.null;
+						done();
+					});
 				});
 
 			});
@@ -204,9 +221,9 @@
 			var svg = icon.__findSvg(icon);
 			var style = getComputedStyle(svg);
 			var correctWidth = svg.clientWidth === size ||
-				style.width == (size + 'px');
+				style.width === (size + 'px');
 			var correctHeight = svg.clientHeight === size ||
-				style.height == (size + 'px');
+				style.height === (size + 'px');
 			expect(correctWidth).to.be.true;
 			expect(correctHeight).to.be.true;
 		}
