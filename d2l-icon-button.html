@@ -1,0 +1,25 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="d2l-icon.html">
+<link rel="import" href="d2l-icon-button-shared-styles.html">
+<link rel="import" href="d2l-icon-button-behavior.html">
+<link rel="import" href="../d2l-offscreen/d2l-offscreen.html">
+
+<dom-module id="d2l-icon-button">
+	<template strip-whitespace>
+		<style include="d2l-icon-button-shared-styles"></style>
+		<d2l-icon icon="[[icon]]"></d2l-icon>
+		<d2l-offscreen><content></content></d2l-offscreen>
+	</template>
+	<script>
+		Polymer({
+			is: 'd2l-icon-button',
+			extends: 'button',
+
+			behaviors: [D2L.PolymerBehaviors.IconButtonBehavior],
+
+			properties: {
+				icon: String
+			}
+		});
+	</script>
+</dom-module>

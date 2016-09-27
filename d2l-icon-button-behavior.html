@@ -1,0 +1,10 @@
+<script>
+	window.D2L.PolymerBehaviors = window.D2LBehaviors || {};
+	window.D2L.PolymerBehaviors.IconButtonBehavior = {
+		ready: function() {
+			this._observer = Polymer.dom(this).observeNodes(function() {
+				this.title = Polymer.dom(this).textContent;
+			});
+		}
+	};
+</script>
