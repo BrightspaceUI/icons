@@ -1,8 +1,8 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-offscreen/d2l-offscreen.html">
 <link rel="import" href="d2l-icon.html">
 <link rel="import" href="d2l-icon-button-shared-styles.html">
 <link rel="import" href="d2l-icon-button-behavior.html">
-<link rel="import" href="../d2l-offscreen/d2l-offscreen.html">
 
 <dom-module id="d2l-icon-link">
 	<template strip-whitespace>
@@ -15,11 +15,12 @@
 			is: 'd2l-icon-link',
 			extends: 'a',
 
-			behaviors: [D2L.PolymerBehaviors.IconButtonBehavior],
+			behaviors: [window.D2L.PolymerBehaviors.IconButtonBehavior],
 
 			properties: {
 				icon: String
 			}
+
 		});
 	</script>
 </dom-module>
