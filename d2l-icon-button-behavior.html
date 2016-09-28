@@ -1,10 +1,21 @@
 <script>
-	window.D2L.PolymerBehaviors = window.D2LBehaviors || {};
-	window.D2L.PolymerBehaviors.IconButtonBehavior = {
+(function() {
+	'use strict';
+
+	/** @polymerBehavior */
+	var IconButtonBehavior = {
+
 		ready: function() {
 			this._observer = Polymer.dom(this).observeNodes(function() {
 				this.title = Polymer.dom(this).textContent;
 			});
 		}
+
 	};
+
+	window.D2L = window.D2L || {};
+	window.D2L.PolymerBehaviors = window.D2L.PolymerBehaviors || {};
+	/** @polymerBehavior */
+	window.D2L.PolymerBehaviors.IconButtonBehavior = [IconButtonBehavior];
+})();
 </script>
