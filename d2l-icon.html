@@ -53,6 +53,12 @@
 				}
 			},
 
+			attached: function() {
+				this.async(function() {
+					this.__initialize();
+				});
+			},
+
 			__findSvg: function(node) {
 				var composedChildren = D2L.Dom.getComposedChildren(node);
 				for (var i = 0; i < composedChildren.length; i++) {
