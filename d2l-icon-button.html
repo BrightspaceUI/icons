@@ -8,7 +8,7 @@
 	<template strip-whitespace>
 		<style include="d2l-icon-button-shared-styles"></style>
 		<d2l-icon icon="[[icon]]"></d2l-icon>
-		<d2l-offscreen><content></content></d2l-offscreen>
+		<d2l-offscreen>"[[title]]"</d2l-offscreen>
 	</template>
 	<script>
 		Polymer({
@@ -18,7 +18,8 @@
 			behaviors: [window.D2L.PolymerBehaviors.IconButtonBehavior],
 
 			properties: {
-				icon: String
+				icon: String,
+				title: String
 			}
 
 		});
