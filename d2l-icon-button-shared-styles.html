@@ -35,6 +35,9 @@
 			:host {
 				@apply(--d2l-icon-button);
 			}
+			:host(:disabled){
+				opacity: 0.5;
+			}
 			:host(:hover),
 			:host(:focus) {
 				@apply(--d2l-icon-button-hover);
