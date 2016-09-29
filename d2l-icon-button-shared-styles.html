@@ -20,9 +20,7 @@
 					outline-style: none;
 				};
 				--d2l-icon-button-icon: {
-					height: var(--d2l-icon-height);
 					transition: color 0.3s ease;
-					width: var(--d2l-icon-width);
 				};
 				--d2l-icon-button-icon-hover: {
 					color: var(--d2l-color-celestuba);
@@ -42,11 +40,8 @@
 			:host(:focus) {
 				@apply(--d2l-icon-button-hover);
 			}
-			.d2l-icon-button-icon {
+			:host d2l-icon {
 				@apply(--d2l-icon-button-icon);
-			}
-			:host-context([dir="rtl"]) d2l-icon {
-				@apply(--d2l-icon-button-icon-rtl);
 			}
 			:host(:hover) d2l-icon,
 			:host(:focus) d2l-icon {
