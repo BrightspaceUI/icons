@@ -34,10 +34,6 @@
 				--iron-icon-height: var(--d2l-icon-height, 30px);
 				--iron-icon-width: var(--d2l-icon-width, 30px);
 			}
-			:host-context([dir="rtl"]) iron-icon[data-mirror-rtl] {
-				-webkit-transform: scaleX(-1);
-				transform: scaleX(-1);
-			}
 		</style>
 		<iron-icon icon="[[icon]]"></iron-icon>
 	</template>
@@ -74,19 +70,6 @@
 				return null;
 			},
 
-			__computeMirrorRtl: function(svg) {
-				if (!svg) {
-					return false;
-				}
-				var gs = svg.getElementsByTagName('g');
-				for (var i = 0; i < gs.length; i++) {
-					if (gs[i].hasAttribute('mirror-rtl')) {
-						return true;
-					}
-				}
-				return false;
-			},
-
 			__getIronIcon: function() {
 				return this.$$('iron-icon');
 			},
@@ -98,13 +81,6 @@
 				}
 				/* IE prevent svg from being focusable */
 				svg.setAttribute('focusable', 'false');
-				var mirrorRtl = this.__computeMirrorRtl(svg);
-				if (mirrorRtl) {
-					this.$$('iron-icon').setAttribute('data-mirror-rtl', '');
-				} else {
-					this.$$('iron-icon').removeAttribute('data-mirror-rtl');
-				}
-
 			},
 
 			__onChange: function() {

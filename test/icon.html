@@ -190,29 +190,6 @@
 
 			});
 
-			describe('mirrored', function() {
-
-				beforeEach(function(done) {
-					icon = fixture('mirror-rtl');
-					flush(done);
-				});
-
-				it('initializes iron-icon with data-mirror-rtl attribute', function() {
-					expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.not.be.null;
-					expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.equal('');
-				});
-
-				it('updates iron-icon data-mirror-rtl attribute when icon changes', function(done) {
-					icon.setAttribute('icon', 'd2l-tier1:print');
-					flush(function() {
-						expect(icon.__findSvg(icon).querySelector('[mirror-rtl="true"]')).to.be.null;
-						expect(icon.__getIronIcon().getAttribute('data-mirror-rtl')).to.be.null;
-						done();
-					});
-				});
-
-			});
-
 		});
 
 		function assertSize(icon, size) {
