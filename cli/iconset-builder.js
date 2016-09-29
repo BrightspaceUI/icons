@@ -11,7 +11,7 @@ var iconsetObjTemplate = {
 		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}}
 	],
 	'iron-iconset-svg': {
-		'$': {'name': '', 'size': ''},
+		'$': {'name': '', 'size': '', 'rtl-mirroring': true},
 		'svg': {'defs': {'g': []}}
 	}
 };
@@ -51,8 +51,8 @@ function buildFileXml(iconsetObj, objs, iconsetPath, file) {
 				iconsetObj['iron-iconset-svg'].$.size = values[values.length - 1].toString();
 			}
 			var attrs = {'id': id};
-			if (result.svg.$['mirror-rtl'] !== undefined) {
-				attrs['mirror-rtl'] = true;
+			if (result.svg.$['mirror-in-rtl'] !== undefined) {
+				attrs['mirror-in-rtl'] = true;
 			}
 			processFill(result);
 			var g = {

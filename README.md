@@ -278,7 +278,7 @@ The Polymer iconset files and Sass `icons.scss` file are automatically generated
 When rendered in a right-to-left direction, any icons which show directionality in terms of time (back/forward, next/previous, etc.) need to be mirrored horizontally. If the underlying `<svg>` element has a `mirror-rtl` attribute set, the `<d2l-icon>` component will do this automatically.
 
 ```svg
-<svg mirror-rtl="true" ...>
+<svg mirror-in-rtl="true" ...>
   ...
 </svg>
 ```
