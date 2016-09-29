@@ -19,7 +19,7 @@ bower install d2l-icons
 
 Each icon is grouped into a category, and every icon in a particular category has the same native size.
 
-Currently, there are 4 icon categories:
+Currently, there are 5 icon categories:
 
 | Category Name | Description | Samples | Size | List |
 | :----: | --- | :---: | :---: | :---: |
