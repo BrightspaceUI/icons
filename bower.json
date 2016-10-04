@@ -35,7 +35,7 @@
     "d2l-offscreen": "^2.1.0"
   },
   "devDependencies": {
-    "d2l-demo-template": "~0.0.2",
+    "d2l-demo-template": "~0.0.3",
     "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.1.5",
     "web-component-tester": "^4.2.2"
   }
