@@ -4,7 +4,7 @@ var fs = require('fs'),
 	path = require('path'),
 	q = require('q');
 
-var basePath = 'https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/';
+var basePath = 'https://cdn.rawgit.com/BrightspaceUI/icons/master/images/';
 
 function writeCategory(iconsetPath, writer) {
 
