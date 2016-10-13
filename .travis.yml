@@ -1,9 +1,9 @@
 language: node_js
 node_js: stable
-test:
+script:
 - npm run test:lint
 - npm run build
-- npm run test:unit:ci
+- polymer test --skip-plugin local
 addons:
   sauce_connect: true
   jwt:
