@@ -7,10 +7,11 @@
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
     "postinstall": "bower install",
-    "test": "npm run test:lint:js && npm run test:lint:wc && npm run build",
+    "test": "npm run test:lint && npm run build && npm run test:unit:local",
+    "test:lint": "npm run test:lint:js && npm run test:lint:wc",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
-    "test:lint:wc": "polylint --input *.html --no-recursion",
-    "test:unit:local": "wct --skip-plugin sauce"
+    "test:lint:wc": "polymer lint --input *.html",
+    "test:unit:local": "polymer test --skip-plugin sauce"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,10 @@
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
-    "polylint": "^2.10.1",
+    "polymer-cli": "^0.16.0",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
-    "web-component-tester": "^4.2.2",
     "xml2js": "^0.4.16",
     "yargs": "^4.1.0"
   },
