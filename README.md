@@ -1,4 +1,4 @@
-**Looking for pre-Daylight icons?** They're [over here](https://github.com/Brightspace/d2l-icons-ui/tree/pre-daylight).
+**Looking for pre-Daylight icons?** They're [over here](https://github.com/BrightspaceUI/icons/tree/pre-daylight).
 
 # d2l-icons
 [![Bower version][bower-image]][bower-url]
@@ -23,11 +23,11 @@ Currently, there are 5 icon categories:
 
 | Category Name | Description | Samples | Size | List |
 | :----: | --- | :---: | :---: | :---: |
-| tier1 | minimal level of detail, solid style | ![print](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
-| tier2 | medium level of detail, linear style | ![audio](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
-| tier3 | medium level of detail, linear style | ![notifications](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
-| html-editor | for use in the HTML editor | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
-| emoji | for all your emoji needs, same detail/style as tier1 | ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/emoji/lol.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/emoji/happy.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/Brightspace/d2l-icons-ui/master/images/emoji/angry.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#emoji) |
+| tier1 | minimal level of detail, solid style | ![print](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
+| tier2 | medium level of detail, linear style | ![audio](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
+| tier3 | medium level of detail, linear style | ![notifications](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
+| html-editor | for use in the HTML editor | ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
+| emoji | for all your emoji needs, same detail/style as tier1 | ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/lol.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/happy.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/angry.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#emoji) |
 
 **[&gt; Browse ALL categories and icons](d2l-icons.md)**
 
@@ -291,5 +291,5 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 
 [bower-url]: http://bower.io/search/?q=d2l-icons
 [bower-image]: https://img.shields.io/bower/v/d2l-icons.svg
-[ci-url]: https://travis-ci.org/Brightspace/d2l-icons-ui
-[ci-image]: https://travis-ci.org/Brightspace/d2l-icons-ui.svg?branch=master
+[ci-url]: https://travis-ci.org/BrightspaceUI/icons
+[ci-image]: https://travis-ci.org/BrightspaceUI/icons.svg?branch=master
