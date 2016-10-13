@@ -102,8 +102,10 @@
 				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier2:print');
 					flush(function() {
-						assertSize(icon, 24);
-						done();
+						setTimeout(function() {
+							assertSize(icon, 24);
+							done();
+						}, 100);
 					});
 				});
 
@@ -123,8 +125,10 @@
 				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier1:print');
 					flush(function() {
-						assertSize(icon, 18);
-						done();
+						setTimeout(function() {
+							assertSize(icon, 18);
+							done();
+						}, 100);
 					});
 				});
 
@@ -143,8 +147,10 @@
 				it('should update size when icon changes', function(done) {
 					icon.setAttribute('icon', 'd2l-tier2:print');
 					flush(function() {
-						assertSize(icon, 24);
-						done();
+						setTimeout(function() {
+							assertSize(icon, 24);
+							done();
+						}, 100);
 					});
 				});
 
@@ -201,6 +207,8 @@
 				style.width === (size + 'px');
 			var correctHeight = svg.clientHeight === size ||
 				style.height === (size + 'px');
+			console.log(correctWidth, svg.clientWidth, style.width, size);
+			console.log(correctHeight, svg.clientHeight, style.height, size);
 			expect(correctWidth).to.be.true;
 			expect(correctHeight).to.be.true;
 		}
