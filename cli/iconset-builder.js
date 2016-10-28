@@ -17,7 +17,7 @@ var iconsetObjTemplate = {
 };
 
 function processFill(elem) {
-	if (elem.$ && elem.$.fill && elem.$.fill !== 'none') {
+	if (elem.$ && elem.$.fill && elem.$.fill.toLowerCase() === '#72777a') {
 		delete elem.$.fill;
 	}
 	for (var child in elem) {
