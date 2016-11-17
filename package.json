@@ -9,7 +9,7 @@
     "postinstall": "bower install",
     "galen": "d2l-galen -c \"java -Xmx2g -cp node_modules/galenframework/lib/galen/galen.jar com.galenframework.GalenMain\"",
     "galen:local:run": "npm run galen -- test galen.local.config.js -- --htmlreport reports",
-    "galen:sauce:run": "npm run galen -- test galen.sauce.config.js -i SAUCE_USERNAME SAUCE_ACCESS_KEY TRAVIS_REPO_SLUG TRAVIS_JOB_NUMBER TRAVIS_BUILD_NUMBER -- --htmlreport reports/d2l-table -p4",
+    "galen:sauce:run": "npm run galen -- test galen.sauce.config.js -i SAUCE_USERNAME SAUCE_ACCESS_KEY TRAVIS_REPO_SLUG TRAVIS_JOB_NUMBER TRAVIS_BUILD_NUMBER -- --htmlreport reports -p4",
     "test": "npm run test:lint && npm run build && npm run test:unit:local",
     "test:lint": "npm run test:lint:js",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
