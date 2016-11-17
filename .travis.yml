@@ -1,11 +1,17 @@
 language: node_js
 node_js: stable
+before_install:
+- export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+- export PATH=$JAVA_HOME/bin:$PATH
 script:
 - npm run test:lint
 - npm run build
 - polymer test --skip-plugin local
 - npm run test:galen:sauce
 addons:
+  apt:
+    packages:
+      - oracle-java8-installer
   sauce_connect: true
   jwt:
     # SAUCE_ACCESS_KEY
