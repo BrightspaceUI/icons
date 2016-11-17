@@ -1,0 +1,13 @@
+@objects
+
+	colored-*        @grouped(icons, colored) .color-override > d2l-icon
+		svg          svg
+	sized-*          @grouped(sized) .size-override d2l-icon
+	disabled-*       d2l-icon[disabled]
+
+	default-icon-*   @grouped(icons, default) :not(.color-override) > d2l-icon
+		svg          svg
+	button-*         @grouped(buttons) [is=d2l-icon-button]
+		icon         d2l-icon
+	link-*           @grouped(buttons) [is=d2l-icon-link]
+		icon         d2l-icon

@@ -1,0 +1,13 @@
+@objects
+
+	colored-*      @grouped(icons, colored) body /deep/ .color-override > d2l-icon
+		svg        d2l-icon /deep/ svg
+	sized-*        @grouped(sized) body /deep/ .size-override d2l-icon
+	disabled-*     body /deep/ d2l-icon[disabled]
+
+	default-icon-* @grouped(icons, default) body /deep/ :not(.color-override) > d2l-icon
+		svg        d2l-icon /deep/ svg
+	button-*       @grouped(buttons) body /deep/ [is=d2l-icon-button]
+		icon       [is=d2l-icon-button] /deep/ d2l-icon
+	link-*         @grouped(buttons)body /deep/ [is=d2l-icon-link]
+		icon       [is=d2l-icon-link] /deep/ d2l-icon
