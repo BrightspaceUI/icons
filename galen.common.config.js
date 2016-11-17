@@ -14,7 +14,7 @@ this.specs = {
 		// This spec will be run on all browsers
 		name: 'RTL',
 		endpoint: endpoint + '?dir=rtl',
-		file: 'test/acceptance/icons.polyfill.rtl.gspec'
+		file: 'test/acceptance/icons.polyfill.gspec'
 	},
 	'd2l-icons-shadow': {
 		// This spec will only be run on browsers that have shadow dom
@@ -28,6 +28,6 @@ this.specs = {
 		shadow: true,
 		name: 'Shadow RTL',
 		endpoint: endpoint + '?dom=shadow&dir=rtl',
-		file: 'test/acceptance/icons.shadow.rtl.gspec'
+		file: 'test/acceptance/icons.shadow.gspec'
 	}
 };
