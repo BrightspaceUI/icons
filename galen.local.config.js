@@ -1,12 +1,7 @@
-/* global load, localBrowserFactory */
-/* eslint no-invalid-this: 0 */
-'use strict';
+/* global LocalBrowserFactory, load */
 
 load('galen.common.config.js');
 
 this.browsers = {
-	chrome: {
-		browserName: 'chrome',
-		browserFactory: localBrowserFactory.bind(this, ['768x1000', 'chrome'])
-	}
+	phantomjs: new LocalBrowserFactory({ browser: 'phantomjs', size: '768x768' })
 };
