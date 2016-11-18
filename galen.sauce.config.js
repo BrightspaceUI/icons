@@ -8,7 +8,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'Chrome',
 			platform: 'WIN10',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	firefoxWindows: {
@@ -16,7 +16,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'Firefox',
 			platform: 'WIN10',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	ie11Windows: {
@@ -25,7 +25,7 @@ this.browsers = {
 			browser: 'internet explorer',
 			version: '11',
 			platform: 'WIN10',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	ie10Windows: {
@@ -34,7 +34,7 @@ this.browsers = {
 			browser: 'internet explorer',
 			version: '10',
 			platform: 'WIN8',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	edgeWindows: {
@@ -42,7 +42,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'microsoftedge',
 			platform: 'WIN10',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	chromeMac: {
@@ -50,7 +50,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'Chrome',
 			platform: 'EL_CAPITAN',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	safariMac: {
@@ -58,7 +58,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'Safari',
 			platform: 'EL_CAPITAN',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	},
 	firefoxMac: {
@@ -66,7 +66,7 @@ this.browsers = {
 		browserFactory: sauceBrowserFactory.bind(this, {
 			browser: 'Firefox',
 			platform: 'EL_CAPITAN',
-			size: '1400x900'
+			size: '768x1000'
 		})
 	}
 };
