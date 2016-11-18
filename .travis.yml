@@ -16,6 +16,14 @@ addons:
   jwt:
     # SAUCE_ACCESS_KEY
     secure: RMdv3Z15SfFnPw5HzltECPxyYtB1H/6YS+Tru+dq3BmqZbAwadV7qSSXkw3ZN8sbZjyI1MZvXaYGLVgh0Ye+aSiPnr+/8ikSrOKOsLTrNTkkiv1aFmg4S48hSAiUCvAwjQ8+EkU7UTnrsE9uR/Pv9tsscCIheHTGISMd6As/3vc=
+  artifacts:
+    key:
+      secure: ase7smyb3HeIKsyjEeeiFgGTXvuqbj8eQgVZWdjGCokoWqUD9HMvwI4kpubyhLARql5aG3V0/nT4USaIs2+H4YrFGWC28gyPzJQ400uuD997TY1BaUWYsKxNcpcJnIKMc0H7aGvRaVrFC+8KQGD78qIFogMhAHEgjbZezDwUsrs=
+    secret:
+      secure: s5izCYKWXszBxlUPIvF+My0LGhzIWRt63ruOJZxWWkYdncM5GFFYM1NQ7UJzm/zmwNbPn1cRG23zbkj7FxyMdV9avZNX8OH2xUgDQ9cINecLCDm0Vr28Egzueu7928VM0hgyzBPfHTsZY/KU3lfFh106d2qaZkTCeb+yRysjkb0=
+    bucket: sequence-viewer-artifacts
+    paths:
+    - reports
 env:
   global:
     # SAUCE_USERNAME
