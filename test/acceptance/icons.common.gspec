@@ -3,10 +3,8 @@
 	== Icon ==
 		@forEach [&icons] as icon
 			${icon}.svg:
-				width 100% of ${icon}/width
-				height 100% of ${icon}/height
-			    aligned horizontally all ${icon}
-			    aligned vertically all ${icon}
+			    aligned horizontally all ${icon} 1px
+			    aligned vertically all ${icon} 1px
 
 		&default:
 			color-scheme 100% white-#72777a
@@ -21,7 +19,5 @@
 	== Icon Button ==
 		@forEach [&buttons] as iconButton
 			${iconButton}.icon:
-				width 100% of ${iconButton}/width
-				height 100% of ${iconButton}/height
-				aligned horizontally all ${iconButton}
-				aligned vertically all ${iconButton}
+				aligned horizontally all ${iconButton} 1px
+				aligned vertically all ${iconButton} 1px
