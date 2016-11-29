@@ -29,13 +29,13 @@
   "dependencies": {
     "d2l-colors": "^2.2.2",
     "d2l-offscreen": "^2.2.1",
-    "d2l-polymer-behaviors": "~0.0.3",
+    "d2l-polymer-behaviors": "~0.0.4",
     "iron-icon": "^1.0.10",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0",
     "polymer": "^1.7.0"
   },
   "devDependencies": {
-    "d2l-demo-template": "~0.0.6",
+    "d2l-demo-template": "~0.0.7",
     "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.1.5",
     "web-component-tester": "^4.2.2"
   }
