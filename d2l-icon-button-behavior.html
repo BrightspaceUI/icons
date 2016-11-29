@@ -5,10 +5,14 @@
 	/** @polymerBehavior */
 	var IconButtonBehavior = {
 
-		ready: function() {
+		attached: function() {
 			this._observer = Polymer.dom(this).observeNodes(function() {
 				this.title = Polymer.dom(this).textContent.trim();
 			}.bind(this));
+		},
+
+		detached: function() {
+			Polymer.dom(this).unobserveNodes(this._observer);
 		}
 
 	};
