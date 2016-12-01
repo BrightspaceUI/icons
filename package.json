@@ -41,7 +41,7 @@
   "devDependencies": {
     "chalk": "^1.1.1",
     "concurrently": "^3.1.0",
-    "d2l-galen-utils": "https://github.com/Brightspace/d2l-galen-utils.git#v0.0.1",
+    "d2l-galen-utils": "https://github.com/Brightspace/d2l-galen-utils.git#v0.2.0",
     "eslint": "^3.5.0",
     "eslint-config-brightspace": "^0.2.1",
     "eslint-plugin-html": "^1.5.2",

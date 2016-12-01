@@ -1,7 +1,5 @@
 /* global SauceBrowserFactory, load */
 
-load('galen.common.config.js');
-
 this.browsers = {
 	chromeWindows: new SauceBrowserFactory({
 		browser: 'Chrome',
@@ -46,3 +44,5 @@ this.browsers = {
 		size: '768x1000'
 	})
 };
+
+load('galen.common.config.js');
