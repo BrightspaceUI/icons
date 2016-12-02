@@ -1,6 +1,9 @@
-/* global SauceBrowserFactory, load */
+/* global polymerTests, LocalBrowserFactory, SauceBrowserFactory */
+/* eslint no-invalid-this: 0 */
+'use strict';
 
-this.browsers = {
+var browsers = {
+	chrome: new LocalBrowserFactory({ browser: 'chrome', size: '768x1000' }),
 	chromeWindows: new SauceBrowserFactory({
 		browser: 'Chrome',
 		platform: 'WIN10',
@@ -45,4 +48,28 @@ this.browsers = {
 	})
 };
 
-load('galen.common.config.js');
+var endpoint = 'http://localhost:8080/components/d2l-icons/demo/index.html';
+
+polymerTests(browsers, function(test) {
+	test('d2l-icons', {
+		endpoint: endpoint,
+		spec: 'test/acceptance/icons.polyfill.gspec'
+	});
+
+	test('d2l-icons-rtl', {
+		endpoint: endpoint + '?dir=rtl',
+		spec: 'test/acceptance/icons.polyfill.gspec'
+	});
+
+	test.shadow('d2l-icons-shadow', {
+		endpoint: endpoint + '?dom=shadow',
+		spec: 'test/acceptance/icons.shadow.gspec'
+	});
+
+	/*
+	// This spec fails because the icon mirroring is broken in Chrome's ShadowDOM
+	test.shadow('d2l-icons-shadow-rtl', {
+		endpoint: endpoint + '?dom=shadow&dir=rtl',
+		spec: 'test/acceptance/icons.shadow.gspec'
+	});*/
+});
