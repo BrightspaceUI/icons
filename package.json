@@ -8,7 +8,7 @@
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
     "postinstall": "bower install",
     "test": "npm run test:lint && npm run build && npm run test:unit:local",
-    "test:lint": "npm run test:lint:js && npm run test:lint:wc",
+    "test:lint": "npm run test:lint:js",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
     "test:lint:wc": "polymer lint --input *.html",
     "test:unit:local": "polymer test --skip-plugin sauce"
