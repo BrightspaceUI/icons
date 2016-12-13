@@ -205,7 +205,6 @@
 		function assertSize(icon, size) {
 			expect(icon.clientWidth, 1).to.eql(size);
 			expect(icon.clientHeight, 2).to.eql(size);
-			//var svg = icon.__findSvg(icon);
 			var svg = getSvg(icon);
 			var style = getComputedStyle(svg);
 			var correctWidth = svg.clientWidth === size ||
