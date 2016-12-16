@@ -75,21 +75,17 @@
 					flush(done);
 				});
 
-				it('finds svg', function() {
-					expect(icon.__findSvg(icon)).to.not.be.null;
-				});
-
 				it('initializes svg as not focusable', function() {
-					expect(icon.__findSvg(icon).getAttribute('focusable'))
+					expect(getSvg(icon).getAttribute('focusable'))
 						.to.equal('false');
 				});
 
 				it('updates svg when icon attribute changes', function() {
-					var originalSvg = icon.__findSvg(icon);
+					var originalSvg = getSvg(icon);
 					originalSvg.setAttribute('original', 'true');
 
 					icon.setAttribute('icon', 'd2l-tier1:add');
-					var updatedSvg = icon.__findSvg(icon);
+					var updatedSvg = getSvg(icon);
 
 					expect(updatedSvg).to.not.equal(originalSvg);
 					expect(updatedSvg.getAttribute('original')).to.be.null;
@@ -133,6 +129,7 @@
 				});
 
 			});
+
 
 			describe('tier3', function() {
 
@@ -190,7 +187,7 @@
 				});
 
 				it('should set color of icon and svg to overriden value', function() {
-					var svg = icon.__findSvg(icon);
+					var svg = getSvg(icon);
 					expect(getComputedStyle(svg).color).to.eql('rgb(255, 0, 0)');
 				});
 
@@ -198,10 +195,17 @@
 
 		});
 
+		function getSvg(elem) {
+			if (elem.shadowRoot) {
+				elem = elem.shadowRoot;
+			}
+			return elem.querySelector('svg');
+		}
+
 		function assertSize(icon, size) {
 			expect(icon.clientWidth, 1).to.eql(size);
 			expect(icon.clientHeight, 2).to.eql(size);
-			var svg = icon.__findSvg(icon);
+			var svg = getSvg(icon);
 			var style = getComputedStyle(svg);
 			var correctWidth = svg.clientWidth === size ||
 				style.width === (size + 'px');
