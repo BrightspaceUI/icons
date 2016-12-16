@@ -29,7 +29,6 @@
   "dependencies": {
     "d2l-colors": "^2.2.3",
     "d2l-offscreen": "^2.2.1",
-    "iron-icon": "^1.0.10",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0",
     "polymer": "^1.7.0"
   },
