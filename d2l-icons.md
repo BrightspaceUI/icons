@@ -6,8 +6,7 @@ Size: `18px` x `18`px
 
 | Icon | Name || Icon | Name || Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
-| ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/accelerator.svg?raw=true) | accelerator || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/email-read.svg?raw=true) | email-read || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/pin-hollow.svg?raw=true) | pin-hollow |
-| ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/accessibility-check.svg?raw=true) | accessibility-check || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/email.svg?raw=true) | email || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/plus-default.svg?raw=true) | plus-default |
+| ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/accelerator.svg?raw=true) | accelerator || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/email.svg?raw=true) | email || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/plus-default.svg?raw=true) | plus-default |
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/add-file.svg?raw=true) | add-file || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/enrollment.svg?raw=true) | enrollment || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/plus-large-thick.svg?raw=true) | plus-large-thick |
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/add-message.svg?raw=true) | add-message || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/eportfolio.svg?raw=true) | eportfolio || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/plus-large.svg?raw=true) | plus-large |
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/add-to-lor.svg?raw=true) | add-to-lor || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/event-log.svg?raw=true) | event-log || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/preview.svg?raw=true) | preview |
@@ -66,6 +65,7 @@ Size: `18px` x `18`px
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/draft.svg?raw=true) | draft || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/password.svg?raw=true) | password || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/wizard.svg?raw=true) | wizard |
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/edit-bulk.svg?raw=true) | edit-bulk || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/pic.svg?raw=true) | pic || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/zoom-in.svg?raw=true) | zoom-in |
 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/edit.svg?raw=true) | edit || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/pin-filled.svg?raw=true) | pin-filled || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/zoom-out.svg?raw=true) | zoom-out |
+| ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/email-read.svg?raw=true) | email-read || ![](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/pin-hollow.svg?raw=true) | pin-hollow || &nbsp; | &nbsp; |
 
 ## tier2
 
