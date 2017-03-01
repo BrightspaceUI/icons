@@ -23,11 +23,11 @@ Currently, there are 5 icon categories:
 
 | Category Name | Description | Samples | Size | List |
 | :----: | --- | :---: | :---: | :---: |
-| tier1 | minimal level of detail, solid style | ![print](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
-| tier2 | medium level of detail, linear style | ![audio](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
-| tier3 | medium level of detail, linear style | ![notifications](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
-| html-editor | for use in the HTML editor | ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
-| emoji | for all your emoji needs, same detail/style as tier1 | ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/lol.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/happy.svg?raw=true)&nbsp;&nbsp; ![](https://cdn.rawgit.com/BrightspaceUI/icons/master/images/emoji/angry.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#emoji) |
+| tier1 | minimal level of detail, solid style | ![print](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/print.svg?raw=true)&nbsp;&nbsp; ![gear](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/gear.svg?raw=true)&nbsp;&nbsp; ![save](https://rawgit.com/BrightspaceUI/icons/master/images/tier1/save.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#tier1) |
+| tier2 | medium level of detail, linear style | ![audio](https://rawgit.com/BrightspaceUI/icons/master/images/tier2/file-audio.svg?raw=true)&nbsp;&nbsp; ![copy](https://rawgit.com/BrightspaceUI/icons/master/images/tier2/copy.svg?raw=true)&nbsp;&nbsp; ![news](https://rawgit.com/BrightspaceUI/icons/master/images/tier2/news.svg?raw=true) | `24px` x `24px` | [Full set](d2l-icons.md#tier2) |
+| tier3 | medium level of detail, linear style | ![notifications](https://rawgit.com/BrightspaceUI/icons/master/images/tier3/notification-bell.svg?raw=true)&nbsp;&nbsp; ![help](https://rawgit.com/BrightspaceUI/icons/master/images/tier3/help.svg?raw=true)&nbsp;&nbsp; ![search](https://rawgit.com/BrightspaceUI/icons/master/images/tier3/search.svg?raw=true) | `30px` x `30px` | [Full set](d2l-icons.md#tier3) |
+| html-editor | for use in the HTML editor | ![](https://rawgit.com/BrightspaceUI/icons/master/images/html-editor/bold.svg?raw=true)&nbsp;&nbsp; ![](https://rawgit.com/BrightspaceUI/icons/master/images/html-editor/indent-decrease.svg?raw=true)&nbsp;&nbsp; ![](https://rawgit.com/BrightspaceUI/icons/master/images/html-editor/source-editor.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#html-editor) |
+| emoji | for all your emoji needs, same detail/style as tier1 | ![](https://rawgit.com/BrightspaceUI/icons/master/images/emoji/lol.svg?raw=true)&nbsp;&nbsp; ![](https://rawgit.com/BrightspaceUI/icons/master/images/emoji/happy.svg?raw=true)&nbsp;&nbsp; ![](https://rawgit.com/BrightspaceUI/icons/master/images/emoji/angry.svg?raw=true) | `18px` x `18px` | [Full set](d2l-icons.md#emoji) |
 
 **[&gt; Browse ALL categories and icons](d2l-icons.md)**
 
@@ -54,13 +54,13 @@ Here's an example which consumes the "bookmark-filled" icon from the "tier1" cat
 </button>
 ```
 
-You'll need to set the size (ideally 18px, 24px or 30px) and color (tungsten) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
 
 ```html
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 <style include="d2l-colors">
 iron-icon {
-	color: var(--d2l-color-tungsten);
+	color: var(--d2l-color-ferrite);
 	--iron-icon-height: 18px;
 	--iron-icon-width: 18px;
 }
@@ -257,7 +257,7 @@ When contributing changes to icons, the SVG files should be properly formatted. 
   - not contain negative values
 - there should be no `<title>` element
 - there should be no inline `<style>` -- all style for line fills should be applied directly to the SVG elements
-- color of SVG elements should be "tungsten" (#72777a)
+- color of SVG elements should be "tungsten" (#565a5c)
 
 The best way to have most of these rules applied for you automatically is to put the icon through [SVGOMG](https://jakearchibald.github.io/svgomg/) with the "remove title" and "prettify code" options selected.
 
@@ -265,7 +265,7 @@ Here's a sample of a properly formatted SVG:
 
 ```svg
 <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-  <path fill="#72777a" d="..."/>
+  <path fill="#565a5c" d="..."/>
 </svg>
 ```
 
