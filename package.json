@@ -7,11 +7,16 @@
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
     "postinstall": "bower install",
+    "galen": "d2l-galen -c \"java -Xmx2g -cp node_modules/galenframework/lib/galen/galen.jar com.galenframework.GalenMain\"",
+    "galen:local:run": "npm run galen -- test icons.test.js -g factory:local",
+    "galen:sauce:run": "npm run galen -- test icons.test.js -g factory:sauce -i SAUCE_USERNAME SAUCE_ACCESS_KEY TRAVIS_REPO_SLUG TRAVIS_JOB_NUMBER TRAVIS_BUILD_NUMBER -- -p4",
     "test": "npm run test:lint && npm run build && npm run test:unit:local",
     "test:lint": "npm run test:lint:js",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
     "test:lint:wc": "polymer lint --input *.html",
-    "test:unit:local": "polymer test --skip-plugin sauce"
+    "test:unit:local": "polymer test --skip-plugin sauce",
+    "test:galen:local": "concurrently -p name -n serve,galen -s first -k \"polymer serve\" \"npm run galen:local:run\"",
+    "test:galen:sauce": "concurrently -p name -n serve,galen -s first -k \"polymer serve\" \"npm run galen:sauce:run\""
   },
   "repository": {
     "type": "git",
@@ -35,10 +40,13 @@
   "homepage": "https://github.com/BrightspaceUI/icons",
   "devDependencies": {
     "chalk": "^1.1.1",
+    "concurrently": "^3.1.0",
+    "d2l-galen-utils": "https://github.com/Brightspace/d2l-galen-utils.git#v0.2.2",
     "eslint": "^3.5.0",
     "eslint-config-brightspace": "^0.2.1",
     "eslint-plugin-html": "^1.5.2",
     "fs": "0.0.2",
+    "galenframework": "^2.3.1",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
     "polymer-cli": "^0.16.0",
