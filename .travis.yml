@@ -7,9 +7,7 @@ script:
 addons:
   sauce_connect: true
   jwt:
-    # SAUCE_ACCESS_KEY
     secure: RMdv3Z15SfFnPw5HzltECPxyYtB1H/6YS+Tru+dq3BmqZbAwadV7qSSXkw3ZN8sbZjyI1MZvXaYGLVgh0Ye+aSiPnr+/8ikSrOKOsLTrNTkkiv1aFmg4S48hSAiUCvAwjQ8+EkU7UTnrsE9uR/Pv9tsscCIheHTGISMd6As/3vc=
 env:
   global:
-    # SAUCE_USERNAME
-    secure: g6otcBuYNqlmWM7UlB+251T9PRXzgYB1F1vy5WwZBWHJjppB+RXTYCYZkOiTvKsSSvO3FrknyDpXgu3PcFCCFSnIWITnN8nQBEEWFyMkZF4R9kWGh68npSK1qwnxMmoW+8q5jweJ7cgPo75rCPEVKE9eWfx/0aGfifFsNK4vmTc=
+    SAUCE_USERNAME: Desire2Learn
