@@ -38,6 +38,8 @@ function writeCategory(iconsetPath, writer) {
 		writer.write('| Icon | Name |');
 		if (c === numCols - 1) {
 			writer.write('\n');
+		} else {
+			writer.write(' ');
 		}
 	}
 	for (var d = 0; d < numCols; d++) {
@@ -64,6 +66,8 @@ function writeCategory(iconsetPath, writer) {
 
 			if (j === numCols - 1) {
 				writer.write('\n');
+			} else {
+				writer.write(' ');
 			}
 
 		}
