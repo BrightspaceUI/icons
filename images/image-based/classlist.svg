@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M11 11h43v50H11z" style="fill:#d66dac;"></path>
+      <path d="M51 11h3v50h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M11 11h43v50H11z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <path d="M38.87 60H53V36.05a10.49 10.49 0 0 0-7 17.236A19.22 19.22 0 0 0 38.87 60z" style="opacity:0.1;mix-blend-mode:multiply;"></path>
+      <path d="M69 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#70d070;"></path>
+      <path d="M54 54c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 66 69h3a15.044 15.044 0 0 0-15-15z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M29 48h12M69 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <circle cx="54" cy="46.5" r="7.5" style="fill:#70d070;"></circle>
+      <path d="M54 39a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 54 39z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="54" cy="46.5" r="7.5" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+      <path d="M17 23l3 3M20 26l6-6M17 35l3 3M20 38l6-6M17 47l3 3M20 50l6-6M29 24h19M29 36h17" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+    </g>
+  </g>
+</svg>

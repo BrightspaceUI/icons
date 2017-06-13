@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g class="cls-1" style="isolation:isolate;">
+    <g id="Stroke">
+      <path d="M25 11h44v32H25z" style="fill:#23b2c4;"></path>
+      <path d="M66 11h3v32h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M25 11h44v32H25z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M26 22h30a2 2 0 0 1 2 2v18H26V22z" style="opacity:0.1;mix-blend-mode:multiply;"></path>
+      <path d="M11 25v33h22v11l11-11h11V25H11z" style="fill:#14c5db;"></path>
+      <g style="opacity:0.4;mix-blend-mode:lighten;">
+        <path d="M32 66v3l11-11h-3l-8 8zM52 25h3v33h-3z" style="fill:#fff;"></path>
+      </g>
+      <path d="M11 25v33h22v11l11-11h11V25H11zM21 35h24.545M21 39h24.545M21 43h24.545M21 47h14.545" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+    </g>
+  </g>
+</svg>

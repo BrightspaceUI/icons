@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M11 20.545h58V69H11z" style="fill:#f2f3f5;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M11 20h58v16H11z" style="fill:#e5423b;"></path>
+      <path d="M66 20h3v16h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M17 42h46v20H17z" style="fill:#ef8d87;"></path>
+      <path d="M60.545 42.364h4v21.182h-4z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M17 42h46v20H17z" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:1.921px;"></path>
+      <path d="M17 52h46" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:1.977px;"></path>
+      <path d="M40 42v20M52 42v20M28 42v20" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:1.943px;"></path>
+      <path d="M11 20h58v16H11z" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:1.978px;"></path>
+      <g style="opacity:0.1;mix-blend-mode:multiply;">
+        <rect x="21" y="13.037" width="6" height="18" rx="3" ry="3"></rect>
+        <rect x="21" y="13.037" width="6" height="18" rx="3" ry="3" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#000;stroke-width:2.037px;"></rect>
+      </g>
+      <rect x="21" y="11" width="6" height="18" rx="3" ry="3" style="fill:#f2f3f5;"></rect>
+      <rect x="21" y="11" width="6" height="18" rx="3" ry="3" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:2.037px;"></rect>
+      <g style="opacity:0.1;mix-blend-mode:multiply;">
+        <rect x="53" y="13.037" width="6" height="18" rx="3" ry="3"></rect>
+        <rect x="53" y="13.037" width="6" height="18" rx="3" ry="3" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#000;stroke-width:2.037px;"></rect>
+      </g>
+      <rect x="53" y="11" width="6" height="18" rx="3" ry="3" style="fill:#f2f3f5;"></rect>
+      <rect x="53" y="11" width="6" height="18" rx="3" ry="3" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:2.037px;"></rect>
+    </g>
+  </g>
+</svg>

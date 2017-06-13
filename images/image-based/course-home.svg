@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g id="Stroke">
+      <path d="M11 11h58v35H11z" style="fill:#fd9727;"></path>
+      <path d="M66 11h3v35h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M11 11h58v35H11zM25 20h30M25 26h30M25 32h30M11 42h58" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <path d="M69 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#feed58;"></path>
+      <path d="M54 54c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 66 69h3a15.044 15.044 0 0 0-15-15z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M69 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <circle cx="54" cy="46.5" r="7.5" style="fill:#feed58;"></circle>
+      <path d="M54 39a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 54 39z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="54" cy="46.5" r="7.5" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+      <path d="M42 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#feed58;"></path>
+      <path d="M27 54c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 39 69h3a15.044 15.044 0 0 0-15-15z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M42 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <circle cx="27" cy="46.5" r="7.5" style="fill:#b497c4;"></circle>
+      <path d="M27 39a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 27 39z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="27" cy="46.5" r="7.5" style="stroke:#565a5c;stroke-width:2px;fill:#feed58;stroke-miterlimit:10;"></circle>
+    </g>
+  </g>
+</svg>

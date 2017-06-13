@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M40 11c-16.016 0-29 10.745-29 24 0 7.33 3.976 13.89 10.236 18.292L19 69l13.56-10.8A34.768 34.768 0 0 0 40 59c16.016 0 29-10.745 29-24S56.016 11 40 11z" style="fill:#fd9727;"></path>
+      <path d="M40 11q-.755 0-1.5.032C53.82 11.678 66 22.162 66 35c0 12.81-12.128 23.274-27.4 23.962.465.02.93.038 1.4.038 16.016 0 29-10.745 29-24S56.016 11 40 11z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <path d="M40 11c-16.016 0-29 10.745-29 24 0 7.33 3.976 13.89 10.236 18.292L19 69l13.56-10.8A34.768 34.768 0 0 0 40 59c16.016 0 29-10.745 29-24S56.016 11 40 11z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <rect x="37" y="33" width="6" height="6" rx="3" ry="3" style="fill:#fcc02d;"></rect>
+      <path d="M40 33a2.956 2.956 0 0 0-1.5.42 2.97 2.97 0 0 1 0 5.16A2.956 2.956 0 0 0 40 39a3 3 0 0 0 0-6z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <rect x="37" y="33" width="6" height="6" rx="3" ry="3" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></rect>
+      <rect x="49" y="33" width="6" height="6" rx="3" ry="3" style="fill:#fcc02d;"></rect>
+      <path d="M52 33a2.956 2.956 0 0 0-1.5.42 2.97 2.97 0 0 1 0 5.16A2.956 2.956 0 0 0 52 39a3 3 0 0 0 0-6z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <rect x="49" y="33" width="6" height="6" rx="3" ry="3" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></rect>
+      <rect x="25" y="33" width="6" height="6" rx="3" ry="3" style="fill:#fcc02d;"></rect>
+      <path d="M28 33a2.956 2.956 0 0 0-1.5.42 2.97 2.97 0 0 1 0 5.16A2.956 2.956 0 0 0 28 39a3 3 0 0 0 0-6z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <rect x="25" y="33" width="6" height="6" rx="3" ry="3" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></rect>
+    </g>
+  </g>
+</svg>
