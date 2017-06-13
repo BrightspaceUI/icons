@@ -49,14 +49,7 @@
         "d2l-demo-template": "^0.0.12",
         "iron-test-helpers": "PolymerElements/iron-test-helpers#1.4.1",
         "web-component-tester": "^5.0.0"
-      },
-      "resolutions": {
-        "webcomponentsjs": "^0.7",
-        "polymer": "Polymer/polymer#^1.9.1"
       }
     }
-  },
-  "resolutions": {
-    "webcomponentsjs": "0.7 - 1"
   }
 }
