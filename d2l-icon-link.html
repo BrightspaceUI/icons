@@ -12,6 +12,7 @@
 		</style>
 		<a class="d2l-icon-button"
 			title={{title}}
+			download={{download}}
 			href={{href}}
 			hreflang={{hreflang}}
 			rel={{rel}}
@@ -30,6 +31,10 @@
 
 			properties: {
 				icon: String,
+				download: {
+					type: String,
+					reflectToAttribute: true
+				},
 				href: {
 					type: String,
 					reflectToAttribute: true
