@@ -27,13 +27,13 @@
     "package.json"
   ],
   "dependencies": {
-    "d2l-colors": "^3.0.1",
-    "d2l-offscreen": "^3.0.1",
-    "iron-iconset-svg": "polymerelements/iron-iconset-svg#^2.0.0",
+    "d2l-colors": "2.3 - 3.0",
+    "d2l-offscreen": "2.2 - 3.0",
+    "iron-iconset-svg": "polymerelements/iron-iconset-svg#1 - 2",
     "polymer": "Polymer/polymer#1.9 - 2"
   },
   "devDependencies": {
-    "d2l-demo-template": "~1.0.1",
+    "d2l-demo-template": "0.0.12 - 1.0",
     "iron-test-helpers": "PolymerElements/iron-test-helpers#1 - 2",
     "web-component-tester": "^6.0.0"
   },

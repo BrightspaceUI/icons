@@ -6,7 +6,7 @@
     "build": "npm run build:scss && npm run build:iconsets",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
-    "postinstall": "polymer install",
+    "postinstall": "polymer install --variants",
     "test": "npm run test:lint && npm run build && npm run test:unit:local",
     "test:lint": "npm run test:lint:js",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",

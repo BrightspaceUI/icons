@@ -5,10 +5,6 @@
 	/** @polymerBehavior */
 	var IconButtonBehavior = {
 
-		properties: {
-			disabled: Boolean
-		},
-
 		attached: function() {
 			this._observer = Polymer.dom(this).observeNodes(function() {
 				this.title = Polymer.dom(this).textContent.trim();

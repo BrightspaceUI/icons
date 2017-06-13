@@ -6,8 +6,18 @@
 <dom-module id="d2l-icon-link">
 	<template strip-whitespace>
 		<style include="d2l-icon-button-shared-styles">
+			:host {
+				display: inline-block;
+			}
 		</style>
-		<a class="d2l-icon-button" disabled={{disabled}}>
+		<a class="d2l-icon-button"
+			title={{title}}
+			href={{href}}
+			hreflang={{hreflang}}
+			rel={{rel}}
+			target={{target}}
+			type={{type}}
+		>
 			<d2l-icon icon="[[icon]]"></d2l-icon>
 			<span><slot></slot></span>
 		</a>
@@ -19,7 +29,27 @@
 			behaviors: [window.D2L.PolymerBehaviors.IconButtonBehavior],
 
 			properties: {
-				icon: String
+				icon: String,
+				href: {
+					type: String,
+					reflectToAttribute: true
+				},
+				hreflang: {
+					type: String,
+					reflectToAttribute: true
+				},
+				rel: {
+					type: String,
+					reflectToAttribute: true
+				},
+				target: {
+					type: String,
+					reflectToAttribute: true
+				},
+				type: {
+					type: String,
+					reflectToAttribute: true
+				}
 			}
 
 		});
