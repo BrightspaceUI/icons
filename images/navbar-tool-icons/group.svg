@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M41 46a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#5554ab;"></path>
+      <path d="M26 31c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 38 46h3a15.044 15.044 0 0 0-15-15z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M41 46a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <circle cx="26" cy="23.5" r="7.5" style="fill:#9e9ed7;"></circle>
+      <circle cx="54" cy="23.5" r="7.5" style="fill:#9e9ed7;"></circle>
+      <path d="M69 46a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#5554ab;"></path>
+      <path d="M26 16a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 26 16z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="26" cy="23.5" r="7.5" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+      <path d="M54 31c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 66 46h3a15.044 15.044 0 0 0-15-15z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M69 46a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <path d="M54 16a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 54 16z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="54" cy="23.5" r="7.5" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+      <path d="M60 64a20.06 20.06 0 0 0-20-20 20.06 20.06 0 0 0-20 20z" style="fill:#5d5bc0;"></path>
+      <path d="M40 44c-.675 0-1.342.036-2 .1A20.07 20.07 0 0 1 56 64h4a20.06 20.06 0 0 0-20-20z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M60 64a20.06 20.06 0 0 0-20-20 20.06 20.06 0 0 0-20 20z" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;"></path>
+      <circle cx="40" cy="34" r="10" style="fill:#9e9ed7;"></circle>
+      <path d="M40 24a10.072 10.072 0 0 0-2 .2 10 10 0 0 1 0 19.6A10 10 0 1 0 40 24z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <circle cx="40" cy="34" r="10" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+    </g>
+  </g>
+</svg>

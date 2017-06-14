@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M67.244 21.245l-9.87 9.87a6 6 0 0 1-8.49-8.488l9.87-9.87a17.978 17.978 0 0 0-25.178 20.682l-19.95 19.95a9 9 0 0 0 12.727 12.728l19.794-19.794a17.987 17.987 0 0 0 21.1-25.08z" style="fill:#fd9727;"></path>
+      <g style="opacity:0.4;mix-blend-mode:lighten;">
+        <path d="M45.885 20.627a6.02 6.02 0 0 0 0 8.488 5.913 5.913 0 0 0 2.584 1.49 6 6 0 0 1 .415-7.978l9.87-9.87a17.975 17.975 0 0 0-3.712-1.29zM67.244 21.245l-1.71 1.71a17.976 17.976 0 0 1-22.387 21.37L23.353 64.117a9.033 9.033 0 0 1-9.753 1.968l.03.032a9.027 9.027 0 0 0 12.727 0l19.79-19.794a17.987 17.987 0 0 0 21.1-25.08z" style="fill:#fff;"></path>
+      </g>
+      <path d="M67.244 21.245l-9.87 9.87a6 6 0 0 1-8.49-8.488l9.87-9.87a17.978 17.978 0 0 0-25.178 20.682l-19.95 19.95a9 9 0 0 0 12.727 12.728l19.794-19.794a17.987 17.987 0 0 0 21.1-25.08z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <g style="opacity:0.1;mix-blend-mode:multiply;">
+        <circle cx="50" cy="46.5" r="7.5" style="stroke-width:2px;stroke:#000;stroke-miterlimit:10;"></circle>
+        <path d="M50 54a15.044 15.044 0 0 0-15 15h30a15.044 15.044 0 0 0-15-15z" style="stroke-width:2px;stroke:#000;stroke-miterlimit:10;"></path>
+      </g>
+      <circle cx="53" cy="46.5" r="7.5" style="stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;fill:#36b99a;"></circle>
+      <path d="M53 54a15.044 15.044 0 0 0-15 15h30a15.044 15.044 0 0 0-15-15z" style="stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;fill:#36b99a;"></path>
+      <circle cx="53" cy="46.5" r="7.5" style="fill:#83d5c2;"></circle>
+      <path d="M68 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:#36b99a;"></path>
+      <path d="M53 54c-.506 0-1.006.027-1.5.076A15.052 15.052 0 0 1 65 69h3a15.044 15.044 0 0 0-15-15z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <path d="M68 69a15.044 15.044 0 0 0-15-15 15.044 15.044 0 0 0-15 15z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M53 39a7.554 7.554 0 0 0-1.5.15 7.5 7.5 0 0 1 0 14.7A7.5 7.5 0 1 0 53 39z" style="opacity:0.4;mix-blend-mode:lighten;fill:#fff;"></path>
+      <circle cx="53" cy="46.5" r="7.5" style="fill:none;stroke:#565a5c;stroke-width:2px;stroke-miterlimit:10;"></circle>
+    </g>
+  </g>
+</svg>

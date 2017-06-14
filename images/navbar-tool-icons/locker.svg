@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g class="cls-1" style="isolation:isolate;">
+    <g>
+      <path d="M11 11h57v54H11z" style="fill:#d3e057;"></path>
+      <path d="M11 11h57v54H11zM30 11v54M49 11v54M11 65v4M68 65v4M15 15h11M15 19h11M15 23h11M34 15h11M34 19h11M34 23h11M53 15h11M53 19h11M53 23h11M15 61h11M34 61h11M53 61h11" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <circle cx="17" cy="38" r="2" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:#a9b445;"></circle>
+      <path d="M17 40v4" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <circle cx="36" cy="38" r="2" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:#a9b445;"></circle>
+      <path d="M36 40v4" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <circle cx="55" cy="38" r="2" style="stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:#a9b445;"></circle>
+      <path d="M55 40v4" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M27 12h2v52h-2zM46 12h2v52h-2zM65 12h2v52h-2z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g>
+      <path d="M13 13h18v18H13z" style="fill:#fcc02d;"></path>
+      <path d="M31 13h18v18H31z" style="fill:#e9428d;"></path>
+      <path d="M49 13h18v18H49z" style="fill:#70d070;"></path>
+      <path d="M13 31h18v18H13z" style="fill:#14c5db;"></path>
+      <path d="M31 31h18v18H31z" style="fill:#d3e057;"></path>
+      <path d="M49 31h18v18H49z" style="fill:#86509e;"></path>
+      <path d="M13 49h18v18H13z" style="fill:#feed58;"></path>
+      <path d="M31 49h18v18H31z" style="fill:#5d5bc0;"></path>
+      <path d="M49 49h18v18H49z" style="fill:#fd9727;"></path>
+      <path d="M64 13h3v54h-3zM46 13h3v54h-3zM28 13h3v54h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M13 13h18v18H13zM31 13h18v18H31zM49 13h18v18H49zM13 31h18v18H13zM31 31h18v18H31zM49 31h18v18H49zM13 49h18v18H13zM31 49h18v18H31zM49 49h18v18H49z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+    </g>
+  </g>
+</svg>

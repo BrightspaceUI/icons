@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="80" width="80" viewBox="0 0 80 80">
+  <g style="isolation:isolate;">
+    <g id="Stroke">
+      <path d="M69 11H18a7 7 0 0 0-7 7v40h58z" style="fill:#36b99a;"></path>
+      <path d="M66 11h3v47h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M21 11h-3a7 7 0 0 0-7 7v40h3V18a7 7 0 0 1 7-7z" style="opacity:0.1;mix-blend-mode:multiply;"></path>
+      <path d="M69 11H18a7 7 0 0 0-7 7v40h58z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M18 51a7 7 0 0 0 0 14h51V51z" style="fill:#fff;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M18 58h51" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+      <path d="M58 69l-4-2-4 2V58h8v11z" style="fill:#e5423b;"></path>
+      <path d="M55 58v9.5l3 1.5V58h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M25 17h30v10H25z" style="fill:#83d5c2;"></path>
+      <path d="M52 17h3v10h-3z" style="fill:#fff;opacity:0.4;mix-blend-mode:lighten;"></path>
+      <path d="M25 17h30v10H25zM25 31h30M25 35h30M25 39h20M58 69l-4-2-4 2V58h8v11z" style="fill:none;stroke:#565a5c;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;"></path>
+    </g>
+  </g>
+</svg>
