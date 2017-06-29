@@ -10,15 +10,15 @@
 		<link rel="import" href="../d2l-icons.html">
 	</head>
 	<body>
-		<test-fixture id="d2l-icon-button">
+		<test-fixture id="d2l-icon-button-block">
 			<template>
-				<button is="d2l-icon-button" icon="d2l-tier1:chevron-right">Chevron Right</button>
+				<d2l-icon-button icon="d2l-tier1:chevron-right">Chevron Right</d2l-icon-button>
 			</template>
 		</test-fixture>
 
 		<test-fixture id="trim-whitespaces">
 			<template>
-				<button is="d2l-icon-button" icon="d2l-tier1:chevron-right"> Chevron Right </button>
+				<d2l-icon-button icon="d2l-tier1:chevron-right"> Chevron Right </d2l-icon-button>
 			</template>
 		</test-fixture>
 
@@ -26,7 +26,7 @@
 			describe('<d2l-icon-button>', function() {
 				describe('standard tests', function(){
 					beforeEach(function(done) {
-						iconButton = fixture('d2l-icon-button');
+						iconButton = fixture('d2l-icon-button-block');
 						flush(done);
 					});
 

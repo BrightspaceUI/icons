@@ -2,24 +2,26 @@
 <html>
 <head>
 	<title>d2l-icons</title>
-	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents.min.js"></script>
-	<link rel="import" href="../../d2l-colors/d2l-colors.html">
+	<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 	<link rel="import" href="../../d2l-demo-template/d2l-demo-template.html">
+	<link rel="import" href="../../d2l-colors/d2l-colors.html">
 	<link rel="import" href="../d2l-icons.html">
-	<style is="custom-style">
-		.color-override d2l-icon {
-			color: var(--d2l-color-celestuba);
-		}
-		.size-override d2l-icon {
-			--d2l-icon-height: 50px;
-			--d2l-icon-width: 50px;
-		}
-	</style>
+	<custom-style>
+		<style is="custom-style">
+			.color-override d2l-icon {
+				color: var(--d2l-color-celestine-minus-1);
+			}
+			.size-override d2l-icon {
+				--d2l-icon-height: 50px;
+				--d2l-icon-width: 50px;
+			}
+		</style>
+	</custom-style>
 </head>
 <body unresolved>
 
 	<d2l-demo-template title="d2l-icons">
-		<div class="d2l-demo-fixture">
+		<div slot="d2l-demo-fixture" class="d2l-demo-fixture">
 
 			<h2 class="d2l-heading-4">tiers (1,2,3)</h2>
 			<p>
@@ -52,19 +54,19 @@
 
 			<h2 class="d2l-heading-4">icon button</h2>
 			<p>
-				<button is="d2l-icon-button" icon="d2l-tier1:check-circle">check circle</button>&nbsp;&nbsp;&nbsp;
-				<button is="d2l-icon-button" icon="d2l-tier1:volume">volume</button>&nbsp;&nbsp;&nbsp;
-				<button is="d2l-icon-button" icon="d2l-tier1:move-to">move to</button>&nbsp;&nbsp;&nbsp;
-				<button is="d2l-icon-button" icon="d2l-html-editor:bold">html editor bold</button>&nbsp;&nbsp;&nbsp;
-				<button is="d2l-icon-button" icon="d2l-tier1:chevron-left" disabled="true">chevron left</button>
+				<d2l-icon-button icon="d2l-tier1:check-circle">check circle</d2l-icon-button>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-button icon="d2l-tier1:volume">volume</d2l-icon-button>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-button icon="d2l-tier1:move-to">move to</d2l-icon-button>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-button icon="d2l-html-editor:bold">html editor bold</d2l-icon-button>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-button icon="d2l-tier1:chevron-left" disabled="true">chevron left</d2l-icon-button>
 			</p>
 
 			<h2 class="d2l-heading-4">icon link</h2>
 			<p>
-				<a is="d2l-icon-link" icon="d2l-tier1:check-circle">check circle</a>&nbsp;&nbsp;&nbsp;
-				<a is="d2l-icon-link" icon="d2l-tier1:volume">volume</a>&nbsp;&nbsp;&nbsp;
-				<a is="d2l-icon-link" icon="d2l-tier1:move-to">move to</a>&nbsp;&nbsp;&nbsp;
-				<a is="d2l-icon-link" icon="d2l-html-editor:bold">html editor bold</a>
+				<d2l-icon-link icon="d2l-tier1:check-circle">check circle</d2l-icon-link>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-link icon="d2l-tier1:volume">volume</d2l-icon-link>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-link icon="d2l-tier1:move-to">move to</d2l-icon-link>&nbsp;&nbsp;&nbsp;
+				<d2l-icon-link icon="d2l-html-editor:bold">html editor bold</d2l-icon-link>
 			</p>
 
 		</div>

@@ -70,7 +70,7 @@ iron-icon {
 If you'd like a different color when the user hovers:
 ```css
 button:hover iron-icon, button:focus iron-icon {
-	color: var(--d2l-color-celestuba);
+	color: var(--d2l-color-celestine-minus-1);
 }
 ```
 
@@ -104,7 +104,7 @@ The color will default to tungsten, and the size will be set automatically based
 To swap the color on-hover:
 ```css
 button:hover d2l-icon, button:focus d2l-icon  {
-	color: var(--d2l-color-celestuba);
+	color: var(--d2l-color-celestine-minus-1);
 }
 ```
 
