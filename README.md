@@ -4,9 +4,9 @@
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-`d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/1.0/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
+`d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
 
-For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
 
 ## Installation
 
@@ -54,7 +54,7 @@ Here's an example which consumes the "bookmark-filled" icon from the "tier1" cat
 </button>
 ```
 
-You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite, `#565a5c`) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
 
 ```html
 <link rel="import" href="../d2l-colors/d2l-colors.html">
@@ -80,7 +80,7 @@ Advantages:
 
 Disadvantages:
 - requires Google Polymer
-- default color (tungsten) must be set
+- default color (ferrite) must be set
 - size must be set
 - no automatic support for right-to-left icons
 
@@ -99,7 +99,7 @@ Use it identically to `<iron-icon>`:
 </button>
 ```
 
-The color will default to tungsten, and the size will be set automatically based on the category name.
+The color will default to ferrite, and the size will be set automatically based on the category name.
 
 To swap the color on-hover:
 ```css
@@ -120,7 +120,7 @@ d2l-icon.big-icon {
 ```
 
 Advantages:
-- color (tungsten) is automatically set
+- color (ferrite) is automatically set
 - size is automatically set based on the icon category
 - color can be manipulated using CSS
 - size can be manipulated using CSS
@@ -142,7 +142,7 @@ Don't forget to provide alternate text if the icon isn't accompanied by any othe
 
 Advantages:
 - easy -- no other tech needed
-- color (tungsten) is automatically set
+- color (ferrite) is automatically set
 - size is automatically set
 - size can be manipulated using CSS
 
@@ -176,7 +176,7 @@ Then apply the CSS class to an element:
 
 Advantages:
 - easy -- no other tech needed
-- color (tungsten) is automatically set
+- color (ferrite) is automatically set
 - size can be manipulated using CSS
 
 Disadvantages:
@@ -231,7 +231,7 @@ Finally, consume the CSS class in your markup as before.
 ```
 
 Advantages:
-- color (tungsten) is automatically set
+- color (ferrite) is automatically set
 - size is automatically set
 
 Disadvantages:
@@ -257,7 +257,7 @@ When contributing changes to icons, the SVG files should be properly formatted. 
   - not contain negative values
 - there should be no `<title>` element
 - there should be no inline `<style>` -- all style for line fills should be applied directly to the SVG elements
-- color of SVG elements should be "tungsten" (#565a5c)
+- color of SVG elements should be "ferrite" (`#565a5c`)
 
 The best way to have most of these rules applied for you automatically is to put the icon through [SVGOMG](https://jakearchibald.github.io/svgomg/) with the "remove title" and "prettify code" options selected.
 
@@ -284,10 +284,6 @@ When rendered in a right-to-left direction, any icons which show directionality 
 ```
 
 To learn more about how best to determine if an icon should be mirrored, refer to [Google's Material Design Bidirectionality](https://material.google.com/usability/bidirectionality.html) documentation.
-
-### General
-
-See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
 [bower-url]: http://bower.io/search/?q=d2l-icons
 [bower-image]: https://img.shields.io/bower/v/d2l-icons.svg
