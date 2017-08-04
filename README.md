@@ -1,6 +1,7 @@
 **Looking for pre-Daylight icons?** They're [over here](https://github.com/BrightspaceUI/icons/tree/pre-daylight).
 
 # d2l-icons
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/icons)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
@@ -286,6 +287,6 @@ When rendered in a right-to-left direction, any icons which show directionality 
 To learn more about how best to determine if an icon should be mirrored, refer to [Google's Material Design Bidirectionality](https://material.google.com/usability/bidirectionality.html) documentation.
 
 [bower-url]: http://bower.io/search/?q=d2l-icons
-[bower-image]: https://img.shields.io/bower/v/d2l-icons.svg
+[bower-image]: https://badge.fury.io/bo/d2l-icons.svg
 [ci-url]: https://travis-ci.org/BrightspaceUI/icons
 [ci-image]: https://travis-ci.org/BrightspaceUI/icons.svg?branch=master
