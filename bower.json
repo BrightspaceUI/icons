@@ -27,20 +27,20 @@
     "package.json"
   ],
   "dependencies": {
-    "d2l-colors": "2.4 - 3.1",
-    "d2l-offscreen": "2.2 - 3.0",
+    "d2l-colors": "^2.4.0 || ^3.1.0",
+    "d2l-offscreen": "^2.2.4 || ^3.0.1",
     "iron-iconset-svg": "polymerelements/iron-iconset-svg#1 - 2",
     "polymer": "Polymer/polymer#1.9 - 2"
   },
   "devDependencies": {
-    "d2l-demo-template": "0.0.12 - 1.0",
+    "d2l-demo-template": "^0.0.12 || ^1.0.2",
     "iron-test-helpers": "PolymerElements/iron-test-helpers#1 - 2",
     "web-component-tester": "^6.0.0"
   },
   "variants": {
     "1.x": {
       "dependencies": {
-        "d2l-colors": "^2.3.0",
+        "d2l-colors": "^2.4.0",
         "d2l-offscreen": "^2.2.4",
         "iron-iconset-svg": "polymerelements/iron-iconset-svg#^1.0.0",
         "polymer": "Polymer/polymer#^1.9.1"
