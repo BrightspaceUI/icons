@@ -45,35 +45,10 @@ If your application is using Google's [Polymer](https://www.polymer-project.org/
 An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
 
 Here's an example which consumes the "bookmark-filled" icon from the "tier1" category using an `iron-icon` web component:
-<!---
-```
-<custom-element-demo>
-  <template>
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../d2l-typography/d2l-typography.html">
-    <link rel="import" href="d2l-icons.html">
-    <custom-style include="d2l-typography">
-      <style is="custom-style" include="d2l-typography"></style>
-    </custom-style>
-    <style>
-      html {
-        font-size: 20px;
-      }
-      body {
-        color: var(--d2l-color-ferrite);
-        font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        letter-spacing: 0.01rem;
-        font-size: 0.95rem;
-        font-weight: 400;
-        line-height: 1.4rem;
-      }
-    </style>
-    <next-code-block></next-code-block>
-  </template>
-</custom-element-demo>
-```
--->
 ```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
 <button>
 	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
 	Bookmark
@@ -114,28 +89,15 @@ Disadvantages:
 
 Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size, color, and mirror the icon horizontally for right-to-left languages.
 
-Use it identically to `<iron-icon>`:
 <!---
 ```
 <custom-element-demo>
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../d2l-typography/d2l-typography.html">
     <link rel="import" href="d2l-icons.html">
-    <custom-style include="d2l-typography">
-      <style is="custom-style" include="d2l-typography"></style>
-    </custom-style>
     <style>
-      html {
-        font-size: 20px;
-      }
-      body {
-        color: var(--d2l-color-ferrite);
-        font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-        letter-spacing: 0.01rem;
-        font-size: 0.95rem;
-        font-weight: 400;
-        line-height: 1.4rem;
+      d2l-icon {
+        margin-right: 14px;
       }
     </style>
     <next-code-block></next-code-block>
@@ -144,6 +106,16 @@ Use it identically to `<iron-icon>`:
 ```
 -->
 ```html
+<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
+<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
+<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
+```
+
+It can be used identically to `<iron-icon>`:
+```html
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../d2l-icons/d2l-icon.html">
+<link rel="import" href="../d2l-icons/tier1-icons.html">
 <button>
 	<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
 	Bookmark
