@@ -19,12 +19,16 @@
   "ignore": [
     "cli",
     "demo",
+    "test",
     ".csslintrc",
     ".editorconfig",
+    ".eslintrc.json",
     ".gitattributes",
     ".gitignore",
     ".travis.yml",
-    "package.json"
+    "package.json",
+    "polymer.json",
+    "wct.conf.json"
   ],
   "dependencies": {
     "d2l-colors": "^2.4.0 || ^3.1.0",
