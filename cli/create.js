@@ -32,7 +32,7 @@ var generate = function(iconPaths, outputPath, formatter) {
 			}
 
 			var minifyPromises = [];
-			minifyPromises.push(minify( ltrIconInfo.file));
+			minifyPromises.push(minify(ltrIconInfo.file));
 
 			var rtlIconInfo = tryGetRtlIcon(ltrIconInfo);
 			if (rtlIconInfo) {
@@ -50,7 +50,7 @@ var generate = function(iconPaths, outputPath, formatter) {
 				}
 
 				return iconInfo;
-			} );
+			});
 
 		};
 

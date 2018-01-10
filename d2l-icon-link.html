@@ -3,6 +3,13 @@
 <link rel="import" href="d2l-icon-button-shared-styles.html">
 <link rel="import" href="d2l-icon-button-behavior.html">
 
+<!--
+`d2l-icon-link`
+Polymer-based web component for icons
+
+@demo demo/icon-link.html
+-->
+
 <dom-module id="d2l-icon-link">
 	<template strip-whitespace>
 		<style include="d2l-icon-button-shared-styles">
@@ -27,34 +34,63 @@
 		Polymer({
 			is: 'd2l-icon-link',
 
-			behaviors: [window.D2L.PolymerBehaviors.IconButtonBehavior],
+			behaviors: [D2L.PolymerBehaviors.IconButtonBehavior],
 
 			properties: {
+
+				/**
+				 * Name of icon (ex. [iconset-name:icon-id]).
+				 */
 				icon: String,
+
+				/**
+				 * Standard HTML download.
+				 */
 				download: {
 					type: String,
 					reflectToAttribute: true
 				},
+
+				/**
+				 * Standard HTML href.
+				 */
 				href: {
 					type: String,
 					reflectToAttribute: true
 				},
+
+				/**
+				 * Standard HTML hreflang.
+				 */
 				hreflang: {
 					type: String,
 					reflectToAttribute: true
 				},
+
+				/**
+				 * Standard HTML rel.
+				 */
 				rel: {
 					type: String,
 					reflectToAttribute: true
 				},
+
+				/**
+				 * Standard HTML target.
+				 */
 				target: {
 					type: String,
 					reflectToAttribute: true
 				},
+
+				/**
+				 * Standard HTML type.
+				 */
 				type: {
 					type: String,
 					reflectToAttribute: true
 				}
+
 			}
 
 		});

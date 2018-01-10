@@ -17,6 +17,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-meta/iron-meta.html">
 <link rel="import" href="../d2l-colors/d2l-colors.html">
 
+<!--
+`d2l-icon`
+Polymer-based web component for icons
+
+@demo demo/icon.html
+-->
+
 <dom-module id="d2l-icon">
 	<template strip-whitespace>
 		<style>
@@ -52,15 +59,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			is: 'd2l-icon',
 
 			properties: {
+
+				/**
+				 * (Optional) Name of icon (ex. [iconset-name:icon-id]).
+				 */
 				icon: {
 					type: String,
 					reflectToAttribute: true
 				},
+				/**
+				 * (Optional) Explicit source of icon.
+				 */
 				src: String,
+
 				theme: String,
+
 				_meta: {
 					value: Polymer.Base.create('iron-meta', {type: 'iconset'})
 				}
+
 			},
 
 			observers: [

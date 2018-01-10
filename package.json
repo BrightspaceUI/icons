@@ -10,7 +10,7 @@
     "test": "npm run test:lint && npm run build && npm run test:unit:local",
     "test:lint": "npm run test:lint:js",
     "test:lint:js": "eslint *.html demo/*.html cli/*.js",
-    "test:lint:wc": "polymer lint --input *.html",
+    "test:lint:wc": "polymer lint -i *.html",
     "test:unit:local": "polymer test --skip-plugin sauce"
   },
   "repository": {
@@ -35,13 +35,13 @@
   "homepage": "https://github.com/BrightspaceUI/icons",
   "devDependencies": {
     "chalk": "^1.1.1",
-    "eslint": "^3.5.0",
-    "eslint-config-brightspace": "^0.2.1",
-    "eslint-plugin-html": "^1.5.2",
+    "eslint": "^4.15.0",
+    "eslint-config-brightspace": "^0.4.0",
+    "eslint-plugin-html": "^4.0.1",
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
-    "polymer-cli": "^1.1.0",
+    "polymer-cli": "^1.5.7",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",

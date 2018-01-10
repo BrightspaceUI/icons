@@ -43,7 +43,7 @@ var writeScss = function(iconInfos, scssPath) {
 		scss.write('	@include d2l-icon();\n');
 		scss.write('	&:before {\n');
 		scss.write('		content: ' + getContentValue(iconInfo.mimeType, iconInfo.ltrIcon) + ';\n');
-		if ( iconInfo.rtlIcon ) {
+		if (iconInfo.rtlIcon) {
 			scss.write('		[dir=\'rtl\'] & {\n');
 			scss.write('			content: ' + getContentValue(iconInfo.mimeType, iconInfo.rtlIcon) + ';\n');
 			scss.write('		}\n');

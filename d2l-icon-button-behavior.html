@@ -2,8 +2,11 @@
 (function() {
 	'use strict';
 
-	/** @polymerBehavior */
-	var IconButtonBehavior = {
+	window.D2L = window.D2L || {};
+	window.D2L.PolymerBehaviors = window.D2L.PolymerBehaviors || {};
+
+	/** @polymerBehavior D2L.PolymerBehaviors.IconButtonBehavior */
+	D2L.PolymerBehaviors.IconButtonBehaviorImpl = {
 
 		attached: function() {
 			this._observer = Polymer.dom(this).observeNodes(function() {
@@ -17,9 +20,10 @@
 
 	};
 
-	window.D2L = window.D2L || {};
-	window.D2L.PolymerBehaviors = window.D2L.PolymerBehaviors || {};
-	/** @polymerBehavior */
-	window.D2L.PolymerBehaviors.IconButtonBehavior = [IconButtonBehavior];
+	/** @polymerBehavior D2L.PolymerBehaviors.IconButtonBehavior */
+	D2L.PolymerBehaviors.IconButtonBehavior = [
+		D2L.PolymerBehaviors.IconButtonBehaviorImpl
+	];
+
 })();
 </script>
