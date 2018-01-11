@@ -89,7 +89,29 @@ Disadvantages:
 
 Using Google's [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) and [iron-icon](https://elements.polymer-project.org/elements/iron-icon) directly (see above) works just fine, however we've created a wrapper component called `<d2l-icon>` which will automatically set the correct icon size, color, and mirror the icon horizontally for right-to-left languages.
 
-Use it identically to `<iron-icon>`:
+<!---
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="d2l-icons.html">
+    <style>
+      d2l-icon {
+        margin-right: 14px;
+      }
+    </style>
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
+<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
+<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
+```
+
+It can be used identically to `<iron-icon>`:
 ```html
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../d2l-icons/d2l-icon.html">

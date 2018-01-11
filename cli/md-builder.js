@@ -51,9 +51,9 @@ function writeCategory(iconsetPath, writer) {
 		}
 	}
 
-	for (var i = 0; i < numPerCol; i++ ) {
+	for (var i = 0; i < numPerCol; i++) {
 
-		for (var j = 0; j < numCols; j++ ) {
+		for (var j = 0; j < numCols; j++) {
 
 			var index = i + j * numPerCol;
 			if (index > files.length - 1) {
