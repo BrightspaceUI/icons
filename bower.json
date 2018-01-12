@@ -38,19 +38,14 @@
   },
   "devDependencies": {
     "d2l-typography": "^6.0.0",
-    "iron-component-page": "1 - 2",
-    "iron-demo-helpers": "1 - 2",
+    "iron-component-page": "^2.0.0",
+    "iron-demo-helpers": "^2.0.0",
     "web-component-tester": "^6.0.0"
   },
   "variants": {
     "1.x": {
       "dependencies": {
-        "iron-iconset-svg": "^1.0.0",
         "polymer": "^1.9.1"
-      },
-      "devDependencies": {
-        "iron-component-page": "^1.1.9",
-        "iron-demo-helpers": "^1.2.6"
       },
       "resolutions": {
         "webcomponentsjs": "^0.7"
