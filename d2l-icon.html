@@ -96,14 +96,6 @@ Polymer-based web component for icons
 				this._updateIcon();
 			},
 
-			_initSvg: function(svg) {
-				if (!svg) {
-					return false;
-				}
-				/* IE prevent svg from being focusable */
-				svg.setAttribute('focusable', 'false');
-			},
-
 			_srcChanged: function() {
 				this._updateIcon();
 			},
@@ -121,9 +113,8 @@ Polymer-based web component for icons
 						this._iconset = /** @type {?Polymer.Iconset} */ (
 							this._meta.byKey(this._iconsetName));
 						if (this._iconset) {
-							var svg = this._iconset.applyIcon(this, this._iconName, this.theme);
+							this._iconset.applyIcon(this, this._iconName, this.theme);
 							this.unlisten(window, 'iron-iconset-added', '_updateIcon');
-							this._initSvg(svg);
 						} else {
 							this.listen(window, 'iron-iconset-added', '_updateIcon');
 						}
