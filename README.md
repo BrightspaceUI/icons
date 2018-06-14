@@ -4,6 +4,9 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/icons)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
+  
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/BrightspaceUIicons)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/BrightspaceUIicons.svg)](https://vaadin.com/directory/component/BrightspaceUIicons)
 
 `d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
 
