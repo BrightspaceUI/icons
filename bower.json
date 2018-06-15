@@ -32,7 +32,6 @@
   ],
   "dependencies": {
     "d2l-colors": "^3.1.2",
-    "d2l-offscreen": "^3.0.3",
     "iron-iconset-svg": "^2.1.0",
     "polymer": "1.9 - 2"
   },
