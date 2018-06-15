@@ -1,0 +1,143 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="d2l-icon.html">
+<link rel="import" href="d2l-icon-button-shared-styles.html">
+<link rel="import" href="d2l-icon-button-behavior.html">
+
+<!--
+`d2l-icon-button`
+Polymer-based web component for icons
+
+@demo demo/icon-button.html d2l-icon-button
+-->
+
+<dom-module id="d2l-icon-button">
+	<template strip-whitespace>
+		<style include="d2l-icon-button-shared-styles">
+			:host {
+				display: inline-block;
+			}
+		</style>
+		<button class="d2l-icon-button"
+			disabled=[[disabled]]
+			title=[[title]]
+			autofocus=[[autofocus]]
+			form=[[form]]
+			formaction=[[formaction]]
+			formenctype=[[formenctype]]
+			formmethod=[[formmethod]]
+			formnovalidate=[[formnovalidate]]
+			formtarget=[[formtarget]]
+			name=[[name]]
+			type=[[type]]
+			value=[[value]]
+		>
+			<d2l-icon icon="[[icon]]"></d2l-icon>
+			<span><slot></slot></span>
+		</button>
+	</template>
+	<script>
+		Polymer({
+			is: 'd2l-icon-button',
+
+			behaviors: [D2L.PolymerBehaviors.IconButtonBehavior],
+
+			properties: {
+
+				/**
+				 * Name of icon (ex. [iconset-name:icon-id]).
+				 */
+				icon: String,
+
+				/**
+				 * Standard HTML disabled.
+				 */
+				disabled: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML autofocus.
+				 */
+				autofocus: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML form.
+				 */
+				form: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML formaction.
+				 */
+				formaction: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML formenctype.
+				 */
+				formenctype: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML formmethod.
+				 */
+				formmethod: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML formnovalidate.
+				 */
+				formnovalidate: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML formtarget.
+				 */
+				formtarget: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML name.
+				 */
+				name: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML button type.
+				 */
+				type: {
+					type: String,
+					reflectToAttribute: true
+				},
+
+				/**
+				 * Standard HTML value.
+				 */
+				value: {
+					type: String,
+					reflectToAttribute: true
+				}
+
+			}
+
+		});
+	</script>
+</dom-module>

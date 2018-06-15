@@ -1,0 +1,29 @@
+<script>
+(function() {
+	'use strict';
+
+	window.D2L = window.D2L || {};
+	window.D2L.PolymerBehaviors = window.D2L.PolymerBehaviors || {};
+
+	/** @polymerBehavior D2L.PolymerBehaviors.IconButtonBehavior */
+	D2L.PolymerBehaviors.IconButtonBehaviorImpl = {
+
+		attached: function() {
+			this._observer = Polymer.dom(this).observeNodes(function() {
+				this.title = Polymer.dom(this).textContent.trim();
+			}.bind(this));
+		},
+
+		detached: function() {
+			Polymer.dom(this).unobserveNodes(this._observer);
+		}
+
+	};
+
+	/** @polymerBehavior D2L.PolymerBehaviors.IconButtonBehavior */
+	D2L.PolymerBehaviors.IconButtonBehavior = [
+		D2L.PolymerBehaviors.IconButtonBehaviorImpl
+	];
+
+})();
+</script>
