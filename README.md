@@ -45,10 +45,7 @@ Here's an example which consumes the "bookmark-filled" icon from the "tier1" cat
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
-	Bookmark
-</button>
+<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
 ```
 
 You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite, `#565a5c`) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
@@ -66,7 +63,7 @@ iron-icon {
 
 If you'd like a different color when the user hovers:
 ```css
-button:hover iron-icon, button:focus iron-icon {
+iron-icon:hover {
 	color: var(--d2l-color-celestine-minus-1);
 }
 ```
@@ -112,17 +109,14 @@ It can be used identically to `<iron-icon>`:
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../d2l-icons/d2l-icon.html">
 <link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
-	Bookmark
-</button>
+<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
 ```
 
 The color will default to ferrite, and the size will be set automatically based on the category name.
 
 To swap the color on-hover:
 ```css
-button:hover d2l-icon, button:focus d2l-icon  {
+d2l-icon:hover  {
 	color: var(--d2l-color-celestine-minus-1);
 }
 ```
@@ -243,10 +237,7 @@ The name of the mixin will correspond to its location within the `images` direct
 Finally, consume the CSS class in your markup as before.
 
 ```html
-<button>
-	<span class="my-app-bookmark-icon"></span>
-	Bookmark
-</button>
+<span class="my-app-bookmark-icon"></span>
 ```
 
 Advantages:
