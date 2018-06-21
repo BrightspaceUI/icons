@@ -253,6 +253,10 @@ Disadvantages:
 
 ### Updating or contributing new icons
 
+#### First, do you need to contribute?
+
+Before contributing to our shared set of icons, ask yourself whether your new icon is common enough to be included here. Will it be used in many other applications, or is it unique to yours? To keep our icon sets small and improve performance, only icons that have the potential to be reused many times should be a part of this library.
+
 #### SVG format
 
 When contributing changes to icons, the SVG files should be properly formatted. Follow these rules:
