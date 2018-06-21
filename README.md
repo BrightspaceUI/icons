@@ -1,13 +1,9 @@
-**Looking for pre-Daylight icons?** They're [over here](https://github.com/BrightspaceUI/icons/tree/pre-daylight).
-
 # d2l-icons
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/icons)
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
 `d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
-
-For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
 
 ## Installation
 
@@ -40,7 +36,7 @@ There are many ways to consume icons -- the best technique depends on your appli
 
 ### Polymer Icon Sets
 
-If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
+If your application is using Google's [Polymer](https://www.polymer-project.org/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
 
 An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
 
@@ -49,10 +45,7 @@ Here's an example which consumes the "bookmark-filled" icon from the "tier1" cat
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
 <link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
-	Bookmark
-</button>
+<iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
 ```
 
 You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite, `#565a5c`) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
@@ -70,7 +63,7 @@ iron-icon {
 
 If you'd like a different color when the user hovers:
 ```css
-button:hover iron-icon, button:focus iron-icon {
+iron-icon:hover {
 	color: var(--d2l-color-celestine-minus-1);
 }
 ```
@@ -116,17 +109,14 @@ It can be used identically to `<iron-icon>`:
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../d2l-icons/d2l-icon.html">
 <link rel="import" href="../d2l-icons/tier1-icons.html">
-<button>
-	<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
-	Bookmark
-</button>
+<d2l-icon icon="d2l-tier1:bookmark-filled"></d2l-icon>
 ```
 
 The color will default to ferrite, and the size will be set automatically based on the category name.
 
 To swap the color on-hover:
 ```css
-button:hover d2l-icon, button:focus d2l-icon  {
+d2l-icon:hover  {
 	color: var(--d2l-color-celestine-minus-1);
 }
 ```
@@ -247,10 +237,7 @@ The name of the mixin will correspond to its location within the `images` direct
 Finally, consume the CSS class in your markup as before.
 
 ```html
-<button>
-	<span class="my-app-bookmark-icon"></span>
-	Bookmark
-</button>
+<span class="my-app-bookmark-icon"></span>
 ```
 
 Advantages:
@@ -265,6 +252,10 @@ Disadvantages:
 ## Coding styles
 
 ### Updating or contributing new icons
+
+#### First, do you need to contribute?
+
+Before contributing to our shared set of icons, ask yourself whether your new icon is common enough to be included here. Will it be used in many other applications, or is it unique to yours? To keep our icon sets small and improve performance, only icons that have the potential to be reused many times should be a part of this library.
 
 #### SVG format
 
