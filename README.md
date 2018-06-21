@@ -36,7 +36,7 @@ There are many ways to consume icons -- the best technique depends on your appli
 
 ### Polymer Icon Sets
 
-If your application is using Google's [Polymer](https://www.polymer-project.org/1.0/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
+If your application is using Google's [Polymer](https://www.polymer-project.org/) framework, `d2l-icons` exposes [iron-iconset-svg](https://elements.polymer-project.org/elements/iron-iconset-svg) collections for usage with the Polymer [iron-icon](https://elements.polymer-project.org/elements/iron-icon) web component.
 
 An iconset collection is available for each category (tier1, tier2, etc.), named `{category}-icons.html`. Also, an HTML import which imports ALL categories is also available by including `d2l-icons.html`.
 
