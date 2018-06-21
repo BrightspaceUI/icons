@@ -5,8 +5,6 @@
 
 `d2l-icons` contains SVGs, [Polymer](https://www.polymer-project.org/)-based web components and [Sass mixins](http://sass-lang.com) to incorporate D2L iconography into your application.
 
-For further information on this and other Brightspace UI components, see the docs at [ui.developers.brightspace.com](http://ui.developers.brightspace.com/).
-
 ## Installation
 
 `d2l-icons` can be installed from [Bower][bower-url]:
