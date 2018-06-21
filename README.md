@@ -1,5 +1,3 @@
-**Looking for pre-Daylight icons?** They're [over here](https://github.com/BrightspaceUI/icons/tree/pre-daylight).
-
 # d2l-icons
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/BrightspaceUI/icons)
 [![Bower version][bower-image]][bower-url]
