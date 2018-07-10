@@ -1,14 +1,19 @@
 language: node_js
-node_js:
-- 9
-script:
-- npm run test:lint
-- npm run build
-- polymer test --skip-plugin local
+node_js: node
 addons:
-  sauce_connect: true
-  jwt:
-    secure: NROXIT6jN4cCo2ny9wcZf0JKxxg5gTOvnch8iorbd0Jq80GMfaIuTprAA6ztncayEMgJrmwKPuduolAjwNe9h+p42d3u3bDq/BKtJ5/gOLBmd97F2SmSY0C0AgdO8mrvq4tLrUutlAzvaziVD1gW2pmaZO6x3e33IKBPxPvuUAk=
+  chrome: stable
+script:
+- npm run lint
+- npm run build
+- |
+  if [ $TRAVIS_PULL_REQUEST != false ] && [ $TRAVIS_SECURE_ENV_VARS == true ]; then
+    echo "Pull request with secure environment variables, running Sauce tests...";
+    npm run test:polymer:sauce || travis_terminate 1;
+  else
+    echo "Not a pull request and/or no secure environment variables, running headless tests...";
+    npm run test:polymer:local || travis_terminate 1;
+  fi
 env:
   global:
-    SAUCE_USERNAME: Desire2Learn
+  - SAUCE_USERNAME: Desire2Learn
+  - secure: NOor8Yc6J+8QC/JudZ3aN8MmCyV7/HqkriUnNDrb3fCzgWQEqI5slGnkOveEP1rNdbUKySxS/kgZFWKiUPOaBofpa+URZmCzbUtYebbvNYDfj9R3v0kQEV+kMsAsEoUkn0biw8S2rpFkcAdZZZEbkkPyUpZVrgtLhaTbuDt6B9Y=

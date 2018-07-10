@@ -7,11 +7,12 @@
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
     "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
     "postinstall": "polymer install --variants",
-    "test": "npm run test:lint && npm run build && npm run test:unit:local",
-    "test:lint": "npm run test:lint:js",
-    "test:lint:js": "eslint *.html demo/*.html cli/*.js",
-    "test:lint:wc": "polymer lint -i *.html",
-    "test:unit:local": "polymer test --skip-plugin sauce"
+    "lint": "npm run lint:html && npm run lint:wc",
+    "lint:html": "eslint *.html demo/*.html cli/*.js",
+    "lint:wc": "polymer lint -i *.html",
+    "test": "npm run lint && npm run build && npm run test:polymer:local",
+    "test:polymer:local": "polymer test --skip-plugin sauce",
+    "test:polymer:sauce": "polymer test --skip-plugin local"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,7 @@
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
-    "polymer-cli": "^1.5.7",
+    "polymer-cli": "^1.7.7",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
