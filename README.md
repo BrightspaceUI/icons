@@ -201,7 +201,7 @@ Disadvantages:
 
 If you would prefer the text accompanying the icon to be invisible, the background image approach can be combined with off-screen text. The text will be positioned outside of the visible screen area using CSS, essentially hiding it for everyone except those using assistive devices.
 
-To position something off-screen, you can either use the [vui-offscreen](https://github.com/Brightspace/d2l-offscreen-ui) component, or follow [WebAIM's text-indent technique](http://webaim.org/techniques/css/invisiblecontent/).
+To position something off-screen, you can either use the [d2l-offscreen](https://github.com/BrightspaceUI/offscreen) component, or follow [WebAIM's text-indent technique](http://webaim.org/techniques/css/invisiblecontent/).
 
 For example, a button which contains only an icon:
 ```html
