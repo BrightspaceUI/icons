@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "extends": "brightspace/node-config",
   "rules": {
      "no-console": "off",

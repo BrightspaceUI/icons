@@ -5,81 +5,81 @@ var forEachIcon = require('./for-each-icon');
 
 var generate = function(iconPaths, outputPath, formatter) {
 
-    var iconInfos = [];
+	var iconInfos = [];
 
-    return forEachIcon(iconPaths, function(iconInfo) {
+	return forEachIcon(iconPaths, function(iconInfo) {
 
-        iconInfos.push(iconInfo);
+		iconInfos.push(iconInfo);
 
-    }).then(function() {
+	}).then(function() {
 
-        var q = require('q');
-        var iconPromises = [];
+		var q = require('q');
+		var iconPromises = [];
 
-        var tryGetRtlIcon = function(ltrIcon) {
-            for (var i = 0; i < iconInfos.length; i++) {
-                if (iconInfos[i].isRtl && iconInfos[i].name === ltrIcon.name) {
-                    return iconInfos[i];
-                }
-            }
-            return null;
-        };
+		var tryGetRtlIcon = function(ltrIcon) {
+			for (var i = 0; i < iconInfos.length; i++) {
+				if (iconInfos[i].isRtl && iconInfos[i].name === ltrIcon.name) {
+					return iconInfos[i];
+				}
+			}
+			return null;
+		};
 
-        var getIconInfo = function(ltrIconInfo) {
+		var getIconInfo = function(ltrIconInfo) {
 
-            if (ltrIconInfo.isRtl) {
-                return;
-            }
+			if (ltrIconInfo.isRtl) {
+				return;
+			}
 
-            var minifyPromises = [];
-            minifyPromises.push(minify(ltrIconInfo.file));
+			var minifyPromises = [];
+			minifyPromises.push(minify(ltrIconInfo.file));
 
-            var rtlIconInfo = tryGetRtlIcon(ltrIconInfo);
-            if (rtlIconInfo) {
-                minifyPromises.push(minify(rtlIconInfo.file));
-            }
+			var rtlIconInfo = tryGetRtlIcon(ltrIconInfo);
+			if (rtlIconInfo) {
+				minifyPromises.push(minify(rtlIconInfo.file));
+			}
 
-            return q.all(minifyPromises).then(function(minifiedIcons) {
+			return q.all(minifyPromises).then(function(minifiedIcons) {
 
-                var iconInfo = ltrIconInfo;
+				var iconInfo = ltrIconInfo;
 
-                iconInfo.ltrIcon = minifiedIcons[0].contents;
+				iconInfo.ltrIcon = minifiedIcons[0].contents;
 
-                if (minifiedIcons.length === 2) {
-                    iconInfo.rtlIcon = minifiedIcons[1].contents;
-                }
+				if (minifiedIcons.length === 2) {
+					iconInfo.rtlIcon = minifiedIcons[1].contents;
+				}
 
-                return iconInfo;
-            });
+				return iconInfo;
+			});
 
-        };
+		};
 
-        for (var i = 0; i < iconInfos.length; i++) {
+		for (var i = 0; i < iconInfos.length; i++) {
 
-            var iconPromise = getIconInfo(iconInfos[i]);
-            if (iconPromise) {
-                iconPromises.push(iconPromise);
-            }
+			var iconPromise = getIconInfo(iconInfos[i]);
+			if (iconPromise) {
+				iconPromises.push(iconPromise);
+			}
 
-        }
+		}
 
-        return q.all(iconPromises);
+		return q.all(iconPromises);
 
-    }).then(function(iconInfos) {
+	}).then(function(iconInfos) {
 
-        iconInfos.sort(function(a, b) {
-            if (a.mixin > b.mixin) {
-                return 1;
-            }
-            if (a.mixin < b.mixin) {
-                return -1;
-            }
-            return 0;
-        });
+		iconInfos.sort(function(a, b) {
+			if (a.mixin > b.mixin) {
+				return 1;
+			}
+			if (a.mixin < b.mixin) {
+				return -1;
+			}
+			return 0;
+		});
 
-        return formatter(iconInfos, outputPath);
+		return formatter(iconInfos, outputPath);
 
-    });
+	});
 
 };
 
