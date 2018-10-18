@@ -59,7 +59,7 @@ function writeCategory(iconsetPath, writer) {
 			} else {
 				var file = files[index];
 				var iconName = path.basename(file, path.extname(file));
-				writer.write(`| ![](/images/${categoryName}/${file}?raw=true) | ${iconName} |`);
+				writer.write(`| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/${categoryName}/${file}?sanitize=true) | ${iconName} |`);
 			}
 
 			if (j === numCols - 1) {
