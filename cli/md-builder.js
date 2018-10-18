@@ -4,8 +4,6 @@ var fs = require('fs'),
 	path = require('path'),
 	q = require('q');
 
-var basePath = 'https://rawgit.com/BrightspaceUI/icons/master/images/';
-
 function writeCategory(iconsetPath, writer) {
 
 	iconsetPath = path.join(__dirname, '../', iconsetPath);
@@ -61,7 +59,7 @@ function writeCategory(iconsetPath, writer) {
 			} else {
 				var file = files[index];
 				var iconName = path.basename(file, path.extname(file));
-				writer.write('| ![](' + basePath + categoryName + '/' + file + '?raw=true) | ' + iconName + ' |');
+				writer.write(`| ![](/images/${categoryName}/${file}?raw=true) | ${iconName} |`);
 			}
 
 			if (j === numCols - 1) {
