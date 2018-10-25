@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>d2l-icon tests</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<script src="../../@babel/polyfill/browser.js"></script>
 		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
 		<script src="../../wct-browser-legacy/browser.js"></script>
 		<link rel="import" href="../../iron-test-helpers/iron-test-helpers.html">
@@ -65,14 +66,6 @@
 			</template>
 		</test-fixture>
 
-		<script>
-		describe('<d2l-icon>', function() {
-
-			var icon;
-
-			describe('tier1', function() {
-
-				beforeEach(function(done) {
 		<script type="module">
 import '../d2l-icons.js';
 import './custom-set.js';
@@ -229,3 +222,5 @@ function assertSize(icon, size) {
 	expect(correctHeight).to.be.true;
 }
 </script>
+	</body>
+</html>
