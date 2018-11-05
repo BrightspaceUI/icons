@@ -136,7 +136,6 @@ describe('<d2l-icon>', function() {
 
 	});
 
-
 	describe('tier3', function() {
 
 		beforeEach(function() {
@@ -217,8 +216,8 @@ function assertSize(icon, size) {
 		style.width === (size + 'px');
 	var correctHeight = svg.clientHeight === size ||
 		style.height === (size + 'px');
-	console.log(correctWidth, svg.clientWidth, style.width, size);
-	console.log(correctHeight, svg.clientHeight, style.height, size);
+	console.log(correctWidth, svg.clientWidth, style.width, size); // eslint-disable-line no-console
+	console.log(correctHeight, svg.clientHeight, style.height, size); // eslint-disable-line no-console
 	expect(correctWidth).to.be.true;
 	expect(correctHeight).to.be.true;
 }
