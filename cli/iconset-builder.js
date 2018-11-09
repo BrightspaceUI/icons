@@ -6,10 +6,6 @@ var path = require('path'),
 	fs = require('fs');
 
 var iconsetObjTemplate = {
-	'link': [
-		{'$': {'rel': 'import', 'href': '../polymer/polymer.html'}},
-		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}}
-	],
 	'iron-iconset-svg': {
 		'$': {'name': '', 'size': '', 'rtl-mirroring': true},
 		'svg': {'defs': {'g': []}}
@@ -105,8 +101,16 @@ module.exports = function(iconsetPath) {
 			var builder = new xml2js.Builder({headless: true});
 			return builder.buildObject(iconsetObj);
 		}).then(function(xml) {
-			xml = xml.substring(7, xml.length - 7);
-			return fs.writeFile(path.join(__dirname, '../', name + '-icons.html'), xml);
+			//xml = xml.substring(7, xml.length - 7);
+			var content = `import '../@polymer/polymer/polymer-legacy.js';
+import '../@polymer/iron-iconset-svg/iron-iconset-svg.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = \`${xml}\`;
+document.head.appendChild($_documentContainer.content);
+`;
+			return fs.writeFile(path.join(__dirname, '../', name + '-icons.js'), content);
 		});
 
 };
