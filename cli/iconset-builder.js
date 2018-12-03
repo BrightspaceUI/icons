@@ -105,8 +105,20 @@ module.exports = function(iconsetPath) {
 			var builder = new xml2js.Builder({headless: true});
 			return builder.buildObject(iconsetObj);
 		}).then(function(xml) {
+
+			var deferred = q.defer();
+
 			xml = xml.substring(7, xml.length - 7);
-			return fs.writeFile(path.join(__dirname, '../', name + '-icons.html'), xml);
+
+			fs.writeFile(path.join(__dirname, '../', name + '-icons.html'), xml, function(err) {
+				if (err) {
+					return deferred.reject(err);
+				}
+				deferred.resolve(true);
+			});
+
+			return deferred.promise;
+
 		});
 
 };
