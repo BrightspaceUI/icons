@@ -11,7 +11,7 @@ var iconsetObjTemplate = {
 		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}}
 	],
 	'iron-iconset-svg': {
-		'$': {'name': '', 'size': '', 'rtl-mirroring': true},
+		'$': {'name': '', 'size': '', 'rtl-mirroring': true, 'use-global-rtl-attribute': true},
 		'svg': {'defs': {'g': []}}
 	}
 };
