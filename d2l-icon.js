@@ -23,12 +23,12 @@ Polymer-based web component for icons
   from HTML and may be out of place here. Review them and
   then delete this comment!
 */
-import { Base } from '../@polymer/polymer/polymer-legacy.js';
+import { Base } from '@polymer/polymer/polymer-legacy.js';
 
-import '../@polymer/iron-meta/iron-meta.js';
-import '../d2l-colors/d2l-colors.js';
-import { Polymer } from '../@polymer/polymer/lib/legacy/polymer-fn.js';
-import { dom } from '../@polymer/polymer/lib/legacy/polymer.dom.js';
+import '@polymer/iron-meta/iron-meta.js';
+import 'd2l-colors/d2l-colors.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
 const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `<dom-module id="d2l-icon">
