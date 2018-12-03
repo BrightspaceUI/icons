@@ -7,7 +7,7 @@ var path = require('path'),
 
 var iconsetObjTemplate = {
 	'iron-iconset-svg': {
-		'$': {'name': '', 'size': '', 'rtl-mirroring': true},
+		'$': {'name': '', 'size': '', 'rtl-mirroring': true, 'use-global-rtl-attribute': true},
 		'svg': {'defs': {'g': []}}
 	}
 };
@@ -101,16 +101,25 @@ module.exports = function(iconsetPath) {
 			var builder = new xml2js.Builder({headless: true});
 			return builder.buildObject(iconsetObj);
 		}).then(function(xml) {
-			//xml = xml.substring(7, xml.length - 7);
-			var content = `import '../@polymer/polymer/polymer-legacy.js';
-import '../@polymer/iron-iconset-svg/iron-iconset-svg.js';
+
+			var deferred = q.defer();
+
+			var content = `import '@polymer/polymer/polymer-legacy.js';
+import '@polymer/iron-iconset-svg/iron-iconset-svg.js';
 const $_documentContainer = document.createElement('template');
 $_documentContainer.setAttribute('style', 'display: none;');
-
 $_documentContainer.innerHTML = \`${xml}\`;
 document.head.appendChild($_documentContainer.content);
 `;
-			return fs.writeFile(path.join(__dirname, '../', name + '-icons.js'), content);
+			fs.writeFile(path.join(__dirname, '../', name + '-icons.js'), content, function(err) {
+				if (err) {
+					return deferred.reject(err);
+				}
+				deferred.resolve(true);
+			});
+
+			return deferred.promise;
+
 		});
 
 };
