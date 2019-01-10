@@ -6,6 +6,10 @@ var path = require('path'),
 	fs = require('fs');
 
 var iconsetObjTemplate = {
+	'link': [
+		{'$': {'rel': 'import', 'href': '../polymer/polymer.html'}},
+		{'$': {'rel': 'import', 'href': '../iron-iconset-svg/iron-iconset-svg.html'}}
+	],
 	'iron-iconset-svg': {
 		'$': {'name': '', 'size': '', 'rtl-mirroring': true, 'use-global-rtl-attribute': true},
 		'svg': {'defs': {'g': []}}
@@ -104,14 +108,9 @@ module.exports = function(iconsetPath) {
 
 			var deferred = q.defer();
 
-			var content = `import '@polymer/polymer/polymer-legacy.js';
-import '@polymer/iron-iconset-svg/iron-iconset-svg.js';
-const $_documentContainer = document.createElement('template');
-$_documentContainer.setAttribute('style', 'display: none;');
-$_documentContainer.innerHTML = \`${xml}\`;
-document.head.appendChild($_documentContainer.content);
-`;
-			fs.writeFile(path.join(__dirname, '../', name + '-icons.js'), content, function(err) {
+			xml = xml.substring(7, xml.length - 7);
+
+			fs.writeFile(path.join(__dirname, '../', name + '-icons.html'), xml, function(err) {
 				if (err) {
 					return deferred.reject(err);
 				}
