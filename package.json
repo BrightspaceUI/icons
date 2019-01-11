@@ -46,7 +46,7 @@
     "fs": "0.0.2",
     "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
-    "polymer-cli": "^1.9.4",
+    "polymer-cli": "^1.9.5",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
