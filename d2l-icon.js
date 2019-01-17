@@ -127,7 +127,8 @@ Polymer({
 				this._iconset = /** @type {?Polymer.Iconset} */ (
 					this._meta.byKey(this._iconsetName));
 				if (this._iconset) {
-					this._iconset.applyIcon(this, this._iconName, this.theme);
+					var iconName = 'd2l-icon-' + this._iconName;
+					this._iconset.applyIcon(this, iconName, this.theme);
 					this.unlisten(window, 'iron-iconset-added', '_updateIcon');
 				} else {
 					this.listen(window, 'iron-iconset-added', '_updateIcon');
