@@ -36,7 +36,7 @@ function buildFileXml(iconsetObj, objs, iconsetPath, file) {
 		if (err) {
 			return deferred.reject(err);
 		}
-		var id = path.basename(file, extension);
+		var id = 'd2l-icon-' + path.basename(file, extension);
 		var parser = new xml2js.Parser();
 		parser.parseString(xml, function(err, result) {
 			if (err) {
