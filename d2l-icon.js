@@ -65,7 +65,7 @@ $_documentContainer.innerHTML = `<dom-module id="d2l-icon">
 			}
 		</style>
 	</template>
-	
+
 </dom-module>`;
 
 document.head.appendChild($_documentContainer.content);
@@ -105,7 +105,11 @@ Polymer({
 
 	_iconChanged: function(icon) {
 		var parts = (icon || '').split(':');
-		this._iconName = parts.pop();
+		var iconName = parts.pop();
+		if (iconName !== this._iconName) {
+			this._d2lIconName = undefined;
+		}
+		this._iconName = iconName;
 		this._iconsetName = parts.pop() || this._DEFAULT_ICONSET;
 		this._updateIcon();
 	},
@@ -127,9 +131,11 @@ Polymer({
 				this._iconset = /** @type {?Polymer.Iconset} */ (
 					this._meta.byKey(this._iconsetName));
 				if (this._iconset) {
-					var d2lIcon = this._iconset.innerHTML.indexOf(`d2l-icon-${this._iconName}`) > -1;
-					var iconName = d2lIcon ? (`d2l-icon-${this._iconName}`) : this._iconName;
-					this._iconset.applyIcon(this, iconName, this.theme);
+					if (!this._d2lIconName) {
+						this._d2lIconName = this._iconset.querySelector(`#d2l-icon-${this._iconName}`) ?
+							(`d2l-icon-${this._iconName}`) : this._iconName;
+					}
+					this._iconset.applyIcon(this, this._d2lIconName, this.theme);
 					this.unlisten(window, 'iron-iconset-added', '_updateIcon');
 				} else {
 					this.listen(window, 'iron-iconset-added', '_updateIcon');
