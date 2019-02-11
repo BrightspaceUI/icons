@@ -65,7 +65,7 @@ $_documentContainer.innerHTML = `<dom-module id="d2l-icon">
 			}
 		</style>
 	</template>
-
+	
 </dom-module>`;
 
 document.head.appendChild($_documentContainer.content);
@@ -86,6 +86,8 @@ Polymer({
 		 */
 		src: String,
 
+		theme: String,
+
 		_meta: {
 			value: Base.create('iron-meta', {type: 'iconset'})
 		}
@@ -94,23 +96,17 @@ Polymer({
 
 	observers: [
 		'_updateIcon(_meta, isAttached)',
+		'_updateIcon(theme, isAttached)',
 		'_srcChanged(src, isAttached)',
 		'_iconChanged(icon, isAttached)'
 	],
 
 	_DEFAULT_ICONSET: 'icons',
 
-	_iconChanged: function(icon, attached) {
-		if (!attached) return;
+	_iconChanged: function(icon) {
 		var parts = (icon || '').split(':');
-		var iconName = parts.pop();
-		var iconSetName = parts.pop() || this._DEFAULT_ICONSET;
-		if (iconName === this._iconName && iconSetName === this._iconsetName && attached === this.attached) {
-			return;
-		}
-		this._d2lIconName = undefined;
-		this._iconName = iconName;
-		this._iconsetName = iconSetName;
+		this._iconName = parts.pop();
+		this._iconsetName = parts.pop() || this._DEFAULT_ICONSET;
 		this._updateIcon();
 	},
 
@@ -131,11 +127,7 @@ Polymer({
 				this._iconset = /** @type {?Polymer.Iconset} */ (
 					this._meta.byKey(this._iconsetName));
 				if (this._iconset) {
-					if (!this._d2lIconName) {
-						this._d2lIconName = this._iconset.querySelector(`#d2l-icon-${this._iconName}`) ?
-							(`d2l-icon-${this._iconName}`) : this._iconName;
-					}
-					this._iconset.applyIcon(this, this._d2lIconName);
+					this._iconset.applyIcon(this, this._iconName, this.theme);
 					this.unlisten(window, 'iron-iconset-added', '_updateIcon');
 				} else {
 					this.listen(window, 'iron-iconset-added', '_updateIcon');
