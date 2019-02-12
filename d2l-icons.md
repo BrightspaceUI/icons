@@ -191,6 +191,7 @@ Size: `18px` x `18`px
 
 | Icon | Name | | Icon | Name | | Icon | Name |
 | :---: | :--- | --- | :---: | :--- | --- | :---: | :--- |
-| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/angry.svg?sanitize=true) | angry | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/lol.svg?sanitize=true) | lol | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/sad.svg?sanitize=true) | sad |
-| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/happy.svg?sanitize=true) | happy | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/meh.svg?sanitize=true) | meh | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/shout.svg?sanitize=true) | shout |
+| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/angry.svg?sanitize=true) | angry | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/meh.svg?sanitize=true) | meh | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/super-sad.svg?sanitize=true) | super-sad |
+| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/happy.svg?sanitize=true) | happy | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/sad.svg?sanitize=true) | sad | | &nbsp; | &nbsp; |
+| ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/lol.svg?sanitize=true) | lol | | ![](https://raw.githubusercontent.com/BrightspaceUI/icons/master/images/emoji/shout.svg?sanitize=true) | shout | | &nbsp; | &nbsp; |
 
