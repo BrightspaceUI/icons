@@ -303,12 +303,3 @@ To learn more about how best to determine if an icon should be mirrored, refer t
 [bower-image]: https://badge.fury.io/bo/d2l-icons.svg
 [ci-url]: https://travis-ci.org/BrightspaceUI/icons
 [ci-image]: https://travis-ci.org/BrightspaceUI/icons.svg?branch=master
-
-## Versioning
-
-Commits and PR merges to master will automatically do a minor version bump which will:
-* Update the version in `package.json`
-* Add a tag matching the new version
-* Create a github release matching the new version
-
-By using either **[increment major]** or **[increment patch]** notation inside your merge message, you can overwrite the default version upgrade of minor to the position of your choice.
