@@ -13,20 +13,7 @@ script:
     echo "Not a pull request and/or no secure environment variables, running headless tests...";
     npm run test:polymer:local || travis_terminate 1;
   fi
-- |
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ $TRAVIS_PULL_REQUEST == false ]; then
-    echo "Not a Pull Request and on branch master so bumping version";
-    frauci-update-version;
-    export TRAVIS_TAG=$(frauci-get-version)
-  fi
-deploy:
-  provider: releases
-  api_key: "$GITHUB_RELEASE_TOKEN"
-  on:
-    tags: true
 env:
   global:
-  - REPO_NAME=icons
   - SAUCE_USERNAME: Desire2Learn
   - secure: NOor8Yc6J+8QC/JudZ3aN8MmCyV7/HqkriUnNDrb3fCzgWQEqI5slGnkOveEP1rNdbUKySxS/kgZFWKiUPOaBofpa+URZmCzbUtYebbvNYDfj9R3v0kQEV+kMsAsEoUkn0biw8S2rpFkcAdZZZEbkkPyUpZVrgtLhaTbuDt6B9Y=
-  - secure: nLUyzTFXAl4QIh6bdAGqqJiKzjiz7yvjnHkFEuTg4/BKc9a3u8T7SvMmu5IlnW2RugmOaMdPHO0jMVmTbsVpiP57/jBv0vjytdwr1BQro8pn9YwVBxn9eHQZ0NV7cdF8RKpncg/jRKFut/wMtRk3W3NzR+eC9Hw6jl2EvGtclq4=
