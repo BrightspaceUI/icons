@@ -26,6 +26,7 @@ deploy:
     tags: true
 env:
   global:
+  - OWNER_NAME=BrightspaceUI
   - REPO_NAME=icons
   - SAUCE_USERNAME: Desire2Learn
   - secure: NOor8Yc6J+8QC/JudZ3aN8MmCyV7/HqkriUnNDrb3fCzgWQEqI5slGnkOveEP1rNdbUKySxS/kgZFWKiUPOaBofpa+URZmCzbUtYebbvNYDfj9R3v0kQEV+kMsAsEoUkn0biw8S2rpFkcAdZZZEbkkPyUpZVrgtLhaTbuDt6B9Y=
