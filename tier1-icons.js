@@ -720,7 +720,7 @@ $_documentContainer.innerHTML = `<iron-iconset-svg name="d2l-tier1" size="18" rt
       <g id="d2l-icon-time">
         <path d="M11.92 2.55A1.976 1.976 0 0 0 12 2a2.006 2.006 0 0 0-2-2H8a2.006 2.006 0 0 0-2 2 1.976 1.976 0 0 0 .08.55 8 8 0 1 0 5.84 0zM14 12H9a1 1 0 0 1-1-1V5a1 1 0 0 1 2 0v5h4a1 1 0 0 1 0 2z"/>
       </g>
-      <g id="d2l-icon-toggle_small_left" mirror-in-rtl="true">
+      <g id="d2l-icon-toggle-small-left" mirror-in-rtl="true">
         <path d="M11,14a1,1,0,0,1-.707-.293l-4-4a1,1,0,0,1,0-1.414l4-4A1,1,0,0,1,12,5v8a1,1,0,0,1-.617.924A.987.987,0,0,1,11,14ZM8.414,9,10,10.586V7.414Z"/>
       </g>
       <g id="d2l-icon-tools">
