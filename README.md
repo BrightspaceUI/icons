@@ -265,7 +265,7 @@ When contributing changes to icons, the SVG files should be properly formatted. 
   - have a `width` and `height` attribute which match the native size
   - not have an `id` or `data-name` attribute
 - the `<svg>`'s `viewBox` attribute must:
-  - have an origin beginning at `0 0`
+  - have an origin beginning with `0 0`
   - be exactly square (e.g. `0 0 18 18`)
   - match the icon's native size
   - not contain negative values
