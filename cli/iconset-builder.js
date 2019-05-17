@@ -13,7 +13,7 @@ var iconsetObjTemplate = {
 };
 
 function processFill(elem) {
-	if (elem.$ && elem.$.fill && elem.$.fill.toLowerCase() === '#565a5c') {
+	if (elem.$ && elem.$.fill && elem.$.fill.toLowerCase() === '#494c4e') {
 		delete elem.$.fill;
 	}
 	for (var child in elem) {

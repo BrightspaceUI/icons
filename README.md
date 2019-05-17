@@ -48,7 +48,7 @@ Here's an example which consumes the "bookmark-filled" icon from the "tier1" cat
 <iron-icon icon="d2l-tier1:bookmark-filled"></iron-icon>
 ```
 
-You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite, `#565a5c`) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
+You'll need to set the size (ideally 18px, 24px or 30px) and color (ferrite, `#494c4e`) of the icon. [d2l-colors](https://github.com/Brightspace/d2l-colors-ui) comes in handy:
 
 ```html
 <link rel="import" href="../d2l-colors/d2l-colors.html">
@@ -271,7 +271,7 @@ When contributing changes to icons, the SVG files should be properly formatted. 
   - not contain negative values
 - there should be no `<title>` element
 - there should be no inline `<style>` -- all style for line fills should be applied directly to the SVG elements
-- color of SVG elements should be "ferrite" (`#565a5c`)
+- color of SVG elements should be "ferrite" (`#494c4e`)
 
 The best way to have most of these rules applied for you automatically is to put the icon through [SVGOMG](https://jakearchibald.github.io/svgomg/) with the "remove title" and "prettify code" options selected.
 
@@ -279,7 +279,7 @@ Here's a sample of a properly formatted SVG:
 
 ```svg
 <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-  <path fill="#565a5c" d="..."/>
+  <path fill="#494c4e" d="..."/>
 </svg>
 ```
 
