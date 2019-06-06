@@ -64,7 +64,7 @@
   },
   "main": "d2l-icons.js",
   "dependencies": {
-    "d2l-colors": "BrightspaceUI/colors#semver:^4",
+    "@brightspace-ui/core": "git+https://github.com/BrightspaceUI/core.git",
     "@polymer/iron-iconset-svg": "^3.0.0",
     "@polymer/polymer": "^3.0.0"
   }
