@@ -23,9 +23,7 @@
     "lint": "npm run lint:wc && npm run lint:js",
     "lint:js": "eslint . --ext .js,.html test/**/*.js test/**/*.html demo/**/*.js demo/**/*.html",
     "lint:wc": "polymer lint",
-    "test": "npm run lint && npm run build && npm run test:polymer:local",
-    "test:polymer:local": "polymer test --skip-plugin sauce",
-    "test:polymer:sauce": "polymer test --skip-plugin local"
+    "test": "npm run lint"
   },
   "author": "D2L Corporation",
   "license": "Apache-2.0",
