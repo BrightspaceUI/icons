@@ -59,7 +59,7 @@ $_documentContainer.innerHTML = `<dom-module id="d2l-icon">
 				height: var(--d2l-icon-height, 30px);
 				width: var(--d2l-icon-width, 30px);
 			}
-			:host-context(.d2l-dark-mode) {
+			:host-context([d2l-color-scheme="dark"]) {
 				color: var(--d2l-color-regolith);
 			}
 			/* required since display of inline-block is non-default */
