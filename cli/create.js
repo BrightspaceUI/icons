@@ -1,23 +1,23 @@
 'use strict';
 
-var minify = require('images-to-variables').minify;
-var forEachIcon = require('./for-each-icon');
+const minify = require('images-to-variables').minify;
+const forEachIcon = require('./for-each-icon');
 
-var generate = function(iconPaths, outputPath, formatter) {
+const generate = function(iconPaths, outputPath, formatter) {
 
-	var iconInfos = [];
+	const iconInfos = [];
 
-	return forEachIcon(iconPaths, function(iconInfo) {
+	return forEachIcon(iconPaths, (iconInfo) => {
 
 		iconInfos.push(iconInfo);
 
-	}).then(function() {
+	}).then(() => {
 
-		var q = require('q');
-		var iconPromises = [];
+		const q = require('q');
+		const iconPromises = [];
 
-		var tryGetRtlIcon = function(ltrIcon) {
-			for (var i = 0; i < iconInfos.length; i++) {
+		const tryGetRtlIcon = function(ltrIcon) {
+			for (let i = 0; i < iconInfos.length; i++) {
 				if (iconInfos[i].isRtl && iconInfos[i].name === ltrIcon.name) {
 					return iconInfos[i];
 				}
@@ -25,23 +25,23 @@ var generate = function(iconPaths, outputPath, formatter) {
 			return null;
 		};
 
-		var getIconInfo = function(ltrIconInfo) {
+		const getIconInfo = function(ltrIconInfo) {
 
 			if (ltrIconInfo.isRtl) {
 				return;
 			}
 
-			var minifyPromises = [];
+			const minifyPromises = [];
 			minifyPromises.push(minify(ltrIconInfo.file));
 
-			var rtlIconInfo = tryGetRtlIcon(ltrIconInfo);
+			const rtlIconInfo = tryGetRtlIcon(ltrIconInfo);
 			if (rtlIconInfo) {
 				minifyPromises.push(minify(rtlIconInfo.file));
 			}
 
-			return q.all(minifyPromises).then(function(minifiedIcons) {
+			return q.all(minifyPromises).then((minifiedIcons) => {
 
-				var iconInfo = ltrIconInfo;
+				const iconInfo = ltrIconInfo;
 
 				iconInfo.ltrIcon = minifiedIcons[0].contents;
 
@@ -54,9 +54,9 @@ var generate = function(iconPaths, outputPath, formatter) {
 
 		};
 
-		for (var i = 0; i < iconInfos.length; i++) {
+		for (let i = 0; i < iconInfos.length; i++) {
 
-			var iconPromise = getIconInfo(iconInfos[i]);
+			const iconPromise = getIconInfo(iconInfos[i]);
 			if (iconPromise) {
 				iconPromises.push(iconPromise);
 			}
@@ -65,9 +65,9 @@ var generate = function(iconPaths, outputPath, formatter) {
 
 		return q.all(iconPromises);
 
-	}).then(function(iconInfos) {
+	}).then((iconInfos) => {
 
-		iconInfos.sort(function(a, b) {
+		iconInfos.sort((a, b) => {
 			if (a.mixin > b.mixin) {
 				return 1;
 			}
