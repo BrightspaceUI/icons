@@ -17,15 +17,11 @@
   "homepage": "https://github.com/BrightspaceUI/icons",
   "name": "d2l-icons",
   "scripts": {
-    "build": "npm run build:scss && npm run build:iconsets",
+    "build": "npm run build:scss",
     "build:scss": "node ./cli/create-scss-cli -o icons.scss images/**/*.*",
-    "build:iconsets": "node ./cli/create-iconset-cli images/tier1 images/tier2 images/tier3 images/html-editor images/emoji",
-    "lint": "npm run lint:wc && npm run lint:js",
-    "lint:js": "eslint . --ext .js,.html test/**/*.js test/**/*.html demo/**/*.js demo/**/*.html",
-    "lint:wc": "polymer lint",
-    "test": "npm run lint && npm run build && npm run test:polymer:local",
-    "test:polymer:local": "polymer test --skip-plugin sauce",
-    "test:polymer:sauce": "polymer test --skip-plugin local"
+    "lint": "npm run lint:js",
+    "lint:js": "eslint . --ext .js,.html demo/**/*.js demo/**/*.html",
+    "test": "npm run lint && npm run build"
   },
   "author": "D2L Corporation",
   "license": "Apache-2.0",
@@ -33,26 +29,22 @@
     "url": "https://github.com/BrightspaceUI/icons/issues"
   },
   "devDependencies": {
-    "@polymer/iron-component-page": "^4.0.0",
-    "@polymer/iron-demo-helpers": "^3.0.0",
-    "@polymer/iron-test-helpers": "^3.0.0",
-    "@webcomponents/webcomponentsjs": "^2.2.7",
-    "babel-eslint": "^10.0.1",
+    "@webcomponents/webcomponentsjs": "^2",
+    "babel-eslint": "^10",
     "chalk": "^1.1.1",
-    "d2l-typography": "BrightspaceUI/typography#semver:^7",
-    "eslint": "^4.15.0",
-    "eslint-config-brightspace": "^0.4.1",
-    "eslint-plugin-html": "^4.0.1",
+    "eslint": "^6",
+    "eslint-config-brightspace": "^0.6",
+    "eslint-plugin-html": "^6",
+    "eslint-plugin-lit": "^1",
+    "eslint-plugin-sort-class-members": "^1",
     "frau-ci": "^1.33.2",
     "fs": "0.0.2",
-    "imagemin": "^4.0.0",
     "images-to-variables": "^0.3.0",
+    "lit-element": "^2",
     "polymer-cli": "^1.9.6",
     "q": "^1.4.1",
     "through2": "^2.0.1",
     "vinyl-fs": "^2.3.1",
-    "wct-browser-legacy": "^1.0.1",
-    "xml2js": "^0.4.16",
     "yargs": "^4.1.0"
   },
   "version": "6.8.0",
@@ -64,8 +56,6 @@
   },
   "main": "d2l-icons.js",
   "dependencies": {
-    "d2l-colors": "BrightspaceUI/colors#semver:^4",
-    "@polymer/iron-iconset-svg": "^3.0.0",
-    "@polymer/polymer": "^3.0.0"
+    "@brightspace-ui/core": "^0.2"
   }
 }

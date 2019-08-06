@@ -1,7 +1,6 @@
+const chalk = require('chalk');
 
-var chalk = require('chalk');
-
-var argv = require('yargs')
+const argv = require('yargs')
 	.alias('o', 'output')
 	.argv;
 
@@ -10,14 +9,14 @@ if (argv._.length === 0) {
 	process.exit(1);
 }
 
-var create = require('./create');
+const create = require('./create');
 
 create(argv._, argv.output, require('./create-scss'))
-	.catch(function(err) {
+	.catch((err) => {
 		console.error(err);
 		process.exit(1);
 	})
-	.then(function() {
+	.then(() => {
 		console.log(chalk.green('Icons Scss created successfully.'));
 		process.exit(0);
 	});

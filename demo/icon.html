@@ -3,118 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="/node_modules/@brightspace-ui/core/components/demo/styles.css" type="text/css">
 		<title>d2l-icon demo</title>
-		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-		<script type="module" src="../../@polymer/iron-demo-helpers/demo-pages-shared-styles.js"></script>
-		<script type="module" src="../../@polymer/iron-demo-helpers/demo-snippet.js"></script>
-		<script type="module" src="../../d2l-typography/d2l-typography.js"></script>
-		<script type="module" src="../d2l-icons.js"></script>
-		<!-- FIXME(polymer-modulizer):
-		These imperative modules that innerHTML your HTML are
-		a hacky way to be sure that any mixins in included style
-		modules are ready before any elements that reference them are
-		instantiated, otherwise the CSS @apply mixin polyfill won't be
-		able to expand the underlying CSS custom properties.
-		See: https://github.com/Polymer/polymer-modulizer/issues/154
-		-->
-	<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<custom-style>
-			<style is="custom-style" include="demo-pages-shared-styles"></style>
-		</custom-style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
+		<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 		<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<custom-style include="d2l-typography">
-			<style is="custom-style" include="d2l-typography"></style>
-		</custom-style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
-		<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<custom-style>
-			<style is="custom-style">
-				.color-override d2l-icon {
-					color: var(--d2l-color-celestine-minus-1);
-				}
-				.size-override d2l-icon {
-					--d2l-icon-height: 50px;
-					--d2l-icon-width: 50px;
-				}
-			</style>
-		</custom-style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
-		<script type="module">
-const $_documentContainer = document.createElement('template');
-
-$_documentContainer.innerHTML = `<style>
-			html {
-				font-size: 20px;
-			}
-			d2l-icon {
-				margin-right: 14px;
-			}
-			</style>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
+			import '/node_modules/@brightspace-ui/core/components/demo/demo-page.js';
+			import '../d2l-icons.js';
+			import './icon-color-override.js';
+			import './icon-size-override.js';
+		</script>
 	</head>
-	<body unresolved class="d2l-typography">
-		<script type="module">
-const $_documentContainer = document.createElement('template');
+	<body unresolved>
+		<d2l-demo-page title="d2l-icons (imported from core)">
 
-$_documentContainer.innerHTML = `<div class="vertical-section-container centered">
+			<h2>Tiers (1,2,3)</h2>
+			<d2l-demo-snippet>
+				<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
+				<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
+				<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
+			</d2l-demo-snippet>
 
-			<h3>Tiers (1,2,3)</h3>
-			<demo-snippet>
-				<template>
+			<h2>Color Override</h2>
+			<d2l-demo-snippet>
+				<d2l-icon-demo-color-override>
 					<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
 					<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
 					<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
-				</template>
+				</d2l-icon-demo-color-override>
+			</d2l-demo-snippet>
+
+			<h2>Size Override</h2>
+			<d2l-demo-snippet>
+				<d2l-icon-demo-size-override>
+					<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
+					<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
+					<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
+				</d2l-icon-demo-size-override>
+			</d2l-demo-snippet>
+
+			<h2>RTL Icon (will flip when RTL)</h2>
+			<d2l-demo-snippet>
+				<d2l-icon icon="d2l-tier1:share"></d2l-icon>
+				<d2l-icon icon="d2l-tier2:share"></d2l-icon>
 			</demo-snippet>
 
-			<h3>Color Override</h3>
-			<demo-snippet>
-				<template>
-					<div class="color-override">
-						<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
-						<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
-						<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
-					</div>
-				</template>
-			</demo-snippet>
-
-			<h3>Size Override</h3>
-			<demo-snippet>
-				<template>
-					<div class="size-override">
-						<d2l-icon icon="d2l-tier1:gear"></d2l-icon>
-						<d2l-icon icon="d2l-tier2:gear"></d2l-icon>
-						<d2l-icon icon="d2l-tier3:gear"></d2l-icon>
-					</div>
-				</template>
-			</demo-snippet>
-
-			<h3>RTL Icon (will flip when RTL)</h3>
-			<demo-snippet>
-				<template>
-					<d2l-icon icon="d2l-tier1:share"></d2l-icon>
-					<d2l-icon icon="d2l-tier2:share"></d2l-icon>
-				</template>
-			</demo-snippet>
-
-		</div>`;
-
-document.body.appendChild($_documentContainer.content);
-</script>
+		</d2l-demo-page>
 	</body>
 </html>
