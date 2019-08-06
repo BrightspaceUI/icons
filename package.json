@@ -56,6 +56,6 @@
   },
   "main": "d2l-icons.js",
   "dependencies": {
-    "@brightspace-ui/core": "^0.2"
+    "@brightspace-ui/core": "^1"
   }
 }
