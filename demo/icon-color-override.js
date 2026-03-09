@@ -1,4 +1,4 @@
-import '/node_modules/@brightspace-ui/core/components/colors/colors.js';
+import '@brightspace-ui/core/components/colors/colors.js';
 import { css, html, LitElement } from 'lit-element/lit-element.js';
 
 class IconColorOverride extends LitElement {
