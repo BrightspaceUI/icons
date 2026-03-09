@@ -1,8 +1,0 @@
-{
-  "extends": "brightspace/node-config",
-  "rules": {
-     "no-console": "off",
-     "strict": "off",
-     "no-useless-escape": "off"
-  }
-}
